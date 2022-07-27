@@ -26,6 +26,7 @@ public class BattleshipsInABoard {
         System.out.println(new BattleshipsInABoard().countBattleships(board));
     }
 
+
     public int countBattleships(char[][] board) {
         int count =0;
         int m = board.length, n = board[0].length;
