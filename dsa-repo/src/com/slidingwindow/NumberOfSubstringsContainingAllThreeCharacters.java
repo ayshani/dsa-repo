@@ -41,7 +41,6 @@ public class NumberOfSubstringsContainingAllThreeCharacters {
 
     public int numberOfSubstrings(String s) {
         int[] count =new int[]{0,0,0};
-
         int res =0,i=0;
         for(int j=0;j<s.length();j++) {
             count[s.charAt(j) - 'a']++;
