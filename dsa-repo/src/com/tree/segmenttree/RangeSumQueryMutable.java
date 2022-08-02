@@ -92,6 +92,7 @@ class NumArray {
         if(se < qs || ss> qe)
             return 0;
         if(qs<=ss && qe>=se)
+
             return tree[si];
 
         int mid =(ss+se)/2;

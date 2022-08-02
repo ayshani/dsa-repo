@@ -20,6 +20,13 @@ import java.util.*;
  *
  *  Example 1:
  *  Input: adjacentPairs = [[2,1],[3,4],[3,2]]
+ *
+ *      2 ->1,3
+ *      1-> 2
+ *      3 -> 4, 2
+ *      4 -> 3
+ *  1 2 3 4
+ *  4 3 2 1
  *  Output: [1,2,3,4]
  *  Explanation:
  *  This array has all its adjacent pairs in adjacentPairs.
