@@ -11,9 +11,11 @@ import java.util.Arrays;
  * You cannot change the direction of the taxi.
  *
  * The passengers are represented by a 0-indexed 2D integer array rides, where rides[i] = [starti, endi, tipi]
- * denotes the ith passenger requesting a ride from point starti to point endi who is willing to give a tipi dollar tip.
+ * denotes the ith passenger requesting a ride from point starti to point endi
+ * who is willing to give a tipi dollar tip.
  *
- * For each passenger i you pick up, you earn endi - starti + tipi dollars. You may only drive at most one passenger at a time.
+ * For each passenger i you pick up, you earn endi - starti + tipi dollars.
+ *  You may only drive at most one passenger at a time.
  *
  * Given n and rides, return the maximum number of dollars you can earn by picking up the passengers optimally.
  *
@@ -39,6 +41,9 @@ iterate over 1-n
 	get the consecutive max from dp[i-1], dp[i]
 	match rides[startj] == i
 		update dp[endj] to have max
+
+TC  : o(n)
+SC : o(n)
 */
 public class MaximumEarningsFromTaxi {
 

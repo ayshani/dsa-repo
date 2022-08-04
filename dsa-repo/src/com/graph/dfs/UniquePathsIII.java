@@ -25,10 +25,10 @@ take cell with 1 value as start index.
 run dfs with four up, down left right direction .
     handle out of bound conditions.
     once u reach a cell == 2
-        that means u reach ur destination chell. so check if you have covered all empty cells on the path.
-            if yes -> increation result and resturn
-    decrement empty cells and markt he visited cell which will fall under out of bound condition.
-    once u visit all the four directions, restor eit to its original value i.e. 0.
+        that means u reach ur destination cell. so check if you have covered all empty cells on the path.
+            if yes -> increment result and return
+    decrement empty cells and mark the visited cell which will fall under out of bound condition.
+    once u visit all the four directions, restore it to its original value i.e. 0.
 
 TC : o(3^(m*n))
 SC : o(m*n)

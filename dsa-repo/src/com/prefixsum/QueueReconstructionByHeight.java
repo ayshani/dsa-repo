@@ -45,7 +45,8 @@ subarray after step 2: [[7,0], [6,1], [7,1]]
 TC : o(nlogn)
 SC : o(1)
  */
-public class QueueReconstructionByHeight {
+public class
+QueueReconstructionByHeight {
 
     public static void main(String[] args) {
         int[][] people = new int[][]{

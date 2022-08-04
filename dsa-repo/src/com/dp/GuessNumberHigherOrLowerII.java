@@ -56,7 +56,8 @@ you have two way to guess:
  7, 8, 9 ---------> $8
 
 
- for more numbers, it can simply be reduced them into smaller ranges, and here is why DP solution make more sense in solving this.
+ for more numbers, it can simply be reduced them into smaller ranges, and here is
+ why DP solution make more sense in solving this.
  suppose the range is [start, end]
  the strategy here is to iterate through all number possible and select it as the starting point,
  say for any k between start and end, the worst cost for this is: k+DP( start, k-1 ) + DP(k+1, end ),

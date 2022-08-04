@@ -29,7 +29,8 @@ another column. So we need an array to store ‘E’ counts for each column.
 With those two auxiliary storages, we can just update the max ‘E’ counts when we encounter ‘0’ every time.
 
 Time complexity:
-O(height * width). The inner-most for-loops only execute when we're at the first row / column or when we reach a wall.
+O(height * width).
+The inner-most for-loops only execute when we're at the first row / column or when we reach a wall.
 
 SC : o(n)
  */
