@@ -40,6 +40,9 @@ and then the final stack is your solution.
 3. Note that you cannot pop elements if that means you will not be able to build a solution of k digits.
 For this, you need to check the current number of elements in the stack and the number of digits to the right
 of your current position on the input number.
+
+TC : o(n)
+SC : o(k)
  */
 public class RemoveKDigits {
 
