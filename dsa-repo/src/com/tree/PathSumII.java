@@ -34,6 +34,20 @@ TC : o(n)
 SC : o(n)
  */
 public class PathSumII {
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(4);
+        root.right = new TreeNode(8);
+        root.left.left = new TreeNode(11);
+        root.left.left.left =  new TreeNode(7);
+        root.left.left.right = new TreeNode(2);
+        root.right.left = new TreeNode(13);
+        root.right.right = new TreeNode(4);
+        root.right.left.right = new TreeNode(5);
+        root.right.right.right = new TreeNode(1);
+        System.out.println(new PathSumII().pathSum(root,22));
+    }
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
         List<List<Integer>> result = new ArrayList<>();
 
