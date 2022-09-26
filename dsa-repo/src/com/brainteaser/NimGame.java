@@ -24,7 +24,7 @@ Explanation: These are the possible outcomes:
 In all outcomes, your friend wins.
 
 Solution
-You can always win a Nim game if the number of stones nn in the pile is not divisible by 44.
+You can always win a Nim game if the number of stones n in the pile is not divisible by 4.
 
 Reasoning
 
