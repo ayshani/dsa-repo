@@ -50,7 +50,6 @@ public class NimGame {
         System.out.println(new NimGame().canWinNim(453));
     }
 
-
     public boolean canWinNim(int n) {
         return (n%4!=0);
     }
