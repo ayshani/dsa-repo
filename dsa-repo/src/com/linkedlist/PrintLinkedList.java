@@ -8,4 +8,11 @@ public class PrintLinkedList {
             head = head.next;
         }
     }
+
+    public void printList(ListNode[] head){
+        for(int i=0;i<head.length;i++){
+            print(head[i]);
+            System.out.println();
+        }
+    }
 }
