@@ -22,6 +22,9 @@ Explanation: Compressing s without deleting anything will give us "a3bc3d" of le
 characters 'a' or 'c' would at most decrease the length of the compressed string to 5, for instance delete 2 'a'
 then we will have s = "abcccd" which compressed is abc3d. Therefore, the optimal way is to delete 'b' and 'd',
 then the compressed version of s will be "a3c3" of length 4.
+
+TC : o(nk*n)
+SC : o(n^2)
  */
 public class StringCompressionII {
 
