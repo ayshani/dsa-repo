@@ -36,6 +36,7 @@ the number of nodes in the left subtree.
 
 Since I halve the tree in every recursive step, I have O(log(n)) steps. Finding a height costs O(log(n)).
 So overall O(log(n)^2).
+
  */
 public class CountCompleteTreeNodes {
     public static void main(String[] args) {
