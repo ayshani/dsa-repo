@@ -14,6 +14,7 @@ Output: 45
 
 TC : o(1)
 SC : o(1)
+
  */
 public class RectangleArea {
 
