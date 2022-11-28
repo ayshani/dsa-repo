@@ -20,7 +20,6 @@ You should only consider the players that have played at least one match.
 The testcases will be generated such that no two matches will have the same outcome.
 
 Example 1:
-
 Input: matches = [[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]]
 Output: [[1,2,10],[4,5,7,8]]
 Explanation:
