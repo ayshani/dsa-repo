@@ -35,6 +35,31 @@ randomizedSet.getRandom(); // getRandom() should return either 1 or 2 randomly.
 randomizedSet.remove(1); // Removes 1 from the set, returns true. Set now contains [2].
 randomizedSet.insert(2); // 2 was already in the set, so return false.
 randomizedSet.getRandom(); // Since 2 is the only number in the set, getRandom() will always return 2.
+
+Intuition
+As the name of the class says, it shall behave like a set upon insertion or removal of values.
+So a "set-ish" abstract data type is needed to store the values, and will allow constant access times for
+insertion and removal.
+The randomized get() requires to use a random number generator to calculate the choice, and one can assume,
+that the library standard provides such a constant time random number generator.
+But the Java sets do not provide constant time random access methods to the stored items by index. Thus,
+a common set must probably be iterated.
+To support both acess methods (insert/remove by key, and get by randomized index), a kind of hybrid data
+structure is needed: a set that can be accessed randomly by index, like a list, and by key, like a set or map.
+
+
+Approach
+Use a HashMap to store the inserted values (as keys), so that the set aspect gets satisfied.
+Use an ArrayList to store the values as themselves, and use the indexes of the values in the list as values
+for the key map. This satisfies the random access by index requirement.
+Both tables are associated by the indexes:
+HashMap: value (key aspect) --> index
+ArrayList: index --> value (value aspect).
+
+Complexity
+Time complexity: $$O(1)$$ average for all operations
+Space complexity: $$O(n)$$, where n is the number of items stored in the class at any time.
+    Grows by one with each successful insertion, shrinks by one with each successful removal.
  */
 public class InsertDeleteGetRandomInOOf1 {
     public static void main(String[] args) {
