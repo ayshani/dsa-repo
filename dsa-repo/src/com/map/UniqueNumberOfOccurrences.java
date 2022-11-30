@@ -24,6 +24,10 @@ SC : o(n)
  */
 public class UniqueNumberOfOccurrences {
 
+    public static void main(String[] args) {
+        int[] arr = new int[]{-3,0,1,-3,1,1,1,-3,10,0};
+        System.out.println(new UniqueNumberOfOccurrences().uniqueOccurrences(arr));
+    }
     public boolean uniqueOccurrences(int[] arr) {
         // Store the frequency of elements in the unordered map.
         Map<Integer,Integer> map = new HashMap<>();
