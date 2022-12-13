@@ -36,8 +36,8 @@ public class MinimumFallingPathSum {
 
     public static void main(String[] args) {
         int[][] nums = new int[][]{
-                {1,2,3},
-                {4,5,6},
+                {2,1,3},
+                {6,5,4},
                 {7,8,9}
         };
 
