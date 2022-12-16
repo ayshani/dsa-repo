@@ -55,6 +55,7 @@ skiplist.search(1); // return False, 1 has already been erased.
 
 Explanation -
 https://leetcode.com/problems/design-skiplist/solutions/394985/a-java-solution-using-only-random-number-library/
+https://www.youtube.com/watch?v=7pWkspmYUVo&t=1617s
 
  */
 public class DesignSkiplist {
