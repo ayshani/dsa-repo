@@ -16,7 +16,6 @@ room it unlocks, and you can take all of them with you to unlock the other rooms
 
 Given an array rooms where rooms[i] is the set of keys that you can obtain if you visited room i, return true
 if you can visit all the rooms, or false otherwise.
-
 Example 1:
 
 Input: rooms = [[1],[2],[3],[]]
