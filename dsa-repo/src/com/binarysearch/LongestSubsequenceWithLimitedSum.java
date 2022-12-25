@@ -13,8 +13,6 @@ from nums such that the sum of its elements is less than or equal to queries[i].
 A subsequence is an array that can be derived from another array by deleting some or no elements without changing
 the order of the remaining elements.
 
-
-
 Example 1:
 
 Input: nums = [4,5,2,1], queries = [3,10,21]
