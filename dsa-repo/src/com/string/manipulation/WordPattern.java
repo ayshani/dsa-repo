@@ -32,6 +32,7 @@ If none of the above cases fall, then ti is true
 
 TC : O(n)
 SC : o(n)
+
  */
 public class WordPattern {
 
