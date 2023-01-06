@@ -38,6 +38,8 @@ TC : o(logt)
 SC : o(logt)
 
 This is because for acceleration, we are doubling the speed, so the time space gets shortened by 2.
+
+Explanation - https://www.youtube.com/watch?v=DBJPWJr5zZ4
  */
 public class RaceCar {
 
