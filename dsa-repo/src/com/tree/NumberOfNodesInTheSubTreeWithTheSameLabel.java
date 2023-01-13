@@ -78,6 +78,7 @@ public class NumberOfNodesInTheSubTreeWithTheSameLabel {
         int[] res = new NumberOfNodesInTheSubTreeWithTheSameLabel().countSubTrees(n,edges,labels);
         Arrays.stream(res).forEach(e -> System.out.print(e+" "));
     }
+
     public int[] countSubTrees(int n, int[][] edges, String labels) {
         Map<Integer, List<Integer>> adj = new HashMap<>();
 
