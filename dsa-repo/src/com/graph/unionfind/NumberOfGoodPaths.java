@@ -45,13 +45,15 @@ or if the neighbours (nodes that share an edge) have equal value, we iterate tha
 To iterate over n−1 edges, we have to perform O(n) operations which needs O(n) time.
 We also need a map valuesToNodes having sorted keys.
 Each operation in such a data structure comes with a log factor. We push all the n nodes into the map and
-iterate over all of them, which further adds O(n⋅log(n)))O(n \cdot log(n)))O(n⋅log(n))) time.
-The group map has unsorted keys, and each of its operation takes O(1)O(1)O(1) time on average. We need O(n)O(n)O(n) time to iterate through all of the nodes to find the set size using it.
-Additionally, we need O(n)O(n)O(n) time each to initialize the adj, parent and rank arrays.
-Space complexity: O(n)O(n)O(n)
+iterate over all of them, which further adds O(n⋅log(n))) time.
+The group map has unsorted keys, and each of its operation takes O(1) time on average.
+We need O(n) time to iterate through all of the nodes to find the set size using it.
+Additionally, we need O(n) time each to initialize the adj, parent and rank arrays.
 
-We require O(n)O(n)O(n) space each for the adj, parent and rank arrays.
-We also require O(n)O(n)O(n) space for the valuesToNodes and the group maps.
+Space complexity: O(n)
+
+We require O(n) space each for the adj, parent and rank arrays.
+We also require O(n) space for the valuesToNodes and the group maps.
  */
 public class NumberOfGoodPaths {
 
