@@ -22,8 +22,8 @@ Output: true
 Explanation: The above diagram shows a valid way of adding an edge.
 Every node in the resulting graph is connected to an even number of edges.
 
-TC : o(n)
-SC: o(n)
+TC : o(edges)
+SC: o(edges)
  */
 public class AddEdgesToMakeDegreesOfAllNodesEven {
 
