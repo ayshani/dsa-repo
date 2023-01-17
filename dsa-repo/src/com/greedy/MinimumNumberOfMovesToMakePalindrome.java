@@ -38,7 +38,8 @@ public class MinimumNumberOfMovesToMakePalindrome {
         int res = 0;
         while (s.length() > 0) {
             int i = s.indexOf(s.charAt(s.length() - 1));
-            if (i == s.length() - 1) res += i / 2;
+            if (i == s.length() - 1)
+                res += i / 2;
             else {
                 res += i;
                 s = s.substring(0, i) + s.substring(i + 1);
