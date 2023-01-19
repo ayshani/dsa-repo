@@ -22,6 +22,9 @@ Output: 3
     0 0  ->  1 0  ->  0 1  -> 0 0
     0 1      1 0      1 1     0 0
 Explanation: One possible solution is to flip (1, 0) then (0, 1) and finally (1, 1) as shown.
+
+TC : o(m*n * 2^(m*n))
+SC : o(2^m*n)
  */
 public class MinimumNumberOfFlipsToConvertBinaryMatrixToZeroMatrix {
 
@@ -60,7 +63,6 @@ public class MinimumNumberOfFlipsToConvertBinaryMatrixToZeroMatrix {
         return -1;
     }
 
-    //o(n^2)
     private boolean isTarget(int[][] mat){
         for(int row[] : mat){
             for(int num : row){
@@ -71,7 +73,7 @@ public class MinimumNumberOfFlipsToConvertBinaryMatrixToZeroMatrix {
         return true;
     }
 
-    //o(n)
+
     private String serialize(int[][] mat){
         StringBuilder sb = new StringBuilder();
         for(int row[] : mat){
@@ -83,7 +85,7 @@ public class MinimumNumberOfFlipsToConvertBinaryMatrixToZeroMatrix {
         return sb.toString();
     }
 
-    //o(n^4)
+    //o(2^(m*n))
     private List<int[][]> getNext(int[][] mat){
         List<int[][]> list = new ArrayList<>();
         for(int i=0;i<mat.length;i++){
@@ -94,7 +96,7 @@ public class MinimumNumberOfFlipsToConvertBinaryMatrixToZeroMatrix {
         return list;
     }
 
-    // o(n^2)
+
     private int[][] flip(int[][] mat, int row, int col){
         int m = mat.length, n = mat[0].length;
         int[][] newMat = new int[m][n];
