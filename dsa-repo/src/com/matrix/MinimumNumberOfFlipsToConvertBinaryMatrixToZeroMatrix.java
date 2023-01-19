@@ -23,6 +23,16 @@ Output: 3
     0 1      1 0      1 1     0 0
 Explanation: One possible solution is to flip (1, 0) then (0, 1) and finally (1, 1) as shown.
 
+Explanation
+-----------
+the idea is to use BFS to generate all combinations using flip and put it in queue.
+once a level of combination is generated, we check
+    1. if it reaches the target, if yes, returm the total steps of flip required.
+    2. if not then, check whether any of the combination is visited already or not,
+        if not visited, then add to visited set and add in queue.
+
+Here one level means all combination from a specific mat[][] orientation.
+
 TC : o(m*n * 2^(m*n))
 SC : o(2^m*n)
  */
