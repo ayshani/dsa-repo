@@ -19,7 +19,7 @@ node of the loop is 3.
 
 TC : o(n)
 SC : o(1)
-
+1284, 539
  */
 public class FindTheFirstNodeOfLoopInLinkedList {
 
