@@ -41,6 +41,7 @@ You then decide to move to square 14 and must take the ladder to square 35.
 You then decide to move to square 36, ending the game.
 This is the lowest possible number of moves to reach the last square, so return 4.
 
+
 TC : o(n*6)
 SC : o(n*n)
  */
