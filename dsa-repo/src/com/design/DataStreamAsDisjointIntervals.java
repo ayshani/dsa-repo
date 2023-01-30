@@ -1,9 +1,6 @@
 package com.design;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 /*
 352. Data Stream as Disjoint Intervals
@@ -43,8 +40,16 @@ public class DataStreamAsDisjointIntervals {
 
     public static void main(String[] args) {
         SummaryRanges summaryRanges = new SummaryRanges();
-        summaryRanges.addNum(1);
-
+        summaryRanges.addNum(1);      // arr = [1]
+        System.out.println(Arrays.stream(summaryRanges.getIntervals()).toList()); // return [[1, 1]]
+        summaryRanges.addNum(3);      // arr = [1, 3]
+        System.out.println(Arrays.stream(summaryRanges.getIntervals()).toList()); // return [[1, 1], [3, 3]]
+        summaryRanges.addNum(7);      // arr = [1, 3, 7]
+        System.out.println(Arrays.stream(summaryRanges.getIntervals()).toList()); // return [[1, 1], [3, 3], [7, 7]]
+        summaryRanges.addNum(2);      // arr = [1, 2, 3, 7]
+        System.out.println(Arrays.stream(summaryRanges.getIntervals()).toList()); // return [[1, 3], [7, 7]]
+        summaryRanges.addNum(6);      // arr = [1, 2, 3, 6, 7]
+        System.out.println(Arrays.stream(summaryRanges.getIntervals()).toList()); // return [[1, 3], [6, 7]]
     }
 }
 
