@@ -46,14 +46,21 @@ public class StepByStepDirectionsFromABinaryTreeNodeToAnother {
 
         int i= startToRoot.length(), j = endToRoot.length();
         int count =0;
+        // startToRoot.charAt(i-1)==endToRoot.charAt(j-1) this comes when destination and source are in the same side
+        // of the tree. hence, that section we can omit as we create the patch from source to root /
+        // destination to root. hence we count the common section.
         while(i>0 && j>0 && startToRoot.charAt(i-1)==endToRoot.charAt(j-1)){
             count++;
             i--;
             j--;
         }
 
+        // once we get the common length of the two path
+        // we remove that section from startToRoot path and rest is converted to U i.e. upper.
         String sPath = "U".repeat(startToRoot.length()-count);
 
+        // similarly for destinationToRoot also, we omit the common length and make
+        // the reverse of the current orientation.
         String ePath = endToRoot.reverse().toString().substring(count, endToRoot.length());
 
         return sPath+ePath;
