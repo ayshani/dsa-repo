@@ -31,7 +31,6 @@ TC : o(m*n)
 SC : o(m*n)
  */
 public class AsFarFromLandAsPossible {
-
     public static void main(String[] args) {
         int[][] grid = new int[][]{
                 {1,0,1},{0,0,0},{1,0,1}
