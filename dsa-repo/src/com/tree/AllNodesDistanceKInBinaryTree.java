@@ -15,6 +15,13 @@ Input: root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, k = 2
 Output: [7,4,1]
 Explanation: The nodes that are a distance 2 from the target node (with value 5) have values 7, 4, and 1.
 
+
+Alogo
+-----
+find child parent relationship.
+first try to get all childs from the target
+then find the parent of target and reduce by 1 each time a parent is found .
+    then go and find children at the reduced level from each parent
 TC : o(k*k)
 SC: o(n)
  */
