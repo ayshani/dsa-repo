@@ -43,6 +43,7 @@ space:-  O(1)
  */
 public class SingleElementInASortedArray {
 
+
     public static void main(String[] args) {
         int[] nums = new int[]{1,1,2,3,3,4,4,8,8};
         System.out.println(new SingleElementInASortedArray().singleNonDuplicate(nums));
