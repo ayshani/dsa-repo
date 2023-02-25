@@ -1,4 +1,4 @@
-package com.array;
+package com.greedy;
 /*
 121. Best Time to Buy and Sell Stock
 
