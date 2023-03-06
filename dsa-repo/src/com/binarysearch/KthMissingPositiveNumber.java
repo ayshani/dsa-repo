@@ -36,7 +36,6 @@ Time O(logN)
 Space O(1)
  */
 public class KthMissingPositiveNumber {
-
     public static void main(String[] args) {
         int[] ar = new int[]{
                 2,3,4,7,11
