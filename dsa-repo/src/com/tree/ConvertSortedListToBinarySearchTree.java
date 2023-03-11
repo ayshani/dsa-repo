@@ -58,7 +58,6 @@ public class ConvertSortedListToBinarySearchTree {
             fast = fast.next.next;
             slow = slow.next;
         }
-
         TreeNode thead = new TreeNode(slow.val);
 
         thead.left = toBST(head, slow);
