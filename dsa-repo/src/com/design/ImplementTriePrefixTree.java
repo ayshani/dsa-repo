@@ -102,8 +102,8 @@ class Trie {
 }
 
 class TrieNode{
-    private TrieNode[] links;
-    private boolean isEnd;
+     TrieNode[] links;
+     boolean isEnd;
     public TrieNode(){
         links = new TrieNode[26];
     }
