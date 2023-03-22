@@ -33,4 +33,10 @@ public class UnionFind {
             rank[xSet]++;
         }
     }
+
+    public boolean isConnected(int x, int y) {
+        int xSet = find(x), ySet = find(y);
+
+        return xSet==ySet;
+    }
 }
