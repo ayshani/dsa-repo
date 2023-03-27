@@ -26,7 +26,6 @@ SC : o(1)
 
  */
 public class MinimumPathSum {
-
     public static void main(String[] args) {
         int[][] grid = new int[][]{
                 {1,3,1},
