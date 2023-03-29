@@ -58,7 +58,6 @@ Space complexity: O(n)
 We use an array of size nnn to store the remaining capacity of each bag.
  */
 public class MaximumBagsWithFullCapacityOfRocks {
-
     public static void main(String[] args) {
         int[] capacity = new int[]{2,3,4,5}, rocks = new int[]{1,2,4,4};
         int additionalRocks=2;
