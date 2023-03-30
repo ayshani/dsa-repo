@@ -30,6 +30,9 @@ Explanation: One possible scenario applied on s1 is:
 "r/g / e/ a/t" --> "r/g / e/ a/t" // random decision is to keep both substrings in the same order.
 The algorithm stops now, and the result string is "rgeat" which is s2.
 As one possible scenario led s1 to be scrambled to s2, we return true.
+
+TC : o(n*n)
+SC: o(n*n)
  */
 public class ScrambleString {
 
