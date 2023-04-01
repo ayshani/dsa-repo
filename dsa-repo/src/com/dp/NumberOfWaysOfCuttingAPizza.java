@@ -16,6 +16,8 @@ Return the number of ways of cutting the pizza such that each piece contains at 
 Example 1:Input: pizza = ["A..","AAA","..."], k = 3
 Output: 3
 Explanation: The figure above shows the three ways to cut the pizza. Note that pieces must contain at least one apple.
+
+
  */
 public class NumberOfWaysOfCuttingAPizza {
     public static void main(String[] args) {
