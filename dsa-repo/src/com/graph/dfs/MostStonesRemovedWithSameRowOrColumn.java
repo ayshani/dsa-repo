@@ -39,6 +39,8 @@ public class MostStonesRemovedWithSameRowOrColumn {
         };
 
         System.out.println(new MostStonesRemovedWithSameRowOrColumn().removeStones(stones));
+
+        System.out.println(new MostStonesRemovedWithSameRowOrColumn().removeStonesV2(stones));
     }
     public int removeStones(int[][] stones) {
         graph = new HashMap<>();
@@ -68,6 +70,35 @@ public class MostStonesRemovedWithSameRowOrColumn {
         if(visited.add(start)){
             for(int next : graph.get(start)){
                 dfs(next,visited);
+            }
+        }
+    }
+
+    public int removeStonesV2(int[][] stones) {
+        Set<int[]> visited = new HashSet<>();
+
+
+        int numberOfIslands =0;
+
+        for(int[] stone : stones){
+            if(!visited.contains(stone)){
+                numberOfIslands++;
+                dfsV2(stone,visited, stones);
+            }
+        }
+
+
+        return stones.length - numberOfIslands;
+    }
+
+    private void dfsV2(int[] stone, Set<int[]> visited, int[][] stones){
+        visited.add(stone);
+
+        for(int[] next : stones){
+            if(!visited.contains(next)){
+                if( next[0]==stone[0] || next[1]==stone[1]){
+                    dfsV2(next,visited,stones);
+                }
             }
         }
     }
