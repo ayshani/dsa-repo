@@ -19,7 +19,6 @@ Output: 3
 Explanation: There are three 1s that are enclosed by 0s, and one 1 that is not enclosed because its on the boundary.
 
 Time: O(m * n), space: O(m * n)
-
  */
 public class NumberOfEnclaves {
     public static void main(String[] args) {
