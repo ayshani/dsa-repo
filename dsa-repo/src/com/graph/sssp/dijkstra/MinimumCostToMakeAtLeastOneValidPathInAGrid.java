@@ -1,4 +1,4 @@
-package com.graph.mst;
+package com.graph.sssp.dijkstra;
 
 import java.util.PriorityQueue;
 
