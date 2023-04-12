@@ -7,9 +7,10 @@ import java.util.PriorityQueue;
 
 /*
 TC : o(elogv)
-SC : o(e)
- */
+        SC : o(e)
+        */
 public class DijkstraAlgorithm {
+
 
     int V;
     int[] distance;
@@ -27,7 +28,7 @@ public class DijkstraAlgorithm {
     }
 
     public int findShortestPath(Graph graph, int source, int destination){
-        PriorityQueue<Pair> pq = new PriorityQueue<>((a,b) -> a.distance-b.distance);
+        PriorityQueue<Pair> pq = new PriorityQueue<>((a, b) -> a.distance-b.distance);
 
         distance[source] =0;
         pq.offer(new Pair(0,source));

@@ -54,7 +54,7 @@ public class MinimumCostToMakeAtLeastOneValidPathInAGrid {
     public int minCost(int[][] grid) {
         int m = grid.length, n = grid[0].length;
 
-        PriorityQueue<Tuple> pq = new PriorityQueue<>((a, b)-> a.cost - b.cost);
+        PriorityQueue<Tuple> pq = new PriorityQueue<Tuple>((a, b)-> a.cost - b.cost);
         pq.offer(new Tuple(0,0,0));
 
         boolean[][] visited = new boolean[m][n];
@@ -81,7 +81,8 @@ public class MinimumCostToMakeAtLeastOneValidPathInAGrid {
         return 0;
     }
 }
-class Tuple{
+
+class Tuple {
     int row, col, cost;
 
     public Tuple(int r, int col, int cost){
@@ -89,4 +90,5 @@ class Tuple{
         this.col = col;
         this.cost = cost;
     }
+
 }
