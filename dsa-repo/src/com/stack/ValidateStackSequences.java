@@ -32,14 +32,20 @@ public class ValidateStackSequences {
         Stack<Integer> st = new Stack<>();
         int i=0,j =0;
         while(i<pushed.length){
+            // until we reach to end of pushed array and
+            // either stack is empty or top of stack is not equal to popped[j]
+            // we push in the stack from pushed array
             while(i<pushed.length && (st.isEmpty() || st.peek()!=popped[j])){
                 st.push(pushed[i++]);
             }
+            // if top of stack is matched with popped[j]
+            // we just pop from stack till top of stack keeps matching
             while(!st.isEmpty() && st.peek()==popped[j]){
                 st.pop();
                 j++;
             }
         }
+        // if stack becomes empty that means its popped sequence can be achieved
         return st.isEmpty();
     }
 }
