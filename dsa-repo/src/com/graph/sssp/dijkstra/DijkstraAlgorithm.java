@@ -82,6 +82,7 @@ class Node{
 
 class Pair{
     int distance, node;
+
     public Pair(int d, int node){
         this.distance = d;
         this.node = node;
