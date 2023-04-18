@@ -75,6 +75,9 @@ public class NumberOfGoodPaths {
         int n = vals.length;
         // Mapping from value to all the nodes having the same value in sorted order of
         // values.
+        // we consider smaller one first as we build the smaller union first so that when we consider
+        // comparatively larger ones, we know that we dd union of smaller ones first and there
+        // is no scope of larger ones to check.
         TreeMap<Integer, List<Integer>> valuesToNodes = new TreeMap<>();
         for (int i = 0; i < n; i++) {
             valuesToNodes.computeIfAbsent(vals[i], value -> new ArrayList<Integer>()).add(i);
@@ -88,6 +91,7 @@ public class NumberOfGoodPaths {
         for (int value : valuesToNodes.keySet()) {
             // For every node in nodes, combine the sets of the node and its neighbors into
             // one set.
+            // here, we create the connected component of same values as end nodes of the path
             for (int node : valuesToNodes.get(value)) {
                 if (!adj.containsKey(node))
                     continue;
@@ -108,6 +112,7 @@ public class NumberOfGoodPaths {
                 group.put(dsu.find(u), group.getOrDefault(dsu.find(u), 0) + 1);
             }
             // For each set of "size", add size * (size + 1) / 2 to the number of goodPaths.
+            // standalone nodes are included. Note C(n, 2) + n = C(n + 1, 2)
             for (int key : group.keySet()) {
                 int size = group.get(key);
                 goodPaths += size * (size + 1) / 2;
