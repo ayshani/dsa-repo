@@ -61,7 +61,7 @@ public class KrusKalAlgorithm {
 
 class UnionFind{
     int[] parent, rank;
-
+    int count;
     public UnionFind(int n){
         parent = new int[n];
         rank = new int[n];
@@ -69,6 +69,7 @@ class UnionFind{
             parent[i] = i;
             rank[i] = 0;
         }
+        count=0;
     }
 
     public int find(int x){
@@ -83,6 +84,7 @@ class UnionFind{
 
         if(parentX==parentY)
             return;
+        count++;
         if(rank[parentX]>rank[parentY]){
             parent[parentY]= parentX;
         } else if(rank[parentX]<rank[parentY]) {
