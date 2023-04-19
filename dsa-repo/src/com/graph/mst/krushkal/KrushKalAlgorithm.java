@@ -1,6 +1,6 @@
 package com.graph.mst.krushkal;
 /*
-https://www.scaler.com/topics/data-structures/kruskal-algorithm/add-a-link/
+https://www.scaler.com/topics/data-structures/kruskal-algorithm/
 
 KrushKal Algorithm
 ------------------
