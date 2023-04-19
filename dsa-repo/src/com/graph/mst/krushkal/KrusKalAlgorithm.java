@@ -2,7 +2,7 @@ package com.graph.mst.krushkal;
 /*
 https://www.scaler.com/topics/data-structures/kruskal-algorithm/
 
-KrushKal Algorithm
+KrusKal Algorithm
 ------------------
 Kruskal's algorithm is a greedy algorithm in graph theory that is used to find the Minimum
 spanning tree (A subgraph of a graph G(V,E) which is a tree and includes all the vertices of the given graph
@@ -32,15 +32,15 @@ E edges of the given graph so the space complexity is O(E).
 
 import java.util.Arrays;
 
-public class KrushKalAlgorithm {
+public class KrusKalAlgorithm {
 
     public static void main(String[] args) {
         int[][] edges = new int[][]{
                 {0,1,7},{0,2,8},{1,2,3},{1,4,6},{2,3,3},{2,4,4},{3,4,2},{3,5,2},{4,5,2}
         };
-        System.out.println(new KrushKalAlgorithm().getMinimumCostFromKrushKalAlgorithm(edges,6));
+        System.out.println(new KrusKalAlgorithm().getMinimumCostFromKrusKalAlgorithm(edges,6));
     }
-    public int getMinimumCostFromKrushKalAlgorithm(int[][] edges, int n){
+    public int getMinimumCostFromKrusKalAlgorithm(int[][] edges, int n){
 
         int minCost =0;
 
