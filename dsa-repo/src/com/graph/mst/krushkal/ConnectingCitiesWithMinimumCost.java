@@ -32,7 +32,7 @@ public class ConnectingCitiesWithMinimumCost {
         System.out.println(new ConnectingCitiesWithMinimumCost().minimumCost(n,edges));
     }
     public int minimumCost(int n, int[][] connections) {
-
+        // took n+1 as node starts with 1 not 0
         UnionFind uf = new UnionFind(n+1);
         Arrays.sort(connections, (a, b) -> a[2]-b[2]);
         int minCost =0;
