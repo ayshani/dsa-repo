@@ -76,7 +76,6 @@ public class MaximumWidthOfBinaryTree {
                     q.offer(new MyNode(current.right, 2*index+1));
                 }
             }
-
             currentWidth = end - start +1;
             maxWidth = Math.max(maxWidth, currentWidth);
         }
