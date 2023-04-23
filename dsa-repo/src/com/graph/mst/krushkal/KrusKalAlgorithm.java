@@ -81,6 +81,9 @@ class UnionFind{
         return parent[x];
     }
 
+    // find parent withing strictly less than limit
+    // incase its not possible to get, we return the x itself.
+    // not doing any path compression
     public int find(int x, int limit){
         if(x==parent[x]|| weight[x]>=limit)
             return x;
@@ -103,7 +106,10 @@ class UnionFind{
         }
     }
 
+    // we are finding actual parent of the node and doing union of both of them
     public void union(int x, int y, int limit, int imax){
+        // sending imax as we don't care amy any limit when we are finding parent.
+        // its only finding parent irrespective of the limit.
         int parentX = find(x,imax), parentY = find(y,imax);
         if(parentX ==parentY)
             return;

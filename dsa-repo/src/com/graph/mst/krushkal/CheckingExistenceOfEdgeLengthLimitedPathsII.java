@@ -63,12 +63,18 @@ class DistanceLimitedPathsExist {
     final int imax = Integer.MAX_VALUE;
     public DistanceLimitedPathsExist(int n, int[][] edgeList) {
         uf = new UnionFind(n);
+        // sorting in ascending order
         Arrays.sort(edgeList, (a, b) -> a[2]-b[2]);
+
+        // as we start from smallest weight, so technically, we are making the edge[0]
+        // of smallest weighted edge as the parent of the component and so does the weight
+        // in UnionFind gets calculated.
         for(int[] edge : edgeList){
             uf.union(edge[0], edge[1], edge[2],imax);
         }
     }
 
+    // here we find the parent within limit
     public boolean query(int p, int q, int limit) {
         return uf.find(p,limit)==uf.find(q,limit);
     }
