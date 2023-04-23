@@ -60,14 +60,16 @@ public class KrusKalAlgorithm {
 }
 
 class UnionFind{
-    int[] parent, rank;
+    int[] parent, rank, weight;
     int count;
     public UnionFind(int n){
         parent = new int[n];
         rank = new int[n];
+        weight = new int[n];
         for(int i=0;i<n;i++) {
             parent[i] = i;
             rank[i] = 0;
+            weight[i]=0;
         }
         count=0;
     }
@@ -77,6 +79,12 @@ class UnionFind{
             return x;
         parent[x] =  find(parent[x]);
         return parent[x];
+    }
+
+    public int find(int x, int limit){
+        if(x==parent[x]|| weight[x]>=limit)
+            return x;
+        return find(parent[x], limit);
     }
 
     public void union(int x, int y){
@@ -91,6 +99,23 @@ class UnionFind{
             parent[parentX]= parentY;
         } else {
             parent[parentY]= parentX;
+            rank[parentX]++;
+        }
+    }
+
+    public void union(int x, int y, int limit, int imax){
+        int parentX = find(x,imax), parentY = find(y,imax);
+        if(parentX ==parentY)
+            return;
+        if(rank[parentY]<rank[parentX]){
+            parent[parentY] = parentX;
+            weight[parentY] = limit;
+        } else if(rank[parentY]>rank[parentX]){
+            parent[parentX] = parentY;
+            weight[parentX] = limit;
+        } else{
+            parent[parentY] = parentX;
+            weight[parentY] = limit;
             rank[parentX]++;
         }
     }
