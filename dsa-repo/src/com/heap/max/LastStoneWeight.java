@@ -31,7 +31,6 @@ we combine 1 and 1 to get 0 so the array converts to [1] then that's the value o
 TC : o(nlogn)
  */
 public class LastStoneWeight {
-
     public static void main(String[] args) {
         int[] stones = new int[]{2,7,4,1,8,1};
         System.out.println(new LastStoneWeight().lastStoneWeight(stones));
