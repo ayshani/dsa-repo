@@ -125,4 +125,8 @@ class UnionFind{
             rank[parentX]++;
         }
     }
+
+    public void reset(int x) {
+        parent[x]=x;
+    }
 }

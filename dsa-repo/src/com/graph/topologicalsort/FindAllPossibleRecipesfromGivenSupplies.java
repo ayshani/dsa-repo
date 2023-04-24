@@ -75,6 +75,7 @@ public class FindAllPossibleRecipesfromGivenSupplies {
             int notAvailableIngredient =0;
             for(String ingredient : ingredients.get(i)){
                 if(!available.contains(ingredient)){
+                    // this ingredient can have this recipe
                     ingredientToRecipes.computeIfAbsent(ingredient, s-> new HashSet<>()).add(recipes[i]);
                     notAvailableIngredient++;
                 }
