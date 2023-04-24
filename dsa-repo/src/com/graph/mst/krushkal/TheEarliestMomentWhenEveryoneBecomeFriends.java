@@ -53,6 +53,8 @@ public class TheEarliestMomentWhenEveryoneBecomeFriends {
         UnionFind uf = new UnionFind(n);
         for(int[] log : logs){
             uf.union(log[1],log[2]);
+            // once we get all connected edges in one component
+            // we return the timestamp. and we don't look any further
             if(uf.count==1){
                 return log[0];
             }
