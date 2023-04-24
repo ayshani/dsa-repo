@@ -1,6 +1,7 @@
 package com.graph.unionfind;
 
 public class UnionFind {
+    public int count;
     int[] parent;
     int[] rank;
 
@@ -10,6 +11,7 @@ public class UnionFind {
         for(int i=0;i<size;i++){
             parent[i] =i;
         }
+        count=size;
     }
 
     public int find(int x){
@@ -38,5 +40,15 @@ public class UnionFind {
         int xSet = find(x), ySet = find(y);
 
         return xSet==ySet;
+    }
+
+    public boolean unionWithoutRanking(int x, int y){
+        int xSet = find(x), ySet = find(y);
+
+        if(xSet==ySet || ySet!=y)
+            return false;
+        parent[ySet] = xSet;
+        count--;
+        return true;
     }
 }
