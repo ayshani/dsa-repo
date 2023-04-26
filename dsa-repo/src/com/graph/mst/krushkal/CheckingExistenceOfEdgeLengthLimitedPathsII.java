@@ -70,6 +70,8 @@ class DistanceLimitedPathsExist {
         // of smallest weighted edge as the parent of the component and so does the weight
         // in UnionFind gets calculated.
         for(int[] edge : edgeList){
+            // sending imax as we don't care amy any limit when we are finding parent.
+            // its only finding parent irrespective of the limit.
             uf.union(edge[0], edge[1], edge[2],imax);
         }
     }
