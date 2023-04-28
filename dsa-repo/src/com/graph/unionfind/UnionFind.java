@@ -26,7 +26,8 @@ public class UnionFind {
 
         if(xSet==ySet)
             return;
-        else if(rank[xSet]>rank[ySet]){
+        count--;
+        if(rank[xSet]>rank[ySet]){
             parent[ySet] = xSet;
         } else if(rank[xSet]<rank[ySet]){
             parent[xSet] = ySet;
