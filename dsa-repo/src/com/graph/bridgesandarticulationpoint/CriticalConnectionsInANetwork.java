@@ -69,33 +69,32 @@ public class CriticalConnectionsInANetwork {
         low[currentNode] = timer;
         timer++;
 
-        for(int next : graph.get(currentNode)){
+        for(int next : graph.get(currentNode)) {
             // if we get next node as parent, we dont consider this
             // as we are going to consider parent->next edge elimination.
             // so there is no need to consider this. we need to check if we can go
             // to ancestor above the parent.
-            if(next==parent)
+            if (next == parent)
                 continue;
             // if this is first time we are visiting a neighbour
-            if(visited[next]==0){
+            if (visited[next] == 0) {
                 // do the dfs
-                dfs(next, currentNode,graph, visited, inTime, low, bridges);
+                dfs(next, currentNode, graph, visited, inTime, low, bridges);
                 // once dfs is completed, we take the min low of neighbour and it own self
-                low[currentNode] =  Math.min(low[next], low[currentNode]);
+                low[currentNode] = Math.min(low[next], low[currentNode]);
                 // incase the lowest reach time is greater than current node's inTime
                 // that means we can't reach from neighbour to this current node if this current->next
                 // edge is removed
-                if(low[next] > inTime[currentNode] ){
+                if (low[next] > inTime[currentNode]) {
                     bridges.add(Arrays.asList(currentNode, next));
                 }
-            } else{
+            } else {
                 // if we have already visited then we just update our low values
                 // as it can never be a bridge  but we can update our lowest time from this
                 // current node
-                low[currentNode] =  Math.min(low[next], low[currentNode]);
+                low[currentNode] = Math.min(low[next], low[currentNode]);
             }
         }
-
     }
 
     private void buildGraph(int n, List<List<Integer>> connections, List<List<Integer>> graph){
