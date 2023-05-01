@@ -1,4 +1,4 @@
-package com.graph.bridgesandarticulationpoint;
+package com.graph.stronglyconnectedcomponents.bridgesandarticulationpoint;
 
 import java.util.ArrayList;
 import java.util.Arrays;
