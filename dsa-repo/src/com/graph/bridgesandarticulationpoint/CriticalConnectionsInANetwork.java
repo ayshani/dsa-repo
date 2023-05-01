@@ -10,7 +10,8 @@ import java.util.List;
  https://www.youtube.com/watch?v=qrAub5z8FeA&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=55
  bridges are those edges which when deleted, can divide the graph into two or more components.
  this uses Tarjan Algorithm.
- doc - https://takeuforward.org/graph/bridges-in-graph-using-tarjans-algorithm-of-time-in-and-low-time-g-55/
+ doc - https://cp-algorithms.com/graph/bridge-searching.html#algorithm
+       https://www.geeksforgeeks.org/bridge-in-a-graph/
 
 There are n servers numbered from 0 to n - 1 connected by undirected server-to-server connections forming a
 network where connections[i] = [ai, bi] represents a connection between servers ai and bi. Any server can
@@ -90,9 +91,9 @@ public class CriticalConnectionsInANetwork {
                 }
             } else {
                 // if we have already visited then we just update our low values
-                // as it can never be a bridge  but we can update our lowest time from this
+                // as it can never be a bridge  but we can update our lowest time for this
                 // current node
-                low[currentNode] = Math.min(low[next], low[currentNode]);
+                low[currentNode] = Math.min(inTime[next], low[currentNode]);
             }
         }
     }

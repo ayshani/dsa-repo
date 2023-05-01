@@ -89,6 +89,9 @@ public class ArticulationPointI {
                 low[currentNode] = Math.min(low[currentNode], low[next]);
 
                 if(low[next]>= inTime[currentNode] && parent !=-1)
+                    // we only mark this as an articulation point can come multiple times in a flow if it
+                    // has multiple sub trees. Hence, only marking it will eliminate the duplicacy of taking into
+                    // account
                     isAP[currentNode] =1;
                 children++;
             } else{
