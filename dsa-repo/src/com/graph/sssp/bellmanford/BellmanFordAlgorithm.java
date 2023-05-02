@@ -5,6 +5,7 @@ import java.util.Arrays;
 /*
 Bellman Ford Algorithm
 https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/
+https://courses.csail.mit.edu/6.006/fall11/lectures/lecture17.pdf
 
 Given a graph and a source vertex src in the graph, find the shortest paths from src to all vertices in the given
 graph. The graph may contain negative weight edges.
