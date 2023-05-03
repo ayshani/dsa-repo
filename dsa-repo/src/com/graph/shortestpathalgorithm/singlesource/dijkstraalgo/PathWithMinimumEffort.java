@@ -1,4 +1,4 @@
-package com.graph.shortestpathalgorithm.singlesource.dijkstra;
+package com.graph.shortestpathalgorithm.singlesource.dijkstraalgo;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;

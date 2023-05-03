@@ -1,4 +1,4 @@
-package com.graph.shortestpathalgorithm.singlesource.dijkstra;
+package com.graph.shortestpathalgorithm.singlesource.dijkstraalgo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -119,8 +119,6 @@ public class NumberOfRestrictedPathsFromFirstToLastNode {
         return memo[source] = ans;
     }
 }
-
-
 
 class DPair{
     public int destination, weight;

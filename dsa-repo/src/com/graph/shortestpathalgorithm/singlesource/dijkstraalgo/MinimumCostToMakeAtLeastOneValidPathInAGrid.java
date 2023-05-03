@@ -1,4 +1,4 @@
-package com.graph.shortestpathalgorithm.singlesource.dijkstra;
+package com.graph.shortestpathalgorithm.singlesource.dijkstraalgo;
 
 import java.util.PriorityQueue;
 
@@ -41,7 +41,6 @@ TC: o(nlogn)
 SC: o(n)
  */
 public class MinimumCostToMakeAtLeastOneValidPathInAGrid {
-
     public static void main(String[] args) {
         int[][] grid = new int[][]{
                 {1,1,1,1},

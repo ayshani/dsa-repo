@@ -1,4 +1,4 @@
-package com.graph.shortestpathalgorithm.singlesource.dijkstra;
+package com.graph.shortestpathalgorithm.singlesource.dijkstraalgo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,8 +10,6 @@ TC : o(elogv)
         SC : o(e)
         */
 public class DijkstraAlgorithm {
-
-
     int V;
     int[] distance;
     int[] parent;
@@ -72,14 +70,6 @@ public class DijkstraAlgorithm {
     }
 }
 
-class Node{
-    int destination, weight;
-    public Node(int d, int w){
-        this.destination = d;
-        this.weight = w;
-    }
-}
-
 class Pair{
     int distance, node;
 
@@ -92,7 +82,6 @@ class Pair{
 class Graph {
     int V;
     List<List<Node>> adjList;
-
     public Graph(int V){
         this.V = V;
         adjList = new ArrayList<>();
@@ -102,9 +91,18 @@ class Graph {
     }
 
     public void addEdge(int source, int destination, int weight, boolean isDirected){
+        //adjList.get(source).add(new Node(destination,weight));
         adjList.get(source).add(new Node(destination,weight));
         if(!isDirected){
             adjList.get(destination).add(new Node(source,weight));
         }
+    }
+}
+
+class Node{
+    int destination, weight;
+    public Node(int d, int w){
+        this.destination = d;
+        this.weight = w;
     }
 }
