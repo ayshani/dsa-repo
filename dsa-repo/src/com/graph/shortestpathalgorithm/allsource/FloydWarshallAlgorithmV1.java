@@ -3,6 +3,14 @@ package com.graph.shortestpathalgorithm.allsource;
 https://www.youtube.com/watch?v=oNI0rf2P9gE
 https://www.programiz.com/dsa/floyd-warshall-algorithm
 
+The idea is  :
+This algorithm follows the dynamic programming
+we have to check if we can get less weight of an edge via some other vertices apart from its direct end vertices.
+suppose A--B is an edge with weight 10.
+now, there are another two edges : A--C with 2 weight and C---B with weight 5.
+So, instead of connecting A---B , we can connect A--C--B with less weight.
+this what we need to check for all vertices.
+
 Time Complexity
 There are three loops. Each loop has constant complexities. So, the time complexity of the Floyd-Warshall
 algorithm is O(n^3).
