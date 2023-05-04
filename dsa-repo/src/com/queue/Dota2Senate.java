@@ -35,6 +35,7 @@ And in round 2, the first senator can just announce the victory since he is the 
 
 TC : o(n)
 SC : o(n)
+
  */
 public class Dota2Senate {
 
