@@ -27,7 +27,7 @@ public class TarjanAlgorithm {
     int timer =0;
 
     public static void main(String[] args) {
-        int V = 5;
+        /*int V = 5;
         List<List<Integer>> adj = new ArrayList<>();
         for(int i=0;i<V;i++){
             adj.add(new ArrayList<>());
@@ -36,7 +36,30 @@ public class TarjanAlgorithm {
         adj.get(0).add(2);
         adj.get(2).add(1);
         adj.get(0).add(3);
-        adj.get(3).add(4);
+        adj.get(3).add(4);*/
+
+        int V = 11;
+        List<List<Integer>> adj = new ArrayList<>();
+        for(int i=0;i<V;i++){
+            adj.add(new ArrayList<>());
+        }
+        adj.get(0).add(1);
+        adj.get(0).add(3);
+        adj.get(1).add(2);
+        adj.get(1).add(4);
+        adj.get(2).add(0);
+        adj.get(2).add(6);
+        adj.get(3).add(2);
+        adj.get(4).add(5);
+        adj.get(4).add(6);
+        adj.get(5).add(6);
+        adj.get(5).add(7);
+        adj.get(5).add(8);
+        adj.get(5).add(9);
+        adj.get(6).add(4);
+        adj.get(7).add(9);
+        adj.get(8).add(9);
+        adj.get(9).add(8);
 
         System.out.println(new TarjanAlgorithm().tarjans(V,adj));
     }
