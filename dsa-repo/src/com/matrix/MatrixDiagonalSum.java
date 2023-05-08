@@ -15,6 +15,7 @@ Output: 25
 Explanation: Diagonals sum: 1 + 5 + 9 + 3 + 7 = 25
 Notice that element mat[1][1] = 5 is counted only once.
 
+
 TC ; o(n)
 SC : o(1)
  */
