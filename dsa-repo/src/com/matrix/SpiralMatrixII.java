@@ -51,4 +51,32 @@ public class SpiralMatrixII {
 
         return result;
     }
+
+    public int[][] generateMatrixV2(int n) {
+        int[][] res = new int[n][n];
+        int value =1;
+        int top=0,down =n-1,left=0,right=n-1;
+
+        while(left<=right && top<=down){
+            for(int i =left;i<=right;i++){
+                res[top][i] =value++;
+            }
+            top++;
+            for(int i =top;i<=down;i++){
+                res[i][right] =value++;
+            }
+            right--;
+            if(top>down || left>right)
+                break;
+            for(int i =right;i>=left;i--){
+                res[down][i] =value++;
+            }
+            down--;
+            for(int i =down;i>=top;i--){
+                res[i][left] =value++;
+            }
+            left++;
+        }
+        return res;
+    }
 }
