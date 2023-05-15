@@ -12,7 +12,6 @@ Input: head = [1,2,3,4,5], k = 2
 Output: [1,4,3,2,5]
  */
 public class SwappingNodesInALinkedList {
-
     public static void main(String[] args) {
         ListNode head = new ListNode(5);
         head.next = new ListNode(4);
