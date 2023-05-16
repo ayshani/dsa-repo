@@ -42,8 +42,31 @@ public class BulbSwitcher {
 
     public static void main(String[] args) {
         System.out.println(new BulbSwitcher().bulbSwitch(7));
+        System.out.println(new BulbSwitcher().bulbSwitchBinarySearch(7));
     }
     public int bulbSwitch(int n) {
         return (int)Math.sqrt(n);
+
+
+    }
+
+    public int bulbSwitchBinarySearch(int n){
+        long low =0, high = n;
+        long result =0;
+        while(low<=high){
+            long mid = low +(high-low)/2;
+
+            long square = mid*mid;
+
+            if(square== n)
+                return (int)mid;
+            else if(square< n){
+                result = mid;
+                low = mid+1;
+            } else{
+                high = mid-1;
+            }
+        }
+        return (int)result;
     }
 }
