@@ -72,13 +72,14 @@ public class FindTheLongestValidObstacleCourseAtEachPosition {
         int low = 0, high = list.size();
         while(low<high){
             int mid = low+(high-low)/2;
-            if(list.get(mid)>obstacle){
-                high = mid;
-            }
-            else{
+            if(list.get(mid)<=obstacle){
                 low = mid+1;
             }
+            else{
+                high = mid;
+            }
         }
-        return low;
+        return high;
+
     }
 }
