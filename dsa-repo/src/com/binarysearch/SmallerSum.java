@@ -28,10 +28,14 @@ public class SmallerSum {
 
     public static void main(String[] args) {
         int[] arr = new int[]{7, 1, 1, 8, 9, 3, 2, 1};
-        long[] res = new SmallerSum().smallerSum(8,arr);
-        Arrays.stream(res).forEach(e -> System.out.print(e+" "));
+        long[] resv1 = new SmallerSum().smallerSumV1(8,arr);
+        Arrays.stream(resv1).forEach(e -> System.out.print(e+" "));
+        System.out.println();
+        long[] resv2 = new SmallerSum().smallerSumV2(8,arr);
+        Arrays.stream(resv2).forEach(e -> System.out.print(e+" "));
+
     }
-    public long[] smallerSum(int n,int arr[])
+    public long[] smallerSumV1(int n,int arr[])
     {
         int[] temp = arr.clone();
 
@@ -67,5 +71,41 @@ public class SmallerSum {
         }
 
         return ans;
+    }
+
+    public long[] smallerSumV2(int n,int arr[])
+    {
+        int[] temp = arr.clone();
+        Arrays.sort(temp);
+
+        long[] prefixSum = new long[n];
+        prefixSum[0] = temp[0];
+        for(int i=1;i<n;i++){
+            prefixSum[i] = prefixSum[i-1] + temp[i];
+        }
+        long[] res = new long[n];
+
+        for(int i=0;i<n;i++){
+            int lowerBoundIndex = binarySearch(temp, arr[i]);
+            if(lowerBoundIndex==0)
+                res[i] = 0;
+            else
+                res[i] = prefixSum[lowerBoundIndex-1];
+        }
+        return res;
+    }
+
+    private int binarySearch(int[] arr, int target){
+        int low =0, high = arr.length-1;
+
+        while(low<high){
+            int mid = low+(high-low)/2;
+            if(arr[mid]<target){
+                low = mid+1;
+            } else{
+                high = mid;
+            }
+        }
+        return high;
     }
 }
