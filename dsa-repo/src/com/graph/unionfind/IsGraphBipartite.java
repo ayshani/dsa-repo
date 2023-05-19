@@ -29,6 +29,7 @@ SC: o(n)
  */
 public class IsGraphBipartite {
 
+
     public static void main(String[] args) {
         int[][] graph = new int[][]{
                 {1,2,3}, {0,2},{0,1,3},{0,2}
