@@ -1,5 +1,6 @@
 package com.string.manipulation;
 
+import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -13,12 +14,14 @@ import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
+import java.util.TimeZone;
 
 public class Test {
     public static void main(String[] args) throws ParseException {
         Test obj = new Test();
         //obj.parseDate("Mon Dec 28 15:18:16 2021");
-        obj.convertDateV2("29-02-2023");
+        //obj.convertDateV2("29-02-2023");
+        obj.chnageDateFromEpoch();
     }
 
     public void parseDate(String stringDate) throws ParseException {
@@ -69,6 +72,21 @@ public class Test {
         System.out.println(yesterdayExpected);
 
 
+    }
+
+    public void chnageDateFromEpoch(){
+        String syncDateTime = null ;
+
+        try{
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            Date date = new Date(timestamp.getTime());
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd'T'HHmmss.SSS z");
+            dateFormat.setTimeZone(TimeZone.getTimeZone("IST"));
+            syncDateTime = dateFormat.format(date);
+            System.out.println(syncDateTime);
+        } catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
 }
