@@ -29,6 +29,14 @@ myHashSet.add(2);      // set = [1, 2]
 myHashSet.contains(2); // return True
 myHashSet.remove(2);   // set = [1]
 myHashSet.contains(2); // return False, (already removed)
+
+Constraints:
+
+0 <= key <= 106
+At most 104 calls will be made to add, remove, and contains.
+
+TC : o(1)
+SC: o(1)
  */
 public class DesignHashSet {
     public static void main(String[] args) {
