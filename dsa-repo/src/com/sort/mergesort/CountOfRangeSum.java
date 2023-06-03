@@ -60,22 +60,26 @@ public class CountOfRangeSum {
 
         int i = mid+1, j = mid+1;
         for(int k=l;k<=mid;k++){
-            // get the last i for which the sum is <= upper
+            // get the last index where difference of sum is <= upper
             while(i<=r && (nums[i] - nums[k]) <= upper )
                 i++;
-            // get the last j for which the summation is < lower
+            // get the last index where difference of sum is <lower .
+            // i.e. int he last iteration, j will be equal to an index where
+            // the range sum wiil be >=lower
             while(j<=r && (nums[j] - nums[k]) < lower )
                 j++;
 
             /*
              * the logic is we have last i which is upper bound for sum
              * we also have j which is the lower bound of sum i.e. sum >= lower starts from here
-             * So, if we substract j-i, then we have the count for this range of (l,r)
+             * So, if we substract i-j, then we have the count for this range of (l,r)
              */
             count+= i-j;
         }
 
         //merge(nums, l,r);
+        // once this section for (l,r) is done, we can sort it out
+        // so that in larger section, it can be computed properly.
         Arrays.sort(nums,l,r+1);
         return count;
     }
