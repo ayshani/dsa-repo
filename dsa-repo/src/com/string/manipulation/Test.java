@@ -11,17 +11,15 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
-import java.util.Date;
-import java.util.Locale;
-import java.util.Map;
-import java.util.TimeZone;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) throws ParseException {
         Test obj = new Test();
         //obj.parseDate("Mon Dec 28 15:18:16 2021");
         //obj.convertDateV2("29-02-2023");
-        obj.chnageDateFromEpoch();
+        //obj.chnageDateFromEpoch();
+        obj.check();
     }
 
     public void parseDate(String stringDate) throws ParseException {
@@ -89,6 +87,41 @@ public class Test {
         }
     }
 
+
+    public void check(){
+        Employee e1 = new Employee(1,"abc");
+        Employee e2 = new Employee(1,"abc");
+        Map<Employee, String> empMap = new HashMap<>();
+        empMap.put(e1, "employee 1");
+        empMap.put(e2, "employee 2");
+
+        for(int i=0;i<98;i++) {
+            Employee e = new Employee(i, "abc");
+            empMap.put(e, "employee "+i);
+        }
+
+        System.out.println(empMap.size());
+        for(int i=0;i<100;i++){
+            System.out.println("------- "+i+" --------");
+            System.out.println(empMap.get(e1));
+            System.out.println(empMap.get(e2));
+        }
+    }
+
 }
 
+class Employee{
+    int id;
+    String name;
+
+    public Employee(int id, String name){
+        this.id = id;
+        this.name =name;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
+    }
+}
 
