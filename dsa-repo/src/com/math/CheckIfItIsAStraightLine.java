@@ -24,6 +24,7 @@ Output: true
 
     TC : o(n)
     SC : o(1)
+
  */
 public class CheckIfItIsAStraightLine {
     public static void main(String[] args) {
