@@ -3,6 +3,7 @@ package com.binarysearch;
 Allocate minimum number of pages
 
 https://practice.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+https://www.geeksforgeeks.org/allocate-minimum-number-pages/
 
 You have N books, each with Ai number of pages. M students need to be allocated contiguous books, with each student
 getting at least one book. Out of all the permutations, the goal is to find the permutation where the student with

@@ -32,13 +32,13 @@ Then the characters must be same,
 
 if It is 'L'
 then this condition must hold j>= i , if in target string it found at index i and , in st string it found at J
-because we can move 'L' charcater to left , means left in st string ,
-otherwise i should return fase;
+because we can move 'L' character to left , means left in st string ,
+otherwise i should return false;
 
 same with 'R'
 then this condition must hold j<= i , if in target string it found at index i and , in st string it found at J
-because we can move 'R' charcater to right ,means right in st string ,
-otherwise i should return fase;
+because we can move 'R' character to right ,means right in st string ,
+otherwise i should return false;
 
 Time complexityO(N)
 because every time either i increase I , or J , or both

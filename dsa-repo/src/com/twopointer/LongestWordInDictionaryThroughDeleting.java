@@ -29,8 +29,10 @@ If x is a subsequence of s every character of x will be present in s.
 
 Complexity Analysis
 
-Time complexity : O(n⋅xlogn+n⋅x). Here n refers to the number of strings in list d and x refers to average string length.
- Sorting takes O(nlogn) and isSubsequence takes O(x) to check whether a string is a subsequence of another string or not.
+Time complexity : O(n⋅xlogn+n⋅x). Here n refers to the number of strings in list d and x refers to average string
+length.
+ Sorting takes O(nlogn) and isSubsequence takes O(x) to check whether a string is a subsequence of another
+ string or not.
 
 Space complexity : O(logn). Sorting takes O(logn) space in average case.
  */
@@ -41,11 +43,7 @@ public class LongestWordInDictionaryThroughDeleting {
         System.out.println(new LongestWordInDictionaryThroughDeleting().findLongestWord("abpcplea",dict));
     }
     public String findLongestWord(String s, List<String> dictionary) {
-        Collections.sort(dictionary, new Comparator<String>(){
-            public int compare(String s1, String s2){
-                return s1.length()!=s2.length() ? s2.length()-s1.length() : s1.compareTo(s2);
-            }
-        });
+        Collections.sort(dictionary, (s1,s2)->s1.length()!=s2.length() ? s2.length()-s1.length() : s1.compareTo(s2));
 
         for(String wordInDictionary : dictionary){
             if(isSubSequence(wordInDictionary,s))
