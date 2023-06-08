@@ -16,9 +16,16 @@ Example 1:
 Input: nums = [-2,-1,-1,1,2,3]
 Output: 3
 Explanation: There are 3 positive integers and 3 negative integers. The maximum count among them is 3.
+
+TC : o(logn)
+SC: o(1)
  */
 public class MaximumCountOfPositiveIntegerAndNegativeInteger {
 
+    public static void main(String[] args) {
+        int[] nums = new int[]{-2,-1,-1,1,2,3};
+        System.out.println(new MaximumCountOfPositiveIntegerAndNegativeInteger().maximumCount(nums));
+    }
     public int maximumCount(int[] nums) {
         int negative = binarySearch(nums, 0);
         int positive = nums.length - binarySearch(nums, 1);
