@@ -50,8 +50,11 @@ public class FourSum {
                         l = j + 1;
                         r = n - 1;
 
+                        // computing half not to overflow integers
                         long partSum = A[i] + A[j];
+                        // whatever is left
                         long rest = ((long)X - partSum);
+
                         // To find the remaining two elements, move the index
                         // variables (l & r) toward each other.
                         while (l < r)
