@@ -62,6 +62,7 @@ public class LexicographicallySmallestStringAfterSubstringOperation {
             return String.valueOf(cur);
         }
         System.out.println(index);
+        // replace all character between first non-'a' character to second 'a' character with cur-1 character
         for(int i=index;i<n;i++){
             if(cur[i]!='a'){
                 cur[i] = (char)(cur[i]-1);
