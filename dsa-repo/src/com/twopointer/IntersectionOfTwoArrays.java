@@ -1,4 +1,4 @@
-package com.sort;
+package com.twopointer;
 
 import java.util.ArrayList;
 import java.util.Arrays;

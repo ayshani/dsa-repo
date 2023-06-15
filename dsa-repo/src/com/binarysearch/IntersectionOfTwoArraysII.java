@@ -1,7 +1,5 @@
 package com.binarysearch;
 
-import com.sort.IntersectionOfTwoArrays;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
