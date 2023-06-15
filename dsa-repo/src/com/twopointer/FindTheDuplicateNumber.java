@@ -1,4 +1,4 @@
-package com.binarysearch;
+package com.twopointer;
 /*
 287. Find the Duplicate Number
 
