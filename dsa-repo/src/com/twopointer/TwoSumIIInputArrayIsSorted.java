@@ -1,4 +1,4 @@
-package com.binarysearch;
+package com.twopointer;
 
 import java.util.Arrays;
 
@@ -13,32 +13,39 @@ Return the indices of the two numbers, index1 and index2, added by one as an int
 of length 2.
 
 The tests are generated such that there is exactly one solution. You may not use the same element twice.
+
 Your solution must use only constant extra space.
+
+
 
 Example 1:
 
 Input: numbers = [2,7,11,15], target = 9
 Output: [1,2]
 Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].
+TC : o(n)
+SC: o(1)
  */
 public class TwoSumIIInputArrayIsSorted {
 
     public static void main(String[] args) {
-        int target =9, num[] = new int[]{2,7,11,15};
-        System.out.println(Arrays.toString(new TwoSumIIInputArrayIsSorted().twoSum(num, target)));
+        int[] num = new int[]{2,7,11,15};
+        System.out.println(Arrays.toString(new TwoSumIIInputArrayIsSorted().twoSum(num,9)));
     }
     public int[] twoSum(int[] numbers, int target) {
-        int l = 0, r = numbers.length-1;
+        int[] res = new int[2];
+        int l =0, r = numbers.length-1;
 
         while(l<r){
-            if(numbers[l]+ numbers[r] == target){
-                return new int[]{l+1,r+1};
-            } else if(numbers[l]+ numbers[r] < target){
+            if(numbers[l]+ numbers[r]== target){
+                res[0] = l+1;
+                res[1] = r+1;
+                return res;
+            } else if(numbers[l]+ numbers[r]<target){
                 l++;
-            } else{
+            } else
                 r--;
-            }
         }
-        return new int[]{0,0};
+        return res;
     }
 }
