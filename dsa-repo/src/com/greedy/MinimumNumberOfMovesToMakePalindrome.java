@@ -75,7 +75,7 @@ public class MinimumNumberOfMovesToMakePalindrome {
                 }
 
                 // if we scanned whole the string and found
-                // no one the same char swap char on the
+                // no one, the same char swap char on the
                 // start with adjacent char it needs for
                 // case when the first char is not on it's
                 // right place all other parts of the
