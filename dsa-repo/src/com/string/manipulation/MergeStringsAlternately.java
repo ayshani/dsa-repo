@@ -37,7 +37,7 @@ public class MergeStringsAlternately {
         }
 
         if(j<word2.length()){
-            sb.append(word2.substring(j++));
+            sb.append(word2.substring(j));
         }
 
         return sb.toString();
