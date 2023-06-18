@@ -1,4 +1,4 @@
-package com.binarysearch;
+package com.twopointer;
 
 import java.util.Arrays;
 
