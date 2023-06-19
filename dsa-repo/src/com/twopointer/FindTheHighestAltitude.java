@@ -27,11 +27,10 @@ public class FindTheHighestAltitude {
         int n = gain.length;
         if(n==0)
             return 0;
-        int j=1, maxAltitude = 0 ,currentAltitude = 0;
+        int  maxAltitude = 0 ,currentAltitude = 0;
         for(int i=0;i<n;i++){
             currentAltitude = currentAltitude + gain[i];
             maxAltitude = Math.max(maxAltitude,currentAltitude);
-            j++;
         }
 
         return maxAltitude;
