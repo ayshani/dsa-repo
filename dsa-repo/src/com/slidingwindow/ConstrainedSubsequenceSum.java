@@ -24,6 +24,8 @@ Logic
 We need to get the max element in k latest elements in O(1) by using Decreasing Monotonic Queue.
 similar to  239. Sliding Window Maximum problem.
 
+TC : o(n)
+SC: o(n)
 
  */
 public class ConstrainedSubsequenceSum {
@@ -36,6 +38,7 @@ public class ConstrainedSubsequenceSum {
 
     public int constrainedSubsetSum(int[] nums, int k) {
         int n = nums.length;
+        // max sum till now in ith in dp[]
         int[] dp = new int[n];
 
         Deque<Integer> dq = new ArrayDeque<>();
