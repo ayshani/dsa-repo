@@ -1,4 +1,4 @@
-package com.heap.max;
+package com.slidingwindow;
 
 import java.util.Arrays;
 import java.util.Collections;
