@@ -22,7 +22,7 @@ Output: 6
 Explanation: We have two disjoint subsets {1,2,3} and {6}, which have the same sum = 6.
 
 TC : o(3^n)
-SC: o(max different absolute difference)
+SC: o(N * max different absolute difference)
  */
 public class TallestBillboard {
 
