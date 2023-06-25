@@ -21,7 +21,7 @@ Input: rods = [1,2,3,6]
 Output: 6
 Explanation: We have two disjoint subsets {1,2,3} and {6}, which have the same sum = 6.
 
-TC : o(3^n)
+TC : o(n^3)
 SC: o(N * max different absolute difference)
  */
 public class TallestBillboard {
