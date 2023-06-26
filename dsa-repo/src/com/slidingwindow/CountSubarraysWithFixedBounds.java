@@ -1,4 +1,4 @@
-package com.array;
+package com.slidingwindow;
 /*
 2444. Count Subarrays With Fixed Bounds
 
