@@ -26,7 +26,7 @@ public class SortArrayByParity {
         new SortArrayByParity().sortArrayByParity(nums);
         System.out.println(Arrays.toString(nums));
     }
-    public int[] sortArrayByParity(int[] nums) {
+    public int[] sortArrayByParityV2(int[] nums) {
         int n = nums.length;
         int low =0, mid=0, high = n-1;
         while(mid<high){
@@ -41,6 +41,21 @@ public class SortArrayByParity {
                 nums[mid] = nums[high];
                 nums[high] = temp;
                 high--;
+            }
+        }
+        return nums;
+    }
+
+    public int[] sortArrayByParity(int[] nums) {
+        int start =0, end =nums.length-1 ;
+        while(start<end){
+            if(nums[start]%2!=0){
+                int temp = nums[end];
+                nums[end] = nums[start];
+                nums[start] = temp;
+                end--;
+            }else{
+                start++;
             }
         }
         return nums;

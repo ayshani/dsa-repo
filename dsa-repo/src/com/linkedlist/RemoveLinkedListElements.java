@@ -21,6 +21,9 @@ public class RemoveLinkedListElements {
 
         new RemoveLinkedListElements().removeElements(head,6);
         new PrintLinkedList().print(head);
+        System.out.println();
+        new RemoveLinkedListElements().removeElementsV2(head,2);
+        new PrintLinkedList().print(head);
     }
     public ListNode removeElements(ListNode head, int val) {
 
@@ -37,6 +40,25 @@ public class RemoveLinkedListElements {
                 A=A.next;
         }
 
+        return head;
+    }
+
+    public ListNode removeElementsV2(ListNode head, int val) {
+
+        while( head!= null && head.val == val)
+            head= head.next;
+        if(head== null)
+            return head;
+        ListNode cur = head;
+        while(cur.next!= null){
+            if(cur.next.val==val){
+                cur.next  = cur.next.next;
+            }else{
+                cur = cur.next;
+            }
+        }
+        if(cur.val==val)
+            return null;
         return head;
     }
 }
