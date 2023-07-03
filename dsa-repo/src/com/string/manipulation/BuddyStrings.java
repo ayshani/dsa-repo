@@ -48,10 +48,13 @@ public class BuddyStrings {
                     // then there is no way we cna get the answer a|c to problem.
                     // so return false.
 
-                    // incase if thi can be a second swap but either the first characetr with goal does'nt match or another character (second) doesn't match with current character in s, we return false, as if we consider this, it ll be more 2 character swap.
+                    // incase if thi can be a second swap but either the first characetr with goal does'nt match
+                    // or another character (second) doesn't match with current character in s, we return false,
+                    // as if we consider this, it ll be more 2 character swap.
                     return false;
                 } else{
-                    // incase we already encountered one swap, and oppositely both characetr matches, so we get our another swap.
+                    // incase we already encountered one swap, and oppositely both characetr matches,
+                    // so we get our another swap.
                     swap =2;
                 }
             } else if(swapPossible==0 && swap ==0){
