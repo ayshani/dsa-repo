@@ -32,16 +32,15 @@ public class FirstUniqueCharacterInAString {
         System.out.println(new FirstUniqueCharacterInAString().firstUniqChar(s));
     }
     public int firstUniqChar(String s) {
-        Map<Character,Integer> map = new HashMap<>();
+        int[] count = new int[26];
+        int index=-1;
         for(int i=s.length()-1;i>=0;i--){
-            map.put(s.charAt(i),map.getOrDefault(s.charAt(i),0)+1);
+            count[s.charAt(i)-'a']++;
         }
-
         for(int i=0;i<s.length();i++){
-            if(map.get(s.charAt(i))==1)
+            if(count[s.charAt(i)-'a']==1)
                 return i;
         }
-
         return -1;
     }
 }

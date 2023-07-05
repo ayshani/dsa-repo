@@ -32,6 +32,7 @@ public class LongestSubarrayOf1sAfterDeletingOneElement {
     public static void main(String[] args) {
         int[] nums = new int[]{0,1,1,1,0,1,1,0,1};
         System.out.println(new LongestSubarrayOf1sAfterDeletingOneElement().longestSubarray(nums));
+        System.out.println(new LongestSubarrayOf1sAfterDeletingOneElement().longestSubarrayV2(nums));
     }
 
     public int longestSubarray(int[] nums) {
@@ -50,5 +51,18 @@ public class LongestSubarrayOf1sAfterDeletingOneElement {
             res = Math.max(res, j-i);
         }
         return res;
+    }
+
+    public int longestSubarrayV2(int[] nums) {
+        int zeroCount=0, start =0, maxLength=0;
+        for(int i=0;i<nums.length;i++){
+            zeroCount += (nums[i]==0 ? 1 :0);
+
+            while(zeroCount>1){
+                zeroCount -= (nums[start++]==0 ? 1 :0);
+            }
+            maxLength = Math.max(maxLength, i-start);
+        }
+        return maxLength;
     }
 }
