@@ -5,9 +5,11 @@ import java.util.Arrays;
 /*
 1706. Where Will the Ball Fall
 
-You have a 2-D grid of size m x n representing a box, and you have n balls. The box is open on the top and bottom sides.
+You have a 2-D grid of size m x n representing a box, and you have n balls. The box is open on the top and bottom
+sides.
 
-Each cell in the box has a diagonal board spanning two corners of the cell that can redirect a ball to the right or to the left.
+Each cell in the box has a diagonal board spanning two corners of the cell that can redirect a ball to the right
+or to the left.
 
 A board that redirects the ball to the right spans the top-left corner to the bottom-right corner and is represented
 in the grid as 1.
