@@ -66,7 +66,7 @@ public class MinimumAverageDifference {
     public int minimumAverageDifference(int[] nums) {
         int n = nums.length;
         int ans = -1;
-        int minAverageDirrefrence = Integer.MAX_VALUE;
+        int minAverageDifference = Integer.MAX_VALUE;
         long currentPrefixSum =0, totalSum =0;
 
         // Get total sum of array.
@@ -90,8 +90,8 @@ public class MinimumAverageDifference {
 
             // If current difference of averages is smaller,
             // then current index can be our answer.
-            if(currentDifference < minAverageDirrefrence){
-                minAverageDirrefrence = currentDifference;
+            if(currentDifference < minAverageDifference){
+                minAverageDifference = currentDifference;
                 ans = i;
             }
 

@@ -1,4 +1,4 @@
-package com.tree;
+package com.graph.representation;
 
 import java.util.*;
 
