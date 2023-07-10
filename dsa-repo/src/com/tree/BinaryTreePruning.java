@@ -5,7 +5,7 @@ package com.tree;
 Given the root of a binary tree, return the same tree where every subtree
 (of the given tree) not containing a 1 has been removed.
 
-A subtree of a node node is node plus every node that is a descendant of node.
+A subtree of a node  is node plus every node that is a descendant of node.
 
 Example 1:
 
@@ -34,10 +34,10 @@ Also, the parent needs to be checked. If for example the tree is a single node 0
 
 Complexity Analysis
 
-Time Complexity: O(N), where NN is the number of nodes in the tree. We process each node once.
+Time Complexity: O(N), where  is the number of nodes in the tree. We process each node once.
 
 Space Complexity: O(N), the recursion call stack can be as large as the height HH of the tree.
-In the worst case scenario, H=NH=N, when the tree is skewed.
+In the worst case scenario, H=N, when the tree is skewed.
  */
 public class BinaryTreePruning {
     public static void main(String[] args) {

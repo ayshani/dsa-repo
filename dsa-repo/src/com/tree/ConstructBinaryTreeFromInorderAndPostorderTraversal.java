@@ -18,7 +18,7 @@ Output: [3,9,20,null,null,15,7]
 TC : o(n)
 SC: o(n)
  */
-public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
+    public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
 
     public static void main(String[] args) {
         int[] in = new int[]{9,3,15,20,7}, post = new int[]{9,15,7,20,3};

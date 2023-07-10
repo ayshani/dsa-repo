@@ -1,4 +1,4 @@
-package com.math;
+package com.bit.manipulation;
 /*
 231. Power of Two
 
