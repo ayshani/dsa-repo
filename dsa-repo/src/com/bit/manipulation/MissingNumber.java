@@ -1,4 +1,4 @@
-package com.binarysearch;
+package com.bit.manipulation;
 /*
 268. Missing Number
 
@@ -21,7 +21,15 @@ public class MissingNumber {
         int[] nums = new int[]{3,0,1};
         System.out.println(new MissingNumber().missingNumber(nums));
     }
+
     public int missingNumber(int[] nums) {
+        int xor=0, i=0;
+        for(i=0;i<nums.length;i++){
+            xor = xor^i^nums[i];
+        }
+        return xor^i;
+    }
+    public int missingNumberV2(int[] nums) {
         int missingNumber = -1, actualMissingNumber =-1;
 
         int i = nums.length;
