@@ -50,7 +50,8 @@ public class CousinsInBinaryTree {
                     foundY = true;
 
                 if(current.left!= null && current.right!=null){
-                    if((current.left.val==x  && current.right.val == y) ||(current.left.val==y  && current.right.val == x))
+                    if((current.left.val==x  && current.right.val == y)
+                            ||(current.left.val==y  && current.right.val == x))
                         return false;
                 }
 

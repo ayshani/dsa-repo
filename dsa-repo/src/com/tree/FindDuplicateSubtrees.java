@@ -30,16 +30,18 @@ public class FindDuplicateSubtrees {
         root.right.left = new TreeNode(2);
         root.right.left.left = new TreeNode(4);
         root.right.right = new TreeNode(4);
-        System.out.println(new FindDuplicateSubtrees().findDuplicateSubtrees(root));
+        new FindDuplicateSubtrees().findDuplicateSubtrees(root)
+                .forEach(node -> {new TreeTraversal().printTreeLevelOrder(node);
+                                  System.out.println();});
     }
-    public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
+        public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
         HashMap<String, TreeNode> map = new HashMap<>();
         Set<TreeNode> set = new HashSet<>();
         util(root, map,set);
-        List<TreeNode> res = new ArrayList<>();
-        for(TreeNode node : set){
-            res.add(node);
-        }
+        List<TreeNode> res = new ArrayList<>(set);
+//        for(TreeNode node : set){
+//            res.add(node);
+//        }
         return res;
     }
 
