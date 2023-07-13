@@ -60,13 +60,9 @@ public class FindModeInBinarySearchTree {
     void findMode(TreeNode root, Map<Integer,Integer> map){
         if(root==null)
             return;
-        if(map.containsKey(root.val)){
-            int count = map.get(root.val)+1;
-            map.put(root.val, count);
-            maxCount = Math.max(maxCount,count);
-        }
-        else
-            map.put(root.val,1);
+
+        map.put(root.val, map.getOrDefault(root.val,0)+1);
+        maxCount = Math.max(maxCount,map.get(root.val));
 
         findMode(root.left,map);
         findMode(root.right,map);
