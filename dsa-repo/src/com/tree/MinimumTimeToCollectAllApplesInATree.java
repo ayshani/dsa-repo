@@ -60,6 +60,8 @@ public class MinimumTimeToCollectAllApplesInATree {
             int childTime = dfs(child,node,adj,hasApple);
 
             if(childTime>0 || hasApple.get(child)){
+                // we are adding 2 because, we are traversing the same edge two times.
+                // one time for reaching the node, another time for returning.
                 totalTime+= childTime+2;
             }
         }
