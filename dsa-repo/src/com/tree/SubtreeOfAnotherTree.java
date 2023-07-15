@@ -40,7 +40,7 @@ public class SubtreeOfAnotherTree {
 
         StringBuilder subRootTraversal = new StringBuilder();
         // serialize subtree nodes
-        serialize(root, subRootTraversal);
+        serialize(subRoot, subRootTraversal);
         String pattern = subRootTraversal.toString();
 
         if(s.contains(pattern))

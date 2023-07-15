@@ -36,4 +36,40 @@ Time complexity: O(N) since one has to visit each node, check if at most one dig
 Space complexity: up to O(H) to keep the recursion stack, where H is a tree height.
  */
 public class Pseudo_PalindromicPathsInABinaryTree {
+
+    int count =0;
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(2);
+        root.left = new TreeNode(3);
+        root.right = new TreeNode(1);
+        root.left.left = new TreeNode(3);
+        root.left.right = new TreeNode(1);
+        root.right.right = new TreeNode(1);
+        System.out.println(new Pseudo_PalindromicPathsInABinaryTree().pseudoPalindromicPaths(root));
+
+    }
+    public int pseudoPalindromicPaths (TreeNode root) {
+        preorder(root,0);
+        return count;
+    }
+
+    private void preorder(TreeNode root, int path){
+        if(root==null)
+            return;
+        // compute occurences of each digit
+        // in the corresponding register
+        System.out.println("path before: "+path);
+        path = path^(1<< root.val);
+        System.out.println("path after: "+path);
+        // if it's a leaf check if the path is pseudo-palindromic
+        if(root.left==null && root.right==null){
+            // check if at most one digit has an odd frequency
+            if((path&(path-1))==0)
+                count++;
+        }
+
+        preorder(root.left,path);
+        preorder(root.right,path);
+    }
 }

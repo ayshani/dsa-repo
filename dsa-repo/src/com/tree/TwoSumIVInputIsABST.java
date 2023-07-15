@@ -45,12 +45,12 @@ public class TwoSumIVInputIsABST {
         return false;
     }
 
-    private void inorder(TreeNode root, Map<Integer,Integer> set){
+    private void inorder(TreeNode root, Map<Integer,Integer> map){
         if(root==null)
             return;
-        inorder(root.left, set);
+        inorder(root.left, map);
 
-        set.put(root.val, set.getOrDefault(root.val,0)+1);
-        inorder(root.right,set);
+        map.put(root.val, map.getOrDefault(root.val,0)+1);
+        inorder(root.right,map);
     }
 }

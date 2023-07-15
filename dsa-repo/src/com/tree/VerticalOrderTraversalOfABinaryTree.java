@@ -46,15 +46,13 @@ public class VerticalOrderTraversalOfABinaryTree {
         if(root == null)
             return result;
         PriorityQueue<Point> pq = new PriorityQueue<>(
-                new Comparator<Point>(){
-                    public int compare(Point p1, Point p2){
-                        if(p1.x !=p2.x)
-                            return p1.x-p2.x;
-                        else if(p1.y!=p2.y)
-                            return p2.y-p1.y;
-                        else
-                            return p1.val-p2.val;
-                    }
+                (p1, p2) -> {
+                    if (p1.x != p2.x)
+                        return p1.x - p2.x;
+                    else if (p1.y != p2.y)
+                        return p2.y - p1.y;
+                    else
+                        return p1.val - p2.val;
                 }
         );
 
