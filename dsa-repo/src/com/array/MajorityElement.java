@@ -18,7 +18,8 @@ SC: o(1)
 public class MajorityElement {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{2,2,1,1,1,2,2};
+        //int[] nums = new int[]{2,2,1,1,1,2,2};
+        int[] nums = new int[]{9,5,5,1,1};
         System.out.println(new MajorityElement().majorityElement(nums));
     }
     public int majorityElement(int[] nums) {
