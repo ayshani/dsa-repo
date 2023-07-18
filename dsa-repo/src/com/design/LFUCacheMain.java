@@ -83,6 +83,7 @@ public class LFUCacheMain {
 
 
 class LFUCache {
+
     // key: original key, value: frequency and original value.
     private Map<Integer, Pair> cache;
     // key: frequency, value: All keys that have the same frequency.
