@@ -55,13 +55,14 @@ public class AsteroidCollision {
                 // thet pop it out until previous element is +ve>cur or -ve
                 while(!st.isEmpty() && st.peek()>0 && -cur > st.peek())
                     st.pop();
-                // incase previous element is -ve and its value is same as
-                // current one, then pop it
+                // incase, stack is not empty and
+                // incase previous element is +ve and its value is same as
+                // current -ve element's one, only difference is in direction, then pop it
                 if(!st.isEmpty() && st.peek()==-cur)
                     st.pop();
                     // incase, stack is empty
-                    // one the prev value is -v1, the current -ve is also added
-                    // as there ll be no collisions.
+                    //  or the prev value is -ve, the current -ve is also added
+                    // as there will be no collisions.
                 else if(st.isEmpty() || st.peek()<0)
                     st.push(cur);
 
