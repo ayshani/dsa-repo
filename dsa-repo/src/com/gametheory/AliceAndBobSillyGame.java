@@ -48,28 +48,26 @@ Alice
 public class AliceAndBobSillyGame {
 
     public static void main(String[] args) {
-        System.out.println(AliceAndBobSillyGame.sillyGame(1));
+        System.out.println(AliceAndBobSillyGame.sillyGame(5));
     }
     public static String sillyGame(int n) {
         // Write your code here
-        int size = (int)Math.sqrt(n);
-        if(size==1)
-            return "Bob";
-        long[] prime = new long[n];
-        Arrays.fill(prime,1l);
-        prime[0] = prime[1] = 0;
-        for(int i=2;i<(int)Math.sqrt(n);i++){
-            if(prime[i]==0l)
+        boolean[] prime = new boolean[n+1];
+        Arrays.fill(prime,true);
+        prime[0] = prime[1] = false;
+        for(int i=2;i*i<=n;i++){
+            if(!prime[i])
                 continue;
-            for(long j= i*i;j<size;j+=i){
-                prime[(int)j]= 0;
+            for(int j= i*i;j<=n;j+=i){
+                prime[j]= false;
             }
         }
-
-        for(int i=1;i<size;i++){
-            prime[i] += prime[i-1];
+        int count =0;
+        for(int i=1;i<=n;i++){
+            if(prime[i])
+                count++;
         }
-        if((prime[size-1]%2)==0)
+        if(n==1 || count%2==0 )
             return "Bob";
         return "Alice";
     }
