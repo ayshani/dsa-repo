@@ -1,6 +1,7 @@
 package com.gametheory;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 /*
 Tower Breakers
@@ -40,60 +41,38 @@ Sample Output
 1
 2
  */
-public class TowerBreakersAgain {
-    static ArrayList<Integer>[] divisors = new ArrayList[(int)1e6+1];
+public class TowerBreakersRevisited {
+
+    static int[] primeCount = new int[(int)1e6+1];
 
     public static void main(String[] args) {
-        TowerBreakersAgain.seive();
-        Arrays.fill(divisors, new ArrayList<Integer>());
+        TowerBreakersRevisited.seive();
         List<Integer> list = Arrays.asList(1,2,3);
-        System.out.println(TowerBreakersAgain.towerBreakers(list));
+        System.out.println(TowerBreakersRevisited.towerBreakers(list));
     }
-    static Map<Integer,Integer> map = new HashMap<>();
     public static void seive(){
         boolean[] prime = new boolean[(int)1e6+1];
         Arrays.fill(prime,true);
         prime[0] = prime[1] = false;
         for(int i=2;i<= (int)1e6;i++){
             if(prime[i]){
+                primeCount[i]=1;
                 for(int j=i*2;j<=(int)1e6; j+=i){
                     prime[j]= false;
-                    if(divisors[j]==null)
-                        divisors[j] = new ArrayList<>();
-                    divisors[j].add(i);
+                    int temp = j;
+                    while(temp%i==0){
+                        primeCount[j]++;
+                        temp/=i;
+                    }
                 }
             }
         }
-    }
-
-    public static int grundy(int n){
-        if(n==1)
-            return 0;
-        if(map.containsKey(n))
-            return map.get(n);
-        Set<Integer> set = new HashSet<>();
-        for(int y : divisors[n]){
-            int z = n/y;
-            int g = grundy(z);
-            if(y%2==0)
-                g=0;
-            set.add(g);
-        }
-        int mex =0;
-        for(int i=0;;i++){
-            if(!set.contains(i)) {
-                mex = i;
-                break;
-            }
-        }
-        map.put(n, mex);
-        return mex;
     }
     public static int towerBreakers(List<Integer> arr) {
         // Write your code here
         int nimSum =0;
         for(int i=0;i<arr.size();i++){
-            nimSum ^= grundy(arr.get(i));
+            nimSum ^= primeCount[arr.get(i)];
         }
         if(nimSum!=0)
             return 1;
