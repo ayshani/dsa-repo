@@ -5,6 +5,7 @@ public class TreeNode {
     TreeNode left;
     TreeNode right;
     TreeNode next;
+    TreeNode random;
     TreeNode() {}
 
     TreeNode(int x) { val = x; }
@@ -13,6 +14,13 @@ public class TreeNode {
         this.val = val;
         this.left = left;
         this.right = right;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right, TreeNode random) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+        this.random = random;
     }
 
     @Override
