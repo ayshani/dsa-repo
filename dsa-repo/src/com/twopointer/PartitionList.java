@@ -62,9 +62,7 @@ public class PartitionList {
         }
 
         after.next = null;
-
         before.next = after_head.next;
-
         return before_head.next;
     }
 }
