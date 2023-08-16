@@ -71,6 +71,7 @@ public class SlidingWindowMaximum {
             while(!dq.isEmpty() && nums[dq.peekLast()]<nums[i]){
                 dq.pollLast();
             }
+
             dq.offerLast(i);
             if(i >= k-1){
                 res[i-k+1]=nums[dq.peekFirst()];
