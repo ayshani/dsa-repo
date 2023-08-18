@@ -35,6 +35,7 @@ iterate over every vertex
 
 TC : o(n^2)
 SC : o(n)
+
  */
 public class MaximalNetworkRank {
 
