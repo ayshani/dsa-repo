@@ -28,7 +28,6 @@ The edges 2, 3, 4, and 5 are only part of some MSTs, therefore they are consider
 We add them to the second list of the output.
 
 
-
 TC : o(E*ElogE)
 SC: o(N*3)
  */
