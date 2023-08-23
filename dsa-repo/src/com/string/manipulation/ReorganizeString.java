@@ -11,8 +11,6 @@ Given a string s, rearrange the characters of s so that any two adjacent charact
 
 Return any possible rearrangement of s or return "" if not possible.
 
-
-
 Example 1:
 
 Input: s = "aab"
