@@ -64,9 +64,9 @@ public class WordLadderII {
         list = new LinkedList<String>();
         map = new HashMap<String,List<String>>();
 
-        Queue<String> queue= new ArrayDeque<String>();
-        Set<String> unvisited = new HashSet<String>(dict);
-        Set<String> visited = new HashSet<String>();
+        Queue<String> queue= new ArrayDeque<>();
+        Set<String> unvisited = new HashSet<>(dict);
+        Set<String> visited = new HashSet<>();
 
         queue.add(start);
         unvisited.add(end);
