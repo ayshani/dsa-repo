@@ -28,7 +28,9 @@ To simplify this if we assume that we have a watch in our hand, and we start wal
 Intime – When we visit the node for the first time
 Outtime- If we again visit the node later but there are no children unvisited we call it outtime,
 
-Note: Any node in its sub-tree will always have intime < its children (or children of children) because it is always visited first before children (due to DFS) and will have outtime > all nodes in its sub-tree because before noting the outtime it waits for all of its children to be marked visited.
+Note: Any node in its sub-tree will always have intime < its children (or children of children) because it is always
+visited first before children (due to DFS) and will have outtime > all nodes in its sub-tree because before noting
+the outtime it waits for all of its children to be marked visited.
 
 For any two nodes u, v if they are in the same path then,
 
