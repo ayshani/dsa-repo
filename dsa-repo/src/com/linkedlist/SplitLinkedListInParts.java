@@ -57,7 +57,6 @@ public class SplitLinkedListInParts {
                 if(cur!=null)
                     cur = cur.next;
             }
-
             if(cur!=null){
                 ListNode prev = cur;
                 cur = cur.next;
@@ -66,7 +65,6 @@ public class SplitLinkedListInParts {
 
             ans[i] = head;
         }
-
         return ans;
     }
 }
