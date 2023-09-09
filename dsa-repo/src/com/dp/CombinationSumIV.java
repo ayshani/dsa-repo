@@ -27,7 +27,6 @@ The possible combination ways are:
 (3, 1)
 Note that different sequences are counted as different combinations.
 
-
 Logic
 ------
 Take a dp[] of target+1 size.
