@@ -125,6 +125,9 @@ public class DominoAndTrominoTiling {
 
     public static void main(String[] args) {
         System.out.println(new DominoAndTrominoTiling().numTilings(3));
+        System.out.println(new DominoAndTrominoTiling().numTilingsV2(3));
+
+
     }
     public int numTilings(int n) {
         int MOD = 1_000_000_007;
@@ -145,5 +148,32 @@ public class DominoAndTrominoTiling {
             p[k] = (p[k - 1] + f[k - 2]) % MOD;
         }
         return (int) (f[n]);
+    }
+
+    //https://leetcode.com/problems/domino-and-tromino-tiling/solutions/116581/detail-and-explanation-of-o-n-solution-why-dp-n-2-d-n-1-dp-n-3/?envType=study-plan-v2&envId=leetcode-75
+    /*
+    when N==0, we need return 0, but in dp , we need make dp[0]=1 for easy to construct formula
+    dp[n]=dp[n-1]+dp[n-2]+ 2*(dp[n-3]+...+d[0])
+            =dp[n-1]+dp[n-2]+dp[n-3]+dp[n-3]+2*(dp[n-4]+...+d[0])
+            =dp[n-1]+dp[n-3]+(dp[n-2]+dp[n-3]+2*(dp[n-4]+...+d[0]))
+            =dp[n-1]+dp[n-3]+dp[n-1]
+            =2*dp[n-1]+dp[n-3]
+     */
+    public int numTilingsV2(int n) {
+        int MOD = 1_000_000_007;
+        // handle base case scenarios
+        if (n <= 2) {
+            return n;
+        }
+        long[] dp = new long[n+1];
+        dp[1] =1;
+        dp[2] = 2;
+        dp[3] = 5;
+        if(n<=3)
+            return (int)dp[n];
+        for(int i=4;i<=n;i++){
+            dp[i] = (2*dp[i-1] + dp[i-3])%MOD;
+        }
+        return (int)dp[n];
     }
 }
