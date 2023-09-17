@@ -90,7 +90,6 @@ public class LRUCache {
             return result;
         } else
             return -1;
-
     }
 
     public void put(int key, int value) {
@@ -123,7 +122,6 @@ public class LRUCache {
         node.next.prev = node;
         node.prev = head;
         head.next = node;
-
     }
 }
 
