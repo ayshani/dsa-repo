@@ -56,10 +56,8 @@ public class TheKWeakestRowsInAMatrix {
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) ->
                 a[0]==b[0] ? a[1]-b[1]:
                         a[0]-b[0]);
-
         for(int i=0;i<n;i++){
             int[] temp = mat[i];
-
             pq.offer(new int[]{Arrays.stream(temp).sum(),i});
         }
         for(int i=0;i<k;i++){
