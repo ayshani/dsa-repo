@@ -46,7 +46,6 @@ public class TheKWeakestRowsInAMatrix {
         };
 
         int[] res = new TheKWeakestRowsInAMatrix().kWeakestRows(mat,3);
-
         Arrays.stream(res).forEach(e-> System.out.print(e +" "));
     }
     public int[] kWeakestRows(int[][] mat, int k) {
