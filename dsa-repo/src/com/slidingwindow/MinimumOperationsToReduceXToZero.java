@@ -30,7 +30,6 @@ public class MinimumOperationsToReduceXToZero {
         int i = 0, j = 0, currSum = 0, target = total - x, result = -1;
         if (target < 0) return -1;
         if (target == 0) return nums.length;
-
         while (j < nums.length) {
             currSum += nums[j];
             while (currSum >= target) {
