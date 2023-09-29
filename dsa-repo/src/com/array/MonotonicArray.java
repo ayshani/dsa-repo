@@ -9,8 +9,6 @@ An array nums is monotone decreasing if for all i <= j, nums[i] >= nums[j].
 
 Given an integer array nums, return true if the given array is monotonic, or false otherwise.
 
-
-
 Example 1:
 
 Input: nums = [1,2,2,3]
