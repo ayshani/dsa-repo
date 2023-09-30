@@ -10,8 +10,6 @@ nums[k] such that i < j < k and nums[i] < nums[k] < nums[j].
 
 Return true if there is a 132 pattern in nums, otherwise, return false.
 
-
-
 Example 1:
 
 Input: nums = [1,2,3,4]
