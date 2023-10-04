@@ -77,4 +77,5 @@ class MyHashMap {
     public void remove(int key) {
         flag[key] = -1;
     }
+
 }
