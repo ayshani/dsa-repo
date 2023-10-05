@@ -25,6 +25,8 @@ Output: [1,2]
 
 TC : o(n)
 SC: o(1)
+
+https://gregable.com/2013/10/majority-vote-algorithm-find-majority.html
  */
 public class MajorityElementII {
 
