@@ -31,9 +31,7 @@ public class BackspaceStringCompare {
 
         if(one.equals(sec))
             return true;
-
         return false;
-
     }
 
     public String getProperString(String s){
