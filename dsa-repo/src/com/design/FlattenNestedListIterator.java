@@ -3,7 +3,6 @@ package com.design;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 /*
 341. Flatten Nested List Iterator
 
@@ -23,8 +22,6 @@ while iterator.hasNext()
     append iterator.next() to the end of res
 return res
 If res matches the expected flattened list, then your code will be judged as correct.
-
-
 
 Example 1:
 
