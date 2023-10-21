@@ -26,7 +26,6 @@ similar to  239. Sliding Window Maximum problem.
 
 TC : o(n)
 SC: o(n)
-
  */
 public class ConstrainedSubsequenceSum {
 
