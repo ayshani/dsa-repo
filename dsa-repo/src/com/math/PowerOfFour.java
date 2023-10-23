@@ -20,7 +20,6 @@ So we can use "num & 0x55555555==num" to check if "1" is located at the odd posi
 
 TC : o(1)
 SC : o(1)
-
  */
 public class PowerOfFour {
 
