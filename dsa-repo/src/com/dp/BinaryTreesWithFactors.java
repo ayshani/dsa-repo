@@ -14,7 +14,6 @@ Each non-leaf node's value should be equal to the product of the values of its c
 
 Return the number of binary trees we can make. The answer may be too large so return the answer modulo 109 + 7.
 
-
 Example 1:
 
 Input: arr = [2,4]
@@ -43,7 +42,7 @@ In our Java implementation, we carefully used long so avoid overflow issues.
 Complexity Analysis
 
 Time Complexity: O(N^2)
-where NN is the length of A. This comes from the two for-loops iterating i and j.
+where N is the length of A. This comes from the two for-loops iterating i and j.
 
 Space Complexity: O(N), the space used by dp and index.
  */
