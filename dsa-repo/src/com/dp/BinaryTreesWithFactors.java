@@ -64,7 +64,7 @@ public class BinaryTreesWithFactors {
         for(int i=0;i<N;i++){
             index.put(A[i],i);
         }
-
+        long ans =0;
         for(int i=0;i<N;i++){
             for(int j=0;j<i;j++){
                 if(A[i]%A[j]==0){
@@ -74,12 +74,8 @@ public class BinaryTreesWithFactors {
                     }
                 }
             }
+            ans+= dp[i];
         }
-
-        long ans =0;
-
-        for(long x: dp)
-            ans+= x;
 
         return (int)(ans%MOD);
     }
