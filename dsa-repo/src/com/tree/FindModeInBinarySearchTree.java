@@ -29,7 +29,6 @@ TC : o(n)
 SC : o(n)
  */
 public class FindModeInBinarySearchTree {
-
     int maxCount =1;
 
     public static void main(String[] args) {
@@ -38,7 +37,6 @@ public class FindModeInBinarySearchTree {
         root.right.left = new TreeNode(2);
 
         int[] res = new FindModeInBinarySearchTree().findMode(root);
-
         Arrays.stream(res).forEach(element -> System.out.print(element+" "));
     }
     public int[] findMode(TreeNode root) {
