@@ -101,13 +101,7 @@ public class RestoreTheArrayFromAdjacentPairs {
     }
 
     private void buildGraph(int key, int value){
-        if(graph.containsKey(key)){
-            graph.get(key).add(value);
-        } else{
-            List<Integer> lst = new ArrayList<>();
-            lst.add(value);
-            graph.put(key,lst);
-        }
+        graph.computeIfAbsent(key, va -> new ArrayList<>()).add(value);
     }
 
     private void dfs(Set<Integer> visited, List<Integer> resultList, int start){
