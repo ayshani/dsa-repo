@@ -37,7 +37,6 @@ TC : o(nlogn)
 SC : o(n)
  */
 public class FrequencyOfTheMostFrequentElement {
-
     public static void main(String[] args) {
         int[] nums = new int[]{1,4,8,13};
         int k =5;
