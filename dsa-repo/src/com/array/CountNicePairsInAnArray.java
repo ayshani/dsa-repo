@@ -31,7 +31,6 @@ B[i] = A[i] - rev(A[i])
 Then it becomes an easy question that,
 how many pairs in B with B[i] == B[j]
 
-
 Complexity
 Time O(nloga)
 Space O(n)
