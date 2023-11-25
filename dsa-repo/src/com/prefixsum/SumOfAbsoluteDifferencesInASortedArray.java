@@ -12,8 +12,6 @@ is equal to the summation of absolute differences between nums[i] and all the ot
 
 In other words, result[i] is equal to sum(|nums[i]-nums[j]|) where 0 <= j < nums.length and j != i (0-indexed).
 
-
-
 Example 1:
 
 Input: nums = [2,3,5]
