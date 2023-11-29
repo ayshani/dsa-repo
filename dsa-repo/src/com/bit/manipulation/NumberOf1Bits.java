@@ -32,6 +32,7 @@ public class NumberOf1Bits {
             n = n&(n-1);
             count++;
         }
+
         return count;
     }
 }
