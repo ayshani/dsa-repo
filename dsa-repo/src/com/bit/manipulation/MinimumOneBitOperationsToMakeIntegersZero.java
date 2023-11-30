@@ -31,12 +31,15 @@ public class MinimumOneBitOperationsToMakeIntegersZero {
     }
 
     private int minimumOneBitOperations(int n, int res){
+        System.out.println("n before "+ n);
         if(n==0)
             return res;
         int b = 1;
         while((b<<1)<=n){
             b= b<<1;
+            System.out.println("b in "+ b);
         }
+        System.out.println("b after "+ b);
         return minimumOneBitOperations((b>>1)^b^n, res+b);
     }
 }
