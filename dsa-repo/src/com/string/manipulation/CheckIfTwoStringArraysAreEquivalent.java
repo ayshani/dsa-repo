@@ -30,12 +30,10 @@ public class CheckIfTwoStringArraysAreEquivalent {
         for(String s : word1){
             sb.append(s);
         }
-
         StringBuilder se = new StringBuilder();
         for(String s : word2){
             se.append(s);
         }
-
         if(sb.toString().equals(se.toString()))
             return true;
 
