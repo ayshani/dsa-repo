@@ -54,6 +54,7 @@ public class ConstructStringFromBinaryTree {
 
         System.out.println(new ConstructStringFromBinaryTree().tree2str(root));
     }
+
     public String tree2str(TreeNode root) {
         if(root==null)
             return "";
