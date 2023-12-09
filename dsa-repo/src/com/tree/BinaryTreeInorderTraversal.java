@@ -32,7 +32,6 @@ public class BinaryTreeInorderTraversal {
 
         return result;
     }
-
     private void inorder(TreeNode root, List<Integer> result){
         if(root==null)
             return;
