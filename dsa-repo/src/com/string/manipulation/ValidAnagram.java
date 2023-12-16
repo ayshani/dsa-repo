@@ -33,7 +33,6 @@ public class ValidAnagram {
         ValidAnagram obj = new ValidAnagram();
         System.out.println(obj.isAnagram(s,t));
     }
-
     public boolean isAnagram(String s, String t) {
         if(t.length()!=s.length())
             return false;
