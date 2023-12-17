@@ -44,7 +44,7 @@ public class ArithmeticSubarrays {
         System.out.println(new ArithmeticSubarrays().
                 checkArithmeticSubarrays(new int[]{4,6,5,9,3,7}, new int[]{0,0,2}, new int[]{2,3,5}));
     }
-
+    
     public List<Boolean> checkArithmeticSubarrays(int[] nums, int[] l, int[] r) {
         List<Boolean> ans = new ArrayList();
         for (int i = 0; i < l.length; i++) {
