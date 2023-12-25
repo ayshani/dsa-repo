@@ -19,8 +19,6 @@ Given a string s containing only digits, return the number of ways to decode it.
 
 The test cases are generated so that the answer fits in a 32-bit integer.
 
-
-
 Example 1:
 
 Input: s = "12"
@@ -35,7 +33,7 @@ public class DecodeWays {
     public static void main(String[] args) {
         System.out.println(new DecodeWays().numDecodings("12"));
     }
-    public int numDecodings(String s) {
+    public int numDecodingsV1(String s) {
         int n = s.length();
         int[] dp = new int[n+1];
         dp[0]=1;
@@ -50,5 +48,18 @@ public class DecodeWays {
             }
         }
         return dp[n];
+    }
+
+    public int numDecodings(String s) {
+        int n=s.length();
+        int[] dp=new int[n+1];
+        dp[n]=1;
+        for(int i=n-1;i>=0;i--)
+            if(s.charAt(i)!='0') {
+                dp[i]=dp[i+1];
+                if(i<n-1&&(s.charAt(i)=='1'||s.charAt(i)=='2'&&s.charAt(i+1)<'7'))
+                    dp[i]+=dp[i+2];
+            }
+        return dp[0];
     }
 }
