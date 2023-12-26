@@ -45,7 +45,6 @@ public class NumberOfDiceRollsWithTargetSum {
             } else
                 return 0;
         }
-
         // Incase target is become -ve i.e. with current face we cant get target any further
         // return 0
         if(target<0)
@@ -65,7 +64,6 @@ public class NumberOfDiceRollsWithTargetSum {
         for(int i=1;i<=k;i++){
             count = ((count)%mod + (recursion(index+1,n,k,target-i,dp))%mod)%mod;
         }
-
         // assign the count value for memoization
         dp[index][target] = count;
         return count;
