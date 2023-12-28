@@ -42,7 +42,6 @@ public class StringCompressionII {
                 dp[i][j] = 9999;
             }
         }
-
         dp[0][0] =0;
 
         for(int i=1;i<=n;i++){
