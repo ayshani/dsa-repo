@@ -58,7 +58,6 @@ public class MinimumDifficultyOfAJobSchedule {
             max = Math.max(max, jobDifficulty[i]);
             res = Math.min( res, max+ helper(i+1,jobDifficulty,d-1));
         }
-
         return dp[index][d] = res;
 
     }
