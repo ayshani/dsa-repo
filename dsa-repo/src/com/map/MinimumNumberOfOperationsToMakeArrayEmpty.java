@@ -49,6 +49,11 @@ public class MinimumNumberOfOperationsToMakeArrayEmpty {
             int count = entry.getValue();
             if(count<2)
                 return -1;
+            /*
+            below will also work but wrt time complexity,
+            this take more time that whichever is implemented
+            total += Math.ceil((double)count /3)
+             */
             if(count %3 ==  0 || count%3==2){
                 total += (count/3);
                 count %=3;
