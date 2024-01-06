@@ -37,7 +37,6 @@ public class MaximumProfitInJobScheduling {
         }
         // sort wrt increaing end time
         Arrays.sort(jobs, (a, b)-> a[1]-b[1]);
-
         TreeMap<Integer,Integer> dp = new TreeMap<>();
 
         for(Integer[] job : jobs){
@@ -51,7 +50,6 @@ public class MaximumProfitInJobScheduling {
                 dp.put(job[1],currentProfit);
             }
         }
-
         return dp.lastEntry().getValue();
     }
 }
