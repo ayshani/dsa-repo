@@ -65,7 +65,6 @@ public class LeafSimilarTrees {
             if(tree1.get(i)!=tree2.get(i))
                 return false;
         }
-
         return true;
     }
 
@@ -77,6 +76,5 @@ public class LeafSimilarTrees {
         }
         traverse(root.left,tree);
         traverse(root.right,tree);
-
     }
 }
