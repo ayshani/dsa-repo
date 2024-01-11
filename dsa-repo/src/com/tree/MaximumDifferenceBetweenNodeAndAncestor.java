@@ -72,13 +72,10 @@ public class MaximumDifferenceBetweenNodeAndAncestor {
     private int helper(TreeNode root, int minVal, int maxVal){
         if(root==null)
             return maxVal - minVal;
-
         minVal = Math.min(minVal,root.val);
         maxVal = Math.max(maxVal,root.val);
-
         int left = helper(root.left,minVal,maxVal);
         int right = helper(root.right,minVal,maxVal);
-
         return Math.max(left,right);
     }
 }
