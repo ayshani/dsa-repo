@@ -34,21 +34,20 @@ public class HowManyNumbersAreSmallerThanTheCurrentNumber {
     }
 
     public int[] smallerNumbersThanCurrent(int[] nums) {
-        int[] bucket = new int[101];
+        int[] count = new int[101];
         int n = nums.length;
         for(int i=0;i<n;i++)
-            bucket[nums[i]]++;
+            count[nums[i]]++;
 
         for(int i=1;i<101;i++){
-            bucket[i] +=bucket[i-1];
+            count[i] +=count[i-1];
         }
 
         int[] res = new int[n];
         for(int i=0;i<n;i++){
             int position = nums[i];
-            res[i] = position ==0 ? 0 : bucket[position-1];
+            res[i] = position ==0 ? 0 : count[position-1];
         }
-
         return res;
     }
 

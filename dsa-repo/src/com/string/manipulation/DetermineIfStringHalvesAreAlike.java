@@ -34,7 +34,6 @@ public class DetermineIfStringHalvesAreAlike {
         int counter = 0;
         int i = 0;
         int j = s.length() - 1;
-
         while(i < j){
             if(set.contains(s.charAt(i))) counter++;
             if(set.contains(s.charAt(j))) counter--;
