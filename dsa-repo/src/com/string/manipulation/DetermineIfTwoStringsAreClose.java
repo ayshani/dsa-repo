@@ -18,8 +18,6 @@ You can use the operations on either string as many times as necessary.
 
 Given two strings, word1 and word2, return true if word1 and word2 are close, and false otherwise.
 
-
-
 Example 1:
 
 Input: word1 = "abc", word2 = "bca"
