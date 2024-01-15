@@ -54,14 +54,12 @@ public class FindPlayersWithZeroOrOneLosses {
 
     public List<List<Integer>> findWinners(int[][] matches) {
         Map<Integer,Integer> map = new TreeMap<>();
-
         for(int[] match : matches){
             int winner = match[0], loser = match[1];
             map.put(winner,map.getOrDefault(winner,0));
             map.put(loser,map.getOrDefault(loser,0)+1);
         }
         List<List<Integer>> answerList = Arrays.asList(new ArrayList<Integer>(),new ArrayList<Integer>());
-
         for(Map.Entry<Integer,Integer> entry : map.entrySet()){
             if(entry.getValue()==0){
                 answerList.get(0).add(entry.getKey());
