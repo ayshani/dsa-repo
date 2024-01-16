@@ -16,8 +16,6 @@ int getRandom() Returns a random element from the current set of elements
     Each element must have the same probability of being returned.
 You must implement the functions of the class such that each function works in average O(1) time complexity.
 
-
-
 Example 1:
 
 Input
@@ -96,6 +94,7 @@ class RandomizedSet {
         if(!keys.containsKey(val)){
             return false;
         }
+
         int candidateIndex = keys.get(val);
         int lastIndex = values.size()-1;
         values.set(candidateIndex, values.get(lastIndex));
