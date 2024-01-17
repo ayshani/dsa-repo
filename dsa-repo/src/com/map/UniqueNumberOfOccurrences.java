@@ -11,8 +11,6 @@ import java.util.Set;
 Given an array of integers arr, return true if the number of occurrences of each value in the array is unique,
 or false otherwise.
 
-
-
 Example 1:
 
 Input: arr = [1,2,2,1,1,3]
@@ -36,7 +34,6 @@ public class UniqueNumberOfOccurrences {
         }
         // Store the frequency count of elements in the unordered set.
         Set<Integer> set = new HashSet<>(map.values());
-
         // If the set size is equal to the map size,
         // It implies frequency counts are unique.
         return map.size()== set.size();
