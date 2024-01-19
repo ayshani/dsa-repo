@@ -24,6 +24,7 @@ Explanation
 The minimum path to get to element A[i][j] is the minimum of A[i - 1][j - 1], A[i - 1][j] and A[i - 1][j + 1].
 Starting from row 1, we add the minumum path to each element.
 he smallest number in the last row is the miminum path sum.
+
 Example:
 [1, 2, 3]
 [4, 5, 6] => [5, 6, 8]
@@ -51,7 +52,6 @@ public class MinimumFallingPathSum {
                         Math.min(matrix[i-1][Math.max(0,j-1)], matrix[i-1][Math.min(j+1,m-1)]));
             }
         }
-
         return Arrays.stream(matrix[m-1]).min().getAsInt();
     }
 }
