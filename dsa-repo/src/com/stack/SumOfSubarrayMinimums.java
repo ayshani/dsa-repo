@@ -8,8 +8,6 @@ import java.util.Stack;
 Given an array of integers arr, find the sum of min(b), where b ranges over every (contiguous) subarray of arr.
 Since the answer may be large, return the answer modulo 109 + 7.
 
-
-
 Example 1:
 
 Input: arr = [3,1,2,4]
@@ -29,6 +27,7 @@ public class SumOfSubarrayMinimums {
     }
     public int sumSubarrayMins(int[] arr) {
         int ans = 0;
+        // monotonic stack
         Stack<Integer> st = new Stack<>();
         long mod = (long)1000000007;
         st.push(-1);
@@ -43,6 +42,7 @@ public class SumOfSubarrayMinimums {
                 ans += add ;
                 ans %= mod;
             }
+
             st.push(i);
         }
         return ans;
