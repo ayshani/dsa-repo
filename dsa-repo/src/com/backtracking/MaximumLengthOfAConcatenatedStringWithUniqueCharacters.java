@@ -38,7 +38,6 @@ public class MaximumLengthOfAConcatenatedStringWithUniqueCharacters {
     public static void main(String[] args) {
         List<String> lst = Arrays.asList("cha","r","act","ers");
         System.out.println(new MaximumLengthOfAConcatenatedStringWithUniqueCharacters().maxLength(lst));
-
     }
     public int maxLength(List<String> arr) {
         backtrack(0,arr,"");
@@ -49,7 +48,6 @@ public class MaximumLengthOfAConcatenatedStringWithUniqueCharacters {
         if(max<current.length()){
             max = current.length();
         }
-
         for(int i=start;i<arr.size();i++){
             if(!isValid(current, arr.get(i)))
                 continue;
@@ -60,12 +58,9 @@ public class MaximumLengthOfAConcatenatedStringWithUniqueCharacters {
     private boolean isValid(String current, String future){
         int[] ch = new int[26];
         for(int i=0;i<future.length();i++){
-            if(++ch[future.charAt(i)-'a']==2)
-                return false;
-            if(current.contains(future.charAt(i)+""))
+            if(++ch[future.charAt(i)-'a']==2 || current.contains(future.charAt(i)+""))
                 return false;
         }
-
         return true;
     }
 }
