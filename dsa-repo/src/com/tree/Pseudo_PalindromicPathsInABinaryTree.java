@@ -57,6 +57,7 @@ public class Pseudo_PalindromicPathsInABinaryTree {
     private void preorder(TreeNode root, int path){
         if(root==null)
             return;
+
         // compute occurences of each digit
         // in the corresponding register
         System.out.println("path before: "+path);
@@ -68,7 +69,6 @@ public class Pseudo_PalindromicPathsInABinaryTree {
             if((path&(path-1))==0)
                 count++;
         }
-
         preorder(root.left,path);
         preorder(root.right,path);
     }
