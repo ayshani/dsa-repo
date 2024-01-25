@@ -11,8 +11,6 @@ A subsequence of a string is a new string generated from the original string wit
 For example, "ace" is a subsequence of "abcde".
 A common subsequence of two strings is a subsequence that is common to both strings.
 
-
-
 Example 1:
 
 Input: text1 = "abcde", text2 = "ace"
@@ -35,7 +33,6 @@ public class LongestCommonSubsequence {
         for(int i=0;i<=n;i++){
             dp[0][i]= 0;
         }
-
         for(int i=1;i<=m;i++){
             for(int j=1;j<=n;j++){
                 if(text1.charAt(i-1) == text2.charAt(j-1))
@@ -44,7 +41,6 @@ public class LongestCommonSubsequence {
                     dp[i][j] = Math.max(dp[i-1][j],dp[i][j-1]);
             }
         }
-
         return dp[m][n];
     }
 
