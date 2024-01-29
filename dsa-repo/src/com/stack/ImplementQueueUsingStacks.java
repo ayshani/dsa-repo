@@ -21,7 +21,6 @@ is empty operations are valid.
 Depending on your language, the stack may not be supported natively. You may simulate a stack using a list or
 deque (double-ended queue) as long as you use only a stack's standard operations.
 
-
 Example 1:
 
 Input
@@ -50,7 +49,6 @@ public class ImplementQueueUsingStacks {
 }
 
 class MyQueue {
-
     Stack<Integer> s1, s2;
     int front;
     public MyQueue() {
@@ -79,7 +77,6 @@ class MyQueue {
 
         return front;
     }
-
     public boolean empty() {
         return s1.isEmpty() && s2.isEmpty()  ;
     }
