@@ -31,6 +31,7 @@ public class FirstUniqueCharacterInAString {
         String s = "loveleetcode";
         System.out.println(new FirstUniqueCharacterInAString().firstUniqChar(s));
     }
+
     public int firstUniqChar(String s) {
         int[] count = new int[26];
         int index=-1;
