@@ -32,13 +32,7 @@ public class GroupAnagrams {
         Map<Long,List<String>> hm = new HashMap<>();
         for(int i=0;i<strs.length;i++){
             long h = hash(strs[i]);
-            if(!hm.containsKey(h))
-            {
-                hm.put(h,new ArrayList<>());
-            }
-
-            hm.get(h).add(strs[i]);
-
+            hm.computeIfAbsent(h, value -> new ArrayList<>()).add(strs[i]);
         }
 
         return new ArrayList(hm.values());
