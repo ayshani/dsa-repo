@@ -28,7 +28,6 @@ Iterate over the queue and add the character to string number of the occurrence
 
 TC : o(nlogn)
 SC : o(n)
-
  */
 public class SortCharactersByFrequency {
 
@@ -42,9 +41,7 @@ public class SortCharactersByFrequency {
         }
 
         PriorityQueue<Map.Entry<Character,Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue()-a.getValue());
-
         pq.addAll(map.entrySet());
-
         StringBuilder sb = new StringBuilder();
 
         while(!pq.isEmpty()){
@@ -53,7 +50,6 @@ public class SortCharactersByFrequency {
                 sb.append(e.getKey());
             }
         }
-
         return sb.toString();
     }
 }
