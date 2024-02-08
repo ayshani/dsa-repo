@@ -48,6 +48,7 @@ public class PerfectSquares {
         return 0;
     }
 
+    // DP approach
     public int numSquares(int n) {
         int[] memo = new int[n+1];
 
