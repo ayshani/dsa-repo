@@ -19,7 +19,7 @@ Explanation: [0, 1] is the longest contiguous subarray with an equal number of 0
 TC : o(n)
 SC: o(n)
  */
-public class ContiguousArray {
+public class  ContiguousArray {
 
     /*
     The idea is to change 0 in the original array to -1. Thus, if we find SUM[i, j] == 0 then we know there are
