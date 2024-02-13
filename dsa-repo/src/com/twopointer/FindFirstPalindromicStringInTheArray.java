@@ -28,7 +28,6 @@ public class FindFirstPalindromicStringInTheArray {
             if(isPlaindrome(word))
                 return word;
         }
-
         return "";
     }
 
@@ -37,7 +36,6 @@ public class FindFirstPalindromicStringInTheArray {
         while(i<j){
             if(s.charAt(i)!=s.charAt(j))
                 return false;
-
             i++;
             j--;
         }
