@@ -44,7 +44,7 @@ That is the testcase [1048576, 1048576]. Here is the code:
 Time Complexity: O(22n) = O(n)
 Space Complexity: O(n)
  */
-public class CountGoodMeals {
+public class  CountGoodMeals {
 
     public static void main(String[] args) {
         int[] delic = new int[]{1,3,5,7,9};
