@@ -23,8 +23,6 @@ return the room with the lowest number.
 
 A half-closed interval [a, b) is the interval between a and b including a and not including b.
 
-
-
 Example 1:
 
 Input: n = 2, meetings = [[0,10],[1,5],[2,7],[3,4]]
@@ -56,6 +54,7 @@ public class MeetingRoomsIII {
         for(int i=0;i<n;i++){
             freeRooms.add((long)i);
         }
+
 
         //List(start, end, room number)
         PriorityQueue<Long[]> occupiedRooms = new PriorityQueue<>((x,y)-> Long.compare(x[1], y[1]));
