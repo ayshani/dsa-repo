@@ -11,9 +11,11 @@ Example 1:
 Input: n = 1
 Output: true
 Explanation: 20 = 1
+
+TC : o(1)
+SC: o(1)
  */
 public class PowerOfTwo {
-
     public static void main(String[] args) {
         System.out.println(new PowerOfTwo().isPowerOfTwo(128));
     }
