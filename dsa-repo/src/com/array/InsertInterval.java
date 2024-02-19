@@ -28,7 +28,7 @@ TC : o(n)
 SC : o(n)
 
  */
-public class InsertInterval {
+public class  InsertInterval {
 
     public static void main(String[] args) {
         int[][] intervals = new int[][]{

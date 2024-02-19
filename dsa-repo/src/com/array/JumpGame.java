@@ -7,8 +7,6 @@ and each element in the array represents your maximum jump length at that positi
 
 Return true if you can reach the last index, or false otherwise.
 
-
-
 Example 1:
 
 Input: nums = [2,3,1,1,4]
