@@ -20,6 +20,7 @@ public class MissingNumber {
     public static void main(String[] args) {
         int[] nums = new int[]{3,0,1};
         System.out.println(new MissingNumber().missingNumber(nums));
+        System.out.println(new MissingNumber().missingNumberv2(nums));
     }
 
     public int missingNumber(int[] nums) {
@@ -48,5 +49,13 @@ public class MissingNumber {
                 return nums.length;
 
         return actualMissingNumber;
+    }
+
+    public int missingNumberv2(int[] nums) {
+        int xor=0, i=0;
+        for(i=0;i<nums.length;i++){
+            xor = xor^i^nums[i];
+        }
+        return xor^i;
     }
 }
