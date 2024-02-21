@@ -21,7 +21,7 @@ Explanation: Subarray [3] has maximum sum 3.
 TC : o(n)
 SC : o(1)
  */
-public class MaximumSumCircularSubarray {
+public class  MaximumSumCircularSubarray {
 
     public static void main(String[] args) {
         int[] nums = new int[]{3,-2,3};

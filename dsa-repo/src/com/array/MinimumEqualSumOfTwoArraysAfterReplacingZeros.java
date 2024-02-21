@@ -4,7 +4,8 @@ package com.array;
 
 You are given two arrays nums1 and nums2 consisting of positive integers.
 
-You have to replace all the 0's in both arrays with strictly positive integers such that the sum of elements of both arrays becomes equal.
+You have to replace all the 0's in both arrays with strictly positive integers such that the sum of elements
+of both arrays becomes equal.
 
 Return the minimum equal sum you can obtain, or -1 if it is impossible.
 
@@ -23,7 +24,8 @@ public class MinimumEqualSumOfTwoArraysAfterReplacingZeros {
 
     public static void main(String[] args) {
         System.out.println(new MinimumEqualSumOfTwoArraysAfterReplacingZeros().minSum(
-                new int[]{20,0,18,11,0,0,0,0,0,0,17,28,0,11,10,0,0,15,29}, new int[]{16,9,25,16,1,9,20,28,8,0,1,0,1,27}));
+                new int[]{20,0,18,11,0,0,0,0,0,0,17,28,0,11,10,0,0,15,29},
+                new int[]{16,9,25,16,1,9,20,28,8,0,1,0,1,27}));
 
         /*System.out.println(new MinimumEqualSumOfTwoArraysAfterReplacingZeros().minSum(
                 new int[]{8,13,15,18,0,18,0,0,5,20,12,27,3,14,22,0},
