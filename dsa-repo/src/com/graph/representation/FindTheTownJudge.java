@@ -14,8 +14,6 @@ labeled ai trusts the person labeled bi.
 
 Return the label of the town judge if the town judge exists and can be identified, or return -1 otherwise.
 
-
-
 Example 1:
 
 Input: n = 2, trust = [[1,2]]
@@ -45,7 +43,6 @@ public class FindTheTownJudge {
             count[curr[0]]--;
             count[curr[1]]++;
         }
-
         for(int i=1;i<=n;i++){
             if(count[i] == n-1)
                 return i;

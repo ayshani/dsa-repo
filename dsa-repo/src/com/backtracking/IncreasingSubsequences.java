@@ -27,7 +27,7 @@ and put it in global list if the size is more than 1.
 then backtrack and start from second element.
 
 TC : o(n* 2^n)
-2^n is for all cobminations of the nums.
+2^n is for all combinations of the nums.
 n is for copying the local list to a global list.
 
 SC : o(n)
