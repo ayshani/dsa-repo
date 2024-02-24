@@ -32,12 +32,12 @@ We can achieve the requests of users y, a and z by swapping the places in the 3 
 
 Complexity Analysis
 
-Here, NNN is the number of buildings, and MMM is the number of requests.
+Here, N is the number of buildings, and M is the number of requests.
 
 Time complexity: O(2^M * N)
 We iterate over every two possibilities for each of the M requests; this is equal to 2^M possibilities. For the
 leaf nodes, which are O(2^{M-1}), we will iterate over N buildings to check if the employee change is zero.
-Therefore the total time complexity would be O(2^M * N)
+Therefor the total time complexity would be O(2^M * N)
 
 Space complexity: O(N+M).
 

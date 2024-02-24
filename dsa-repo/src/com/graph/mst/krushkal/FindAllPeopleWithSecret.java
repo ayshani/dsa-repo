@@ -87,7 +87,6 @@ public class FindAllPeopleWithSecret {
                 }
             }
         }
-
         // once the above loop is done, all creation of components are done
         // so, just loop over all people and check whether a person belongs to same component as person-0
         // if yes, add to secretKnown group

@@ -34,13 +34,13 @@ public class RemoveInvalidParentheses {
     }
 
     private List<String> remove(String s, Set<String> set){
-        Set<String> sol = new HashSet<>();
         if(isValid(s)){
             List<String> maxSol = new ArrayList<>();
             maxSol.add(s);
             return maxSol;
         }
 
+        Set<String> sol = new HashSet<>();
         for(int i=0;i<s.length();i++){
             char c = s.charAt(i);
             if(c=='(' || c==')'){
