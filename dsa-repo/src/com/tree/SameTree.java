@@ -10,11 +10,19 @@ Example 1:
 Input: p = [1,2,3], q = [1,2,3]
 Output: true
 
+TC : o(n)
+SC: o(logn)
  */
 public class SameTree {
 
     public static void main(String[] args) {
-
+        TreeNode root1 = new TreeNode(1);
+        root1.left = new TreeNode(2);
+        root1.right = new TreeNode(3);
+        TreeNode root2 = new TreeNode(1);
+        root2.left = new TreeNode(2);
+        root2.right = new TreeNode(3);
+        System.out.println(new SameTree().isSameTree(root1,root2));
     }
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if(p==null && q==null)

@@ -45,7 +45,7 @@ public class FindAPeakElementII {
             // find next search space either left or right
             boolean toLeft = midCol-1>=startCol && mat[ansRow][midCol-1]> mat[ansRow][midCol];
             boolean toRight = midCol+1<=endCol && mat[ansRow][midCol+1]> mat[ansRow][midCol];
-            // if both   toLeft and toRight are falsei.e. we are at peak element
+            // if both   toLeft and toRight are false i.e. we are at peak element
             if(!toLeft && !toRight){
                 return new int[]{ansRow, midCol};
             }
