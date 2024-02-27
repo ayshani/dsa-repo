@@ -27,7 +27,6 @@ public class DiameterOfBinaryTree {
         root.right.left = new TreeNode(2);
         root.right.left.left = new TreeNode(4);
         root.right.right = new TreeNode(4);
-
         System.out.println(new DiameterOfBinaryTree().diameterOfBinaryTree(root));
     }
     public int diameterOfBinaryTree(TreeNode root) {
