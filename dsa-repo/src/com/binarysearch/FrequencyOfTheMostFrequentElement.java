@@ -54,7 +54,7 @@ public class FrequencyOfTheMostFrequentElement {
 
         for(int i=0,j=mid-1;j<nums.length; i++,j++){
             sum += nums[j];
-            long need = 1L * nums[j]* mid;
+            long need = (long) nums[j] * mid;
             if(need - sum <=k)
                 return true;
             sum -= nums[i];
