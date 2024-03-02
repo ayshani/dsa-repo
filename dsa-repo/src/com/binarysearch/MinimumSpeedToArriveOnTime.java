@@ -45,14 +45,14 @@ public class MinimumSpeedToArriveOnTime {
         int ans =-1;
         while(l<=r){
             int mid = l+(r-l)/2;
-            double sum =0;
+            double hourTaken =0;
             for(int i=0;i<n-1;i++){
-                sum+=Math.ceil((double)dist[i]/mid);
+                hourTaken+=Math.ceil((double)dist[i]/mid);
             }
 
-            sum+=(double)dist[n-1]/mid;
+            hourTaken+=(double)dist[n-1]/mid;
 
-            if(sum>hour){
+            if(hourTaken>hour){
                 l= mid+1;
             } else{
                 ans = mid;
