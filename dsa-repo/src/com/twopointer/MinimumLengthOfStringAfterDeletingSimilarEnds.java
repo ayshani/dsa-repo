@@ -39,17 +39,14 @@ public class MinimumLengthOfStringAfterDeletingSimilarEnds {
                 while(j>=0 && s.charAt(j)== last){
                     j--;
                 }
-                //System.out.println("i : "+ i +" j : "+ j);
-                if(i>j)
-                    return 0;
-                else if(i==j)
+                if(i==j)
                     return 1;
-                else
-                    continue;
             } else{
                 break;
             }
         }
+        if(i>j)
+            return 0;
         return s.substring(i,j+1).length();
     }
 }
