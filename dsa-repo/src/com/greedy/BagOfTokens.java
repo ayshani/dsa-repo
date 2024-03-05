@@ -61,10 +61,8 @@ public class BagOfTokens {
     }
     public int bagOfTokensScore(int[] tokens, int power) {
         Arrays.sort(tokens);
-
         int low =0, high = tokens.length-1;
         int currentScore =0, maxScore =0;
-
         while(low<=high && (power>= tokens[low] || currentScore>0)){
             while(low<=high && power>= tokens[low])
             {
