@@ -16,8 +16,8 @@ Input: arr[] = {2, 1, 3, 4}
 Output: 2
 Explanation:
 There are 2 pairs (2, 3) and (1, 3) in this array whose Bitwise AND values are:
-1. (2 & 3) = 1 = (20)
-2. (1 & 3) = 1 = (20).
+1. (2 & 3) = 1 = (2^0)
+2. (1 & 3) = 1 = (2^0).
 Input: arr[] = {6, 4, 2, 3}
 Output: 4
 Explanation:

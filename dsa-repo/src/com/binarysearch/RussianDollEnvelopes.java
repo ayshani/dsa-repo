@@ -41,7 +41,7 @@ public class RussianDollEnvelopes {
     ascending order [3,3],[3,4] and will try to consider. So, we changed the order.
 
     as because we already sorted according to width in ascending order, so, it will
-    reduce our problem to 1D as we need to check only for logest Increasing order wrt
+    reduce our problem to 1D as we need to check only for longest Increasing order wrt
     heights only.
     Ex. after sorting: (1,3), (3,5), (6,8), (6,7), (8,4), (9,5)
     transform to question find LIS: [3,5,8,7,4,5]
