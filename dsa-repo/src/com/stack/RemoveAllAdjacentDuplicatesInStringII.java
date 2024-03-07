@@ -45,6 +45,7 @@ public class RemoveAllAdjacentDuplicatesInStringII {
         }
         StringBuilder res = new StringBuilder();
         for (CharCounter charCount : stack) {
+            System.out.println(charCount);
             res.append(charCount);
         }
         return res.toString();
