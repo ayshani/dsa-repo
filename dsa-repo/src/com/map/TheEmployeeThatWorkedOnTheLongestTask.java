@@ -47,13 +47,7 @@ public class TheEmployeeThatWorkedOnTheLongestTask {
 
         for(int i=0;i<logs.length;i++){
             int time =0;
-            if(i==0){
-                time = logs[i][1]-0;
-            }
-            else{
-                time = logs[i][1] - logs[i-1][1];
-            }
-
+            time = i==0? logs[i][1] : logs[i][1] - logs[i-1][1];
             map.putIfAbsent(time,new TreeSet<>());
             map.get(time).add(logs[i][0]);
         }
