@@ -50,10 +50,8 @@ public class IntersectionOfTwoArrays {
                 }
             }
         }
-
         //int[] res = new ArrayList<>(set).stream().mapToInt(i->i).toArray();
         int[] result = new ArrayList<>(set).stream().mapToInt(e -> e).toArray();
         return result;
-
     }
 }
