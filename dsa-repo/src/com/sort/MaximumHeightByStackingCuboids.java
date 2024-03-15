@@ -73,14 +73,12 @@ public class MaximumHeightByStackingCuboids {
             Arrays.sort(cube);
         }
 
-        Arrays.sort(cuboids, new Comparator<int[]>(){
-            public int compare(int[] a, int[] b){
-                if(a[0]!=b[0])
-                    return b[0]-a[0];
-                if(a[1]!=b[1])
-                    return b[1]-a[1];
-                return b[2]-a[2];
-            }
+        Arrays.sort(cuboids, (a, b) -> {
+            if(a[0]!=b[0])
+                return b[0]-a[0];
+            if(a[1]!=b[1])
+                return b[1]-a[1];
+            return b[2]-a[2];
         });
 
         int n = cuboids.length, res =0;
