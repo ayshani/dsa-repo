@@ -39,12 +39,13 @@ public class SortArrayByIncreasingFrequency {
 
         PriorityQueue<Map.Entry<Integer,Integer>> pq = new PriorityQueue<>((a, b)
                 -> a.getValue() == b.getValue() ? b.getKey()-a.getKey() : a.getValue()-b.getValue());
-
+        System.out.println(pq);
         pq.addAll(map.entrySet());
         int[] res = new int[nums.length];
         int index =0;
         while(!pq.isEmpty()){
             Map.Entry<Integer,Integer> e = pq.poll();
+            System.out.println(" e: "+ e);
             for(int i=0;i<e.getValue();i++){
                 res[index++] = e.getKey();
             }

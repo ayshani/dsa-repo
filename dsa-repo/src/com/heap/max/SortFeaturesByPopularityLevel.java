@@ -67,16 +67,13 @@ public class SortFeaturesByPopularityLevel {
             }
         }
 
-        Arrays.sort(features, new Comparator<String>() {
-            @Override
-            public int compare(String str1, String str2) {
-                int appearanceOfStr1 = appearanceMap.get(str1);
-                int appearanceOfStr2 = appearanceMap.get(str2);
-                if(appearanceOfStr1==appearanceOfStr2)
-                    return featureMap.get(str1) - featureMap.get(str2);
-                else
-                    return appearanceOfStr2 - appearanceOfStr1;
-            }
+        Arrays.sort(features, (str1, str2) -> {
+            int appearanceOfStr1 = appearanceMap.get(str1);
+            int appearanceOfStr2 = appearanceMap.get(str2);
+            if(appearanceOfStr1==appearanceOfStr2)
+                return featureMap.get(str1) - featureMap.get(str2);
+            else
+                return appearanceOfStr2 - appearanceOfStr1;
         });
 
         return features;

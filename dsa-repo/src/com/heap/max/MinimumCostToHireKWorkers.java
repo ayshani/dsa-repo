@@ -12,7 +12,8 @@ ith worker and wage[i] is the minimum wage expectation for the ith worker.
 We want to hire exactly k workers to form a paid group. To hire a group of k workers, we must pay them according
 to the following rules:
 
-Every worker in the paid group should be paid in the ratio of their quality compared to other workers in the paid group.
+Every worker in the paid group should be paid in the ratio of their quality compared to other workers in the paid
+group.
 Every worker in the paid group must be paid at least their minimum wage expectation.
 Given the integer k, return the least amount of money needed to form a paid group satisfying the above conditions.
 Answers within 10-5 of the actual answer will be accepted.
@@ -32,7 +33,8 @@ Logic
 --------
 Let's read description first and figure out the two rules:
 
-"1. Every worker in the paid group should be paid in the ratio of their quality compared to other workers in the paid group."
+"1. Every worker in the paid group should be paid in the ratio of their quality compared to other workers in the
+paid group."
 So for any two workers in the paid group,
 we have wage[i] : wage[j] = quality[i] : quality[j]
 So we have wage[i] : quality[i] = wage[j] : quality[j]
@@ -62,7 +64,8 @@ SC complexity : o(n)
 public class MinimumCostToHireKWorkers {
 
     public static void main(String[] args) {
-        int quality[] = new int[]{3,1,10,10,1}, wage[]= new int[]{4,8,2,2,7}, k = 3;
+        //int quality[] = new int[]{3,1,10,10,1}, wage[]= new int[]{4,8,2,2,7}, k = 3;
+        int quality[] = new int[]{10,20,5}, wage[]= new int[]{70,50,30}, k = 2;
         System.out.println(new MinimumCostToHireKWorkers().mincostToHireWorkers(quality,wage,k));
     }
     public double mincostToHireWorkers(int[] quality, int[] wage, int k) {
@@ -76,14 +79,18 @@ public class MinimumCostToHireKWorkers {
         PriorityQueue<Double> pq = new PriorityQueue<>();
 
         double result =Double.MAX_VALUE, sum = 0;
-
+        Arrays.stream(workers).forEach(worker -> System.out.println(Arrays.toString(worker)));
         for(double[] worker : workers){
+            System.out.println("worker : "+Arrays.toString(worker));
             sum+=worker[1];
             pq.offer(-worker[1]);
+            System.out.println("sum : "+ sum +" pq.peek() : " + pq.peek());
             if(pq.size()>k)
                 sum+=pq.poll();
+            System.out.println("sum : "+ sum +" worker[0] : " + worker[0]);
             if(pq.size() == k)
                 result = Math.min(result, sum*worker[0]);
+            System.out.println("result : "+ result);
         }
 
         return result;
