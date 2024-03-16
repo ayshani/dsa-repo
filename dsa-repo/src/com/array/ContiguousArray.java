@@ -32,6 +32,7 @@ public class  ContiguousArray {
         System.out.println(new ContiguousArray().findMaxLength(nums));
     }
     public int findMaxLength(int[] nums) {
+
         Map<Integer,Integer> map= new HashMap<>();
         map.put(0,-1);
         int sum =0, max =0;
