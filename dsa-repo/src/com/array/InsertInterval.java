@@ -64,7 +64,7 @@ public class  InsertInterval {
 
         // add all the rest
         while(i<intervals.length){
-            result.add(new int[]{intervals[i][0],intervals[i][1]});
+            result.add(intervals[i]);
             i++;
         }
 
