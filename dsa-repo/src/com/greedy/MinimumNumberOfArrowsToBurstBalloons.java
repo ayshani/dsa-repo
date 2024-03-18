@@ -51,7 +51,6 @@ public class MinimumNumberOfArrowsToBurstBalloons {
                         return 1;
                 }
         );
-
         int count =1, start =0, end =0, firstEnd = points[0][1];
 
         for(int[] point : points){
