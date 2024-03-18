@@ -61,7 +61,6 @@ public class MinimumNumberOfArrowsToBurstBalloons {
                 firstEnd = point[1];
             }
         }
-
         return count;
     }
 }
