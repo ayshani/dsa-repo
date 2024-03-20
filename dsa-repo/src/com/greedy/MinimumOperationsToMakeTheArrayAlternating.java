@@ -30,7 +30,7 @@ It can be proven that it is not possible to make the array alternating in less t
 TC : o(n)
 SC : o(n)
  */
-public class MinimumOperationsToMakeTheArrayAlternating {
+public class  MinimumOperationsToMakeTheArrayAlternating {
 
     public static void main(String[] args) {
         int[] nums = new int[]{3,1,3,2,4,3};
