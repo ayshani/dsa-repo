@@ -2,7 +2,8 @@ package com.math;
 /*
 1344. Angle Between Hands of a Clock
 
-Given two numbers, hour and minutes, return the smaller angle (in degrees) formed between the hour and the minute hand.
+Given two numbers, hour and minutes, return the smaller angle (in degrees) formed between the hour and the minute
+hand.
 
 Answers within 10-5 of the actual value will be accepted as correct.
 
@@ -33,7 +34,8 @@ SC: o(1)
  */
 public class AngleBetweenHandsOfAClock {
     public static void main(String[] args) {
-        System.out.println(new AngleBetweenHandsOfAClock().angleClock(12,30));
+        System.out.println(new AngleBetweenHandsOfAClock().
+                angleClock(12,30));
     }
     public double angleClock(int hour, int minutes) {
         // Degree covered by hour hand (hour area + minutes area)

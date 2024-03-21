@@ -11,7 +11,6 @@ TC : o(n)
 SC: o(1)
  */
 public class ReverseLinkedList {
-
     public static void main(String[] args) {
         ListNode head = new ListNode(5);
         head.next = new ListNode(4);
@@ -23,7 +22,6 @@ public class ReverseLinkedList {
     }
     public static ListNode reverse(ListNode head){
         ListNode cur = head, prev = null;
-
         while(cur !=null){
             ListNode forward = cur.next;
             cur.next = prev;
