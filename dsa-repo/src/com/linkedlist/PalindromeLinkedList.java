@@ -29,7 +29,6 @@ public class PalindromeLinkedList {
             fast = fast.next.next;
             slow= slow.next;
         }
-
         ListNode rev = ReverseLinkedList.reverse(slow);
         slow  = head;
         while(rev!=null){
@@ -41,6 +40,5 @@ public class PalindromeLinkedList {
         return true;
 
     }
-
 
 }

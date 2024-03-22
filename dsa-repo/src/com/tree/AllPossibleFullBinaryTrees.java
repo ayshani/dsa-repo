@@ -53,7 +53,8 @@ Our implementation generates all of these trees taking O(2^{n/2} time.
 Space complexity: O(n.2^{n/2})
 The algorithm uses memoization to store the results of subproblems. Specifically, it uses a hash map called
 memo to store the results of subproblems that have already been solved.
-For every subproblem with n nodes, the algorithm may need to store up to 2^{n/2} TreeNode objects in the memo hash map. This is because there can be up to 2n/22^{n/2}2
+For every subproblem with n nodes, the algorithm may need to store up to 2^{n/2} TreeNode objects in the memo hash map.
+ This is because there can be up to 2n/22^{n/2}2
 n/2 possible full binary trees with n nodes, and the algorithm needs to store all of them in order to return the
 result for the subproblem with n number of nodes. There are maximum of n/2 subproblems (with nodes 1, 3, .. n - 1)
 and hence the space complexity of the algorithm is O(n. 2^{n/2}).
@@ -61,7 +62,8 @@ and hence the space complexity of the algorithm is O(n. 2^{n/2}).
 public class AllPossibleFullBinaryTrees {
 
     public static void main(String[] args) {
-        System.out.println(new AllPossibleFullBinaryTrees().allPossibleFBT(7));
+        System.out.println(new AllPossibleFullBinaryTrees()
+                .allPossibleFBT(7));
     }
     private Map<Integer, List<TreeNode>> memo = new HashMap<>();
 
