@@ -20,7 +20,7 @@ Output: ["1->2->5","1->3"]
 TC : o(n)
 SC : o(n)
  */
-public class BinaryTreePaths {
+public class  BinaryTreePaths {
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);

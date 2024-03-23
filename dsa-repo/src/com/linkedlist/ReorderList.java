@@ -37,10 +37,8 @@ public class ReorderList {
             fast = fast.next.next;
             slow =slow.next;
         }
-
         ListNode revHead = reverse(slow.next);
         slow.next = null;
-
         while(head!= null && revHead != null){
             ListNode temp1 = head.next, temp2 = revHead.next;
             revHead.next = head.next;
