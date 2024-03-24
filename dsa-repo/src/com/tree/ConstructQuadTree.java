@@ -6,7 +6,8 @@ Given a n * n matrix grid of 0's and 1's only. We want to represent the grid wit
 
 Return the root of the Quad-Tree representing the grid.
 
-Notice that you can assign the value of a node to True or False when isLeaf is False, and both are accepted in the answer.
+Notice that you can assign the value of a node to True or False when isLeaf is False, and both are accepted in the
+answer.
 
 A Quad-Tree is a tree data structure in which each internal node has exactly four children. Besides,
 each node has two attributes:
@@ -66,14 +67,21 @@ that value and set isLeaf to true. Otherwise, we create a non-leaf node with isL
 any value. We then recursively construct each quadrant and assign the resulting nodes to the appropriate child
 nodes of the non-leaf node.
 
-The algorithm terminates when we reach a quadrant with only one value, in which case we create a leaf node with that value and set isLeaf to true. The root of the quad-tree is then returned, which is the non-leaf node created in the first call to the construct() function.
+The algorithm terminates when we reach a quadrant with only one value, in which case we create a leaf node
+with that value and set isLeaf to true. The root of the quad-tree is then returned, which is the non-leaf
+node created in the first call to the construct() function.
 
 Approach
-Define a recursive function build that takes in the current grid as well as the indices row_start, row_end, col_start, col_end.
-Check if the current grid is a leaf node. If yes, create a new node and set its isLeaf and val attributes to true or false based on the value of the current grid.
-Otherwise, create a new node and set its isLeaf attribute to false and val attribute to true (since it does not matter).
-Divide the current grid into four sub-grids by calculating the midpoints of the current row and column ranges: mid_row = (row_start + row_end) / 2 and mid_col = (col_start + col_end) / 2.
-Recursively build each of the four sub-grids and set the corresponding child node of the current node to the result.
+Define a recursive function build that takes in the current grid as well as the indices row_start, row_end,
+col_start, col_end.
+Check if the current grid is a leaf node. If yes, create a new node and set its isLeaf and val attributes to true
+ or false based on the value of the current grid.
+Otherwise, create a new node and set its isLeaf attribute to false and val attribute to true (since it does not
+matter).
+Divide the current grid into four sub-grids by calculating the midpoints of the current row and column ranges:
+mid_row = (row_start + row_end) / 2 and mid_col = (col_start + col_end) / 2.
+Recursively build each of the four sub-grids and set the corresponding child node of the current node to the
+result.
 Return the current node.
 Call the build function with the entire grid and return the root node.
 Complexity
@@ -107,7 +115,8 @@ public class ConstructQuadTree {
         QuadNode.print(root);
     }
     public QuadNode construct(int[][] grid) {
-        return construct(grid, 0,0, grid.length - 1, grid[0].length - 1);
+        return
+                construct(grid, 0,0, grid.length - 1, grid[0].length - 1);
     }
 
     private QuadNode construct(int[][] grid, int startRow, int startCol, int endRow, int endCol){
