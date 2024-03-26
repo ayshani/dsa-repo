@@ -6,8 +6,6 @@ Given an unsorted integer array nums, return the smallest missing positive integ
 
 You must implement an algorithm that runs in O(n) time and uses constant extra space.
 
-
-
 Example 1:
 
 Input: nums = [1,2,0]
@@ -58,7 +56,6 @@ public class FirstMissingPositive {
                 }
             }
         }
-
         for(int i=0;i<n;i++){
             // checking if number is in its "correct" position
             if(nums[i]!= i+1)
