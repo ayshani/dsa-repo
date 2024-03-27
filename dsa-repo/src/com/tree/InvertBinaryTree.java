@@ -22,7 +22,8 @@ public class InvertBinaryTree {
         root.right.left.left = new TreeNode(4);
         root.right.right = new TreeNode(4);
 
-        System.out.println(new BinaryTreeInorderTraversal().inorderTraversal(new InvertBinaryTree().invertTree(root)));
+        System.out.println(new BinaryTreeInorderTraversal().inorderTraversal(
+                new InvertBinaryTree().invertTree(root)));
     }
 
     public TreeNode invertTree(TreeNode root) {

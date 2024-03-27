@@ -39,9 +39,7 @@ public class FindDuplicateSubtrees {
         Set<TreeNode> set = new HashSet<>();
         util(root, map,set);
         List<TreeNode> res = new ArrayList<>(set);
-//        for(TreeNode node : set){
-//            res.add(node);
-//        }
+
         return res;
     }
 
