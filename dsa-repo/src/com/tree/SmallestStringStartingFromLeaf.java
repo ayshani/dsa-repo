@@ -66,7 +66,7 @@ public class SmallestStringStartingFromLeaf {
             return;
 
         sb.append((char)('a'+ root.val));
-
+        //System.out.println(sb);
         if(root.left ==null && root.right == null)
         {
             sb.reverse();

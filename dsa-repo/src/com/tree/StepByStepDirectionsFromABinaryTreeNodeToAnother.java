@@ -35,7 +35,8 @@ public class StepByStepDirectionsFromABinaryTreeNodeToAnother {
         root.left.left = new TreeNode(3);
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(4);
-        System.out.println(new StepByStepDirectionsFromABinaryTreeNodeToAnother().getDirections(root,3,6));
+        System.out.println(new StepByStepDirectionsFromABinaryTreeNodeToAnother()
+                .getDirections(root,3,6));
     }
     public String getDirections(TreeNode root, int startValue, int destValue) {
         StringBuilder startToRoot = new StringBuilder();
@@ -61,7 +62,7 @@ public class StepByStepDirectionsFromABinaryTreeNodeToAnother {
 
         // similarly for destinationToRoot also, we omit the common length and make
         // the reverse of the current orientation.
-        String ePath = endToRoot.reverse().toString().substring(count, endToRoot.length());
+        String ePath = endToRoot.reverse().substring(count, endToRoot.length());
 
         return sPath+ePath;
 
