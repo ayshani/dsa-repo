@@ -67,11 +67,9 @@ public class VerticalOrderTraversalOfABinaryTree {
             } else{
                 List<Integer> ls = result.get(result.size()-1);
                 ls.add(p.val);
-
             }
             prev = p.x;
         }
-
         return result;
     }
 

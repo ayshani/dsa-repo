@@ -12,8 +12,6 @@ Return the number of fixed-bound subarrays.
 
 A subarray is a contiguous part of an array.
 
-
-
 Example 1:
 
 Input: nums = [1,3,5,2,7,5], minK = 1, maxK = 5
@@ -55,6 +53,7 @@ public class CountSubarraysWithFixedBounds {
                  0 1 2 3 4 5 -- Index
                 [9,4,3,7,5,1]
             startNextSubArray = 1
+
             through iteration, unless we reach to last index, count remains 0 for this example.
             once we get minIndex = 5, maxIndex  =3,
             we consider the minimum value between this two i.e. maxIndex =3.
