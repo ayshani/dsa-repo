@@ -8,8 +8,6 @@ A word is a maximal
 substring
  consisting of non-space characters only.
 
-
-
 Example 1:
 
 Input: s = "Hello World"
@@ -31,10 +29,7 @@ public class LengthOfLastWord {
             if(s.charAt(i)==' ')
                 break;
         }
-
-
         i++;
-
         return s.length()-i;
 
     }
