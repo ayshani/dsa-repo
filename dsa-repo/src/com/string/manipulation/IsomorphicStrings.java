@@ -29,6 +29,7 @@ public class IsomorphicStrings {
         int[] mapS = new int[256], mapT = new int[256];
         Arrays.fill(mapS,-1);
         Arrays.fill(mapT,-1);
+
         for(int i=0;i<s.length();i++){
             char cs = s.charAt(i), ct = t.charAt(i);
             if(mapS[cs]==-1 && mapT[ct]==-1){
