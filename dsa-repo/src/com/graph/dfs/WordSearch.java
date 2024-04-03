@@ -19,7 +19,6 @@ TC : O(M*N)
 SC : O(M*N)
  */
 public class WordSearch {
-
     public static void main(String[] args) {
         char[][] board = new char[][]{
                 {'A','B','C','E'},
@@ -42,15 +41,12 @@ public class WordSearch {
                 }
             }
         }
-
         return false;
     }
 
     private void dfs(char[][] board, int i, int j, int m, int n, String word,int index, boolean[][] visited){
         if(i<0 || i>=m || j<0 || j>=n || visited[i][j] || word.charAt(index)!=board[i][j])
             return;
-
-
         if(index== word.length()-1)
         {
             ans = true;

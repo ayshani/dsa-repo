@@ -1,5 +1,6 @@
 package com.graph.bfs;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -45,9 +46,7 @@ public class OpenTheLock {
         System.out.println(new OpenTheLock().openLock(deadends,"0202"));
     }
     public int openLock(String[] deadends, String target) {
-        for(String s : deadends){
-            visited.add(s);
-        }
+        Collections.addAll(visited, deadends);
         count = 0;
         Queue<String> q = new LinkedList<>();
 

@@ -99,7 +99,8 @@ public class NumberOfIncreasingPathsInAGrid {
     Space complexity: O(m⋅n)
 
     We build the auxiliary array dp of the same size as grid.
-    The space complexity of recursive algorithm is proportional to the maximum depth of the recursion tree generated. There are at most m⋅nm\cdot nm⋅n recursive call of dfs in the stack simulaneously, thus the stack takes O(m⋅n)O(m\cdot n)O(m⋅n) space.
+    The space complexity of recursive algorithm is proportional to the maximum depth of the recursion tree generated.
+    There are at most m⋅n recursive call of dfs in the stack simulaneously, thus the stack takes O(m⋅n) space.
     To sum up, the space complexity is O(m⋅n).
      */
     int[] direction = new int[]{0,1,0,-1,0};

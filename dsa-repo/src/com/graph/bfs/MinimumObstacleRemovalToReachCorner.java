@@ -62,6 +62,7 @@ public class MinimumObstacleRemovalToReachCorner {
         dist[0][0] = 0;
 
         Deque<int[]> q = new ArrayDeque<>();
+        //{obstacles, x,y}
         q.offer(new int[3]);
 
         while(!q.isEmpty()){
