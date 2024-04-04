@@ -3,7 +3,8 @@ package com.graph.dfs;
 Find whether path exist
 https://practice.geeksforgeeks.org/problems/find-whether-path-exist5238/1
 
-Given a grid of size n*n filled with 0, 1, 2, 3. Check whether there is a path possible from the source to destination. You can traverse up, down, right and left.
+Given a grid of size n*n filled with 0, 1, 2, 3. Check whether there is a path possible from the source to destination.
+You can traverse up, down, right and left.
 The description of cells is as follows:
 
 A value of cell 1 means Source.

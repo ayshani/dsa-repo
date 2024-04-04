@@ -1,6 +1,7 @@
 package com.graph.bfs;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /*
@@ -44,7 +45,7 @@ public class TheMazeII {
     }
     public int shortestDistance(int[][] maze, int[] start, int[] destination) {
         int m = maze.length, n = maze[0].length;
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[2]-b[2]);
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[2]));
 
         pq.offer(new int[]{start[0], start[1],0});
         int[][] distance = new int[m][n];

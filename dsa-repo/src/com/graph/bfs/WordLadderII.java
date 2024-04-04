@@ -89,11 +89,8 @@ public class WordLadderII {
                         }
 
                         //Build Adjacent Graph
-                        map.putIfAbsent(new_word, new LinkedList<String>());
-                        map.get(new_word).add(word);
-
+                        map.computeIfAbsent(new_word, value -> new LinkedList<String>()).add(word);
                         if (new_word.equals(end)&&!found) found=true;
-
                     }
 
                 }//End:Iteration from 'a' to 'z'
