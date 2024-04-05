@@ -63,11 +63,13 @@ public class SumOfDistancesInTree {
 
     /*
     Root the tree. For each node, consider the subtree S
-    node of that node plus all descendants. Let count[node] be the number of nodes in SnodeS_{\text{node}}S
-    node, and stsum[node] ("subtree sum") be the sum of the distances from node to the nodes in SnodeS_{\text{node}}S
+    node of that node plus all descendants. Let count[node] be the number of nodes in Snode
+    node, and stsum[node] ("subtree sum") be the sum of the distances from node to the nodes in Snode
     node.
 
-    We can calculate count and stsum using a post-order traversal, where on exiting some node, the count and stsum of all descendants of this node is correct, and we now calculate count[node] += count[child] and stsum[node] += stsum[child] + count[child].
+    We can calculate count and stsum using a post-order traversal, where on exiting some node, the count and stsum of
+    all descendants of this node is correct, and we now calculate count[node] += count[child] and
+    stsum[node] += stsum[child] + count[child].
 
     This will give us the right answer for the root: ans[root] = stsum[root].
     */

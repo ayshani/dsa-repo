@@ -36,7 +36,6 @@ public class MakeTheStringGreat {
     public String makeGood(String s) {
         // Use stack to store the visited characters.
         Stack<Character> st = new Stack<>();
-
         // Iterate over 's'.
         for(char current : s.toCharArray()){
             // If the current character make a pair with the last character in the stack,

@@ -1,6 +1,7 @@
 package com.graph.dfs;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /*
@@ -80,9 +81,7 @@ public class PacificAtlanticWaterFlow {
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 if(pacific[i][j] && atlantic[i][j]){
-                    result.add(new ArrayList<Integer>());
-                    result.get(result.size()-1).add(i);
-                    result.get(result.size()-1).add(j);
+                    result.add(Arrays.asList(i,j));
                 }
             }
         }

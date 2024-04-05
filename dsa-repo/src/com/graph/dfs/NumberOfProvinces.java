@@ -45,8 +45,6 @@ public class NumberOfProvinces {
             if(isConnected[i][k]==1){
                 isConnected[i][k] = 0;
                 dfs(isConnected, k,m);
-            } else{
-                continue;
             }
         }
     }

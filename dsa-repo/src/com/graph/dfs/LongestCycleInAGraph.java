@@ -39,7 +39,7 @@ public class LongestCycleInAGraph {
         List<List<Integer>> graph = new ArrayList<>();
 
         for(int i=0;i<n;i++){
-            graph.add(new ArrayList<Integer>());
+            graph.add(new ArrayList<>());
         }
 
         for(int i=0;i<n;i++){
