@@ -137,9 +137,9 @@ public class AlienDictionary {
         System.out.println(new AlienDictionary().alienOrder(w));
     }
     public String alienOrder(String[] words) {
-        // creae data structure for storing
+        // create data structure for storing
         // 1. count of unique characters
-        // 2. AdjList of chracter precedence AdjList
+        // 2. AdjList of character precedence AdjList
 
         Map<Character,Integer> count = new HashMap<>();
         Map<Character, List<Character>> adj = new HashMap<>();
@@ -172,7 +172,7 @@ public class AlienDictionary {
         // Do a BFS for topological sorting
         Queue<Character> q = new LinkedList<>();
         StringBuilder sb = new StringBuilder();
-        // add all unique characters in queue whish doesn't have any incoming edge
+        // add all unique characters in queue which doesn't have any incoming edge
         // i.e. it behaves as a starting character
         for(Character c : count.keySet()){
             if(count.get(c)==0)

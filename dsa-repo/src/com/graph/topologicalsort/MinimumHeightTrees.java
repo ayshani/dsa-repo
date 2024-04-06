@@ -57,7 +57,7 @@ public class MinimumHeightTrees {
                 q.offer(i);
             }
         }
-
+        System.out.println(q);
         while(n>2){
             int size = q.size();
             n -= size;
@@ -71,7 +71,7 @@ public class MinimumHeightTrees {
                 }
             }
         }
-
+        System.out.println(q);
         return new ArrayList<>(q);
     }
 }

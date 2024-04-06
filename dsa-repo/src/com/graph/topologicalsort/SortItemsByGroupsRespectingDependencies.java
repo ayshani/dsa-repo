@@ -51,7 +51,7 @@ public class SortItemsByGroupsRespectingDependencies {
             if(group[i]==-1)
             {
                 group[i] = groupId;
-                groupId++;
+                 groupId++;
             }
         }
 

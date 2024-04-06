@@ -48,7 +48,6 @@ public class MinimumRemoveToMakeValidParentheses {
         while(!st.isEmpty()){
             sb.setCharAt(st.pop(),'*');
         }
-
         return sb.toString().replaceAll("\\*","");
 
     }

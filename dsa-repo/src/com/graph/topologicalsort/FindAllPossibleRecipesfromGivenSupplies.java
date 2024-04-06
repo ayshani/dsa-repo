@@ -87,7 +87,8 @@ public class FindAllPossibleRecipesfromGivenSupplies {
                 inDegree.put(recipes[i],notAvailableIngredient);
             }
         }
-
+        System.out.println(ingredientToRecipes);
+        System.out.println(answer);
         for(int i=0;i<answer.size();i++){
             String recipe = answer.get(i);
 
