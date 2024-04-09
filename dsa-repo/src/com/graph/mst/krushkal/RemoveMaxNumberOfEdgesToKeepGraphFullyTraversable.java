@@ -102,7 +102,7 @@ public class RemoveMaxNumberOfEdgesToKeepGraphFullyTraversable {
     }
 }
 
-class UnionFind1579{
+class  UnionFind1579{
     int[] parent, rank;
 
     public UnionFind1579(int n){

@@ -42,6 +42,7 @@ public class IsGraphBipartite {
             for(int j=0;j<graph[i].length;j++){
                 if(uf.find(i)== uf.find(graph[i][j]))
                     return false;
+                System.out.println("graph[i][j], graph[i][0] : "+ graph[i][j] +" " + graph[i][0]);
                 uf.union(graph[i][j], graph[i][0]);
             }
 

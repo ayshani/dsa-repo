@@ -68,8 +68,6 @@ class UnionFind{
         weight = new int[n];
         for(int i=0;i<n;i++) {
             parent[i] = i;
-            rank[i] = 0;
-            weight[i]=0;
         }
         count=0;
     }

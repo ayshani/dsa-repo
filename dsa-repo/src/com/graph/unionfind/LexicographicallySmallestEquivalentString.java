@@ -96,12 +96,12 @@ public class LexicographicallySmallestEquivalentString {
             union(s1.charAt(i) -'a', s2.charAt(i)-'a');
         }
 
-        String ans = "";
+        StringBuilder ans = new StringBuilder();
         // Create the answer string with final mappings.
         for(int i=0;i<baseStr.length();i++){
-            ans+= (char)(find(baseStr.charAt(i) - 'a') + 'a');
+            ans.append((char) (find(baseStr.charAt(i) - 'a') + 'a'));
         }
 
-        return ans;
+        return ans.toString();
     }
 }
