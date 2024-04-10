@@ -80,7 +80,8 @@ public class ReachableNodesInSubdividedGraph {
         }
 
         // we will iterate over every edge and each edge consists of src, dest, and weight
-        // As we have already gone through dijkstra, we know what is the min distance that is required from 0 to reach that src/dest.
+        // As we have already gone through dijkstra, we know what is the min distance that is required from 0 to
+        // reach that src/dest.
         // so, we can check how much we can traverse under maxMoves condition
         for(int[] edge : edges){
             int u = edge[0], v = edge[1], count = edge[2];
@@ -98,7 +99,9 @@ public class ReachableNodesInSubdividedGraph {
                 temp+= Math.min(maxMoves-distance[v], count);
             }
 
-            // Now, as we are calculating edge wise, so, we may run into situation where temp is more than actual count i.e. if same new nodes are getting considered more than one time and that can happen in case for e.g.:
+            // Now, as we are calculating edge wise, so, we may run into situation where temp is more than actual
+            // count i.e. if same new nodes are getting considered more than one time and that can happen
+            // in case for e.g.:
             // 0---2 edge  with count =1
             // here distance[0] =0, distance[2] =2
             // so, Min(maxMoves-distance[0] =6, count =1) ==> 1
