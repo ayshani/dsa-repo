@@ -51,7 +51,6 @@ public class RemoveKDigits {
     }
     public String removeKdigits(String num, int k) {
         Stack<Character> st = new Stack<>();
-
         if(k==num.length())
             return "0";
         for(int i=0;i<num.length();i++){
@@ -59,7 +58,6 @@ public class RemoveKDigits {
                 st.pop();
                 k--;
             }
-
             st.push(num.charAt(i));
         }
 
@@ -67,13 +65,11 @@ public class RemoveKDigits {
             st.pop();
             k--;
         }
-
         StringBuilder res= new StringBuilder();
 
         while(!st.isEmpty()){
             res.append(st.pop());
         }
-
         res.reverse();
 
         while(res.length()>1 && res.charAt(0)=='0' )
