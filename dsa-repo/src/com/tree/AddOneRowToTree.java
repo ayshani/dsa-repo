@@ -74,7 +74,6 @@ public class AddOneRowToTree {
             q = temp;
             d++;
         }
-
         // add the new row
         while(!q.isEmpty()){
             TreeNode node = q.poll();
@@ -85,7 +84,6 @@ public class AddOneRowToTree {
             node.right = new TreeNode(val);
             node.right.right = temp;
         }
-
         return root;
     }
 }
