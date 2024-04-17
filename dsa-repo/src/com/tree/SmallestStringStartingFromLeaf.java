@@ -64,7 +64,6 @@ public class SmallestStringStartingFromLeaf {
     private void dfs(TreeNode root, StringBuilder sb){
         if(root==null)
             return;
-
         sb.append((char)('a'+ root.val));
         //System.out.println(sb);
         if(root.left ==null && root.right == null)
@@ -76,7 +75,6 @@ public class SmallestStringStartingFromLeaf {
             if(s.compareTo(ans)<0)
                 ans = s;
         }
-
         dfs(root.left, sb);
         dfs(root.right, sb);
 
