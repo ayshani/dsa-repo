@@ -1,6 +1,7 @@
 package com.graph.dfs;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /*
@@ -37,7 +38,7 @@ public class FindAllGroupsOfFarmland {
         int[][] land = new int[][]{
                 {1,0,0},{0,1,1},{0,1,1}
         };
-        System.out.println(new FindAllGroupsOfFarmland().findFarmland(land));
+        System.out.println(Arrays.deepToString(new FindAllGroupsOfFarmland().findFarmland(land)));
     }
     public int[][] findFarmland(int[][] land) {
         int m = land.length, n = land[0].length;
@@ -51,7 +52,6 @@ public class FindAllGroupsOfFarmland {
                 }
             }
         }
-
         return result.toArray(new int[result.size()][]);
     }
 
@@ -67,7 +67,6 @@ public class FindAllGroupsOfFarmland {
             land[endX][j]=0;
             endX++;
         }
-
         //Fill the rectangular Farmland with zeroes
         //To avoid revisitng/recounting
         for(int x= i;x<=endX;x++){
