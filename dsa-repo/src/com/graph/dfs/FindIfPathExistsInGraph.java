@@ -52,7 +52,6 @@ public class FindIfPathExistsInGraph {
         if(dfs(adjList,source,destination,visited))
             return true;
         return false;
-
     }
 
     private boolean dfs(List<List<Integer>> adjList, int source, int destination, boolean[] visited){
@@ -65,10 +64,8 @@ public class FindIfPathExistsInGraph {
                 if(dfs(adjList,adjList.get(source).get(i),destination, visited)){
                     return true;
                 }
-
             }
         }
-
         return false;
     }
 }
