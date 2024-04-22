@@ -20,8 +20,6 @@ of the lock will stop turning and you will be unable to open it.
 Given a target representing the value of the wheels that will unlock the lock, return the minimum total
 number of turns required to open the lock, or -1 if it is impossible.
 
-
-
 Example 1:
 
 Input: deadends = ["0201","0101","0102","1212","2002"], target = "0202"
@@ -88,7 +86,6 @@ public class OpenTheLock {
 
         return new String(c);
     }
-
 
     public String down(String s, int index){
         char c[] = s.toCharArray();
