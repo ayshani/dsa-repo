@@ -71,6 +71,7 @@ public class MinimumHeightTrees {
                 }
             }
         }
+
         System.out.println(q);
         return new ArrayList<>(q);
     }
