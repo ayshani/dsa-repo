@@ -40,6 +40,8 @@ public class SumOfDistancesInTree {
         };
         int[] res = new SumOfDistancesInTree().sumOfDistancesInTree(n,edges);
         Arrays.stream(res).forEach(e -> System.out.print(e+" "));
+
+        System.out.println("abc".hashCode());
     }
     public int[] sumOfDistancesInTree(int n, int[][] edges) {
         N = n;
