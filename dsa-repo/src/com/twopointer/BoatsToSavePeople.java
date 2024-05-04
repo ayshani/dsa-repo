@@ -11,8 +11,6 @@ same time, provided the sum of the weight of those people is at most limit.
 
 Return the minimum number of boats to carry every given person.
 
-
-
 Example 1:
 
 Input: people = [1,2], limit = 3
@@ -33,7 +31,6 @@ public class BoatsToSavePeople {
         Arrays.sort(people);
 
         int l =0, r = people.length-1, count=0;
-
         while(l<=r){
             int sum = people[l]+ people[r];
             if(sum<=limit){
@@ -45,7 +42,6 @@ public class BoatsToSavePeople {
                 r--;
             }
         }
-
         return count;
     }
 }
