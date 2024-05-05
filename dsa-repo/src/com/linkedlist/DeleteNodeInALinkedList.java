@@ -38,6 +38,7 @@ public class DeleteNodeInALinkedList {
         head.next.next =  new ListNode(1);
         head.next.next.next = new ListNode(9);
 
+
         new DeleteNodeInALinkedList().deleteNode(head.next);
         new PrintLinkedList().print(head);
     }
