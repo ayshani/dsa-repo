@@ -40,11 +40,11 @@ public class AddStrings {
             int sum = intNum1 + intNum2 + carry;
             carry = sum/10;
             sum %= 10;
-            sb.insert(0,String.valueOf(sum));
+            sb.insert(0, sum);
 
         }
         if(carry>0){
-            sb.insert(0,String.valueOf(carry));
+            sb.insert(0, carry);
         }
         return sb.toString();
     }
