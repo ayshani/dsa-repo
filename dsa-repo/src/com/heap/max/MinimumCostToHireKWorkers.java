@@ -78,16 +78,20 @@ public class MinimumCostToHireKWorkers {
         Arrays.sort(workers, (a, b)-> Double.compare(a[0],b[0]));
         PriorityQueue<Double> pq = new PriorityQueue<>();
 
+
         double result =Double.MAX_VALUE, sum = 0;
         Arrays.stream(workers).forEach(worker -> System.out.println(Arrays.toString(worker)));
         for(double[] worker : workers){
             System.out.println("worker : "+Arrays.toString(worker));
+
             sum+=worker[1];
             pq.offer(-worker[1]);
             System.out.println("sum : "+ sum +" pq.peek() : " + pq.peek());
+
             if(pq.size()>k)
                 sum+=pq.poll();
             System.out.println("sum : "+ sum +" worker[0] : " + worker[0]);
+
             if(pq.size() == k)
                 result = Math.min(result, sum*worker[0]);
             System.out.println("result : "+ result);
