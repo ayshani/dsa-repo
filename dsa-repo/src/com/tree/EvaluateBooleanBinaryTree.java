@@ -46,7 +46,7 @@ public class EvaluateBooleanBinaryTree {
             return false;
 
         if(root.left==null && root.right==null)
-            return root.val==0 ? false : true;
+            return root.val != 0;
 
         boolean leftValue = evaluateTree(root.left);
         boolean rightValue = evaluateTree(root.right);
