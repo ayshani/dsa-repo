@@ -52,7 +52,6 @@ public class EvaluateBooleanBinaryTree {
         boolean rightValue = evaluateTree(root.right);
 
         boolean result = false;
-
         if(root.val == 2)
             result = leftValue | rightValue;
         else
