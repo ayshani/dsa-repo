@@ -38,9 +38,7 @@ public class Subsets {
 
     private void backtrack(int[] nums, int s, List<Integer> cur){
 
-        // if(cur.size()>0){
         result.add(new ArrayList<>(cur));
-        //}
 
         for(int i=s;i<nums.length;i++){
             cur.add(nums[i]);
