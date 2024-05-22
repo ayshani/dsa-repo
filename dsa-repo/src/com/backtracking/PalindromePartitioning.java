@@ -60,7 +60,6 @@ public class PalindromePartitioning {
             result.add(new ArrayList<>(currentList));
             return ;
         }
-
         for(int end = start; end< s.length();end++){
             if(isPalindrome(s, start,end)){
                 currentList.add(s.substring(start,end+1));

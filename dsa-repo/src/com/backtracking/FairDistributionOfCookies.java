@@ -55,7 +55,7 @@ public class FairDistributionOfCookies {
             // no more cookies to distribute; hence, return and try the next posibilities
             return ;
         }
-        // try all possibility of distriuting the cookie to each jar
+        // try all possibility of distriuting the cookie to each child
         for(int i=0;i<k;i++){
             // backtracking algorithm
             res[i]+= cookies[index];
