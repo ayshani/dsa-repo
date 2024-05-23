@@ -2,6 +2,7 @@ package com.tree;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /*
 94. Binary Tree Inorder Traversal
@@ -25,6 +26,7 @@ public class BinaryTreeInorderTraversal {
         root.right.left = new TreeNode(3);
 
         System.out.println(new BinaryTreeInorderTraversal().inorderTraversal(root));
+        new BinaryTreeInorderTraversal().inorderTraversalIterative(root);
     }
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
@@ -38,5 +40,25 @@ public class BinaryTreeInorderTraversal {
         inorder(root.left,result);
         result.add(root.val);
         inorder(root.right,result);
+    }
+
+    private void inorderTraversalIterative(TreeNode root){
+        if(root== null){
+            return;
+        }
+
+        Stack<TreeNode> st = new Stack<>();
+        TreeNode current = root;
+        while(current!= null || !st.isEmpty()){
+            while(current!=null){
+                st.push(current);
+                current = current.left;
+            }
+            current = st.pop();
+            System.out.print(current.val+" ");
+
+            current = current.right;
+        }
+
     }
 }
