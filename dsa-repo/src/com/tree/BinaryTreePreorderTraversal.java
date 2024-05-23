@@ -2,6 +2,7 @@ package com.tree;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /*
 144. Binary Tree Preorder Traversal
@@ -23,6 +24,7 @@ public class BinaryTreePreorderTraversal {
         root.right.left = new TreeNode(3);
 
         System.out.println(new BinaryTreePreorderTraversal().preorderTraversal(root));
+        new BinaryTreePreorderTraversal().preorderIterative(root);
     }
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> ls = new ArrayList<>();
@@ -38,5 +40,24 @@ public class BinaryTreePreorderTraversal {
         ls.add(root.val);
         preorder(root.left,ls);
         preorder(root.right,ls);
+    }
+
+    private void preorderIterative(TreeNode root){
+        if(root == null){
+            return;
+        }
+
+        Stack<TreeNode> st = new Stack<>();
+        st.push(root);
+        while(!st.isEmpty()){
+            TreeNode cur = st.pop();
+            System.out.print(cur.val+" ");
+            if(cur.right != null){
+                st.push(cur.right);
+            }
+            if(cur.left != null){
+                st.push(cur.left);
+            }
+        }
     }
 }
