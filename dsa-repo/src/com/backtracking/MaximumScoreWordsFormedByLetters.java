@@ -60,7 +60,7 @@ public class MaximumScoreWordsFormedByLetters {
         util(words, score, index-1, totalScore, subsetLetters);
 
         // consider the current word
-        // 1. add total frequency of the current owrd in subsetLetters
+        // 1. add total frequency of the current word in subsetLetters
         for(int i=0;i<words[index].length();i++){
             subsetLetters[words[index].charAt(i)-'a']++;
             totalScore += score[words[index].charAt(i)-'a'];
