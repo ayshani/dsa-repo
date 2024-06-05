@@ -28,6 +28,7 @@ public class FindCommonCharacters {
         List<String> res = new ArrayList<>();
         int[] count = new int[26];
         Arrays.fill(count, 101);
+
         for(String word : words){
             int[] cur = new int[26];
             //Arrays.fill(cur, 101);
@@ -38,6 +39,7 @@ public class FindCommonCharacters {
                 count[i] = Math.min(count[i], cur[i]);
             }
         }
+
         for(char c = 'a' ; c<='z';c++){
             while(count[c-'a']-->0){
                 res.add(""+c);
