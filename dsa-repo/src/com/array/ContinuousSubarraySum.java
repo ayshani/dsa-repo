@@ -35,7 +35,6 @@ public class ContinuousSubarraySum {
             if(k!=0){
                 sum%=k;
             }
-
             Integer prev = map.get(sum);
             if(prev!=null){
                 // this checks if there is more than one element in subarray
@@ -44,7 +43,6 @@ public class ContinuousSubarraySum {
             }  else
                 map.put(sum,i);
         }
-
         return false;
     }
 }
