@@ -10,8 +10,6 @@ Given an integer array nums and an integer k, return the number of non-empty sub
 
 A subarray is a contiguous part of an array.
 
-
-
 Example 1:
 
 Input: nums = [4,5,0,-2,-3,1], k = 5
@@ -32,10 +30,12 @@ public class SubarraySumsDivisibleByK {
         Map<Integer,Integer> map = new HashMap<>();
         int sum =0, count=0;
         map.put(0,1);
+
         for(int i=0;i<nums.length;i++){
             sum = (sum+nums[i])%k;
             if(sum<0)
                 sum+=k;
+
             int countOfCurrentSum = map.getOrDefault(sum,0);
             count+=countOfCurrentSum;
             map.put(sum, countOfCurrentSum+1);
