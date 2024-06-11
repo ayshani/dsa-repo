@@ -35,7 +35,6 @@ public class RelativeSortArray {
         for(int val : arr1){
             count[val]++;
         }
-
         List<Integer> result = new ArrayList<>();
         for(int val : arr2){
             while(count[val]>0){
