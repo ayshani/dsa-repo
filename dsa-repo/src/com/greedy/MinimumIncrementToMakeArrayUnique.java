@@ -46,9 +46,23 @@ public class MinimumIncrementToMakeArrayUnique {
 
     public static void main(String[] args) {
         int[] nums = new int[]{3,2,1,2,1,7};
-        System.out.println(new MinimumIncrementToMakeArrayUnique().minIncrementForUnique(nums));
+        System.out.println(new MinimumIncrementToMakeArrayUnique().minIncrementForUniqueV1(nums));
     }
-    public int minIncrementForUnique(int[] nums) {
+
+    public int minIncrementForUniqueV1(int[] nums) {
+        Arrays.sort(nums);
+        int minIncrement =0;
+
+        for(int i=1; i<nums.length;i++){
+            if(nums[i]<= nums[i-1]){
+                int increment = nums[i-1] +1 - nums[i];
+                minIncrement += increment;
+                nums[i] = nums[i-1]+1;
+            }
+        }
+        return minIncrement;
+    }
+    public int minIncrementForUniqueV2(int[] nums) {
         Arrays.sort(nums);
         int moves =0, taken =0;
 
