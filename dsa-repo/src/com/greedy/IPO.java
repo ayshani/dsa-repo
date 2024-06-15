@@ -64,7 +64,6 @@ public class IPO {
         for(int i=0;i<n;i++){
             projects[i] = new Project(capital[i], profits[i]);
         }
-
         Arrays.sort(projects);
 
         // PriorityQueue is a min heap, but we need a max heap, so we use
@@ -77,15 +76,13 @@ public class IPO {
                 q.add(projects[ptr++].profit);
             }
 
-            if(q.isEmpty())
-            {
+            if(q.isEmpty()) {
                 break;
             }
 
             w+= q.poll();
         }
         return w;
-
     }
 }
 
