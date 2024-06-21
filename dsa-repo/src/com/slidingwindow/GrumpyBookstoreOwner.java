@@ -36,10 +36,16 @@ public class GrumpyBookstoreOwner {
         int n = customers.length;
 
         int unsatisfiedCustomer = 0;
+        // get first minutes number of unsatisfied customers
         for(int i=0;i<minutes; i++){
             unsatisfiedCustomer += customers[i]*grumpy[i];
         }
+        // this can be a max unsatisfied customers
         int maxUnsatisfiedCustomer = unsatisfiedCustomer;
+
+        // run over a sliding window of minutes
+        // add the last and remove which is outside of the sliding window
+        // get the max from each sliding window
         for(int i= minutes; i<n; i++){
             unsatisfiedCustomer += customers[i]*grumpy[i];
             unsatisfiedCustomer -= customers[i-minutes]*grumpy[i-minutes];
@@ -47,7 +53,10 @@ public class GrumpyBookstoreOwner {
             maxUnsatisfiedCustomer = Math.max(maxUnsatisfiedCustomer, unsatisfiedCustomer);
         }
 
+        // this will be initial total satisfied customers using the trick
         int totalCustomers = maxUnsatisfiedCustomer;
+
+        // rest add the customers when owner is not grumpy
         for(int i=0;i<n;i++){
             totalCustomers += customers[i]*(1-grumpy[i]);
         }
