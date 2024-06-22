@@ -24,6 +24,7 @@ public class CountNumberOfNiceSubarrays {
     public static void main(String[] args) {
         int[] nums = new int[]{1,1,2,1,1};
         System.out.println(new CountNumberOfNiceSubarrays().numberOfSubarrays(nums,3));
+        System.out.println(new CountNumberOfNiceSubarrays().numberOfSubarraysV2(nums,3));
     }
     public int numberOfSubarrays(int[] nums, int k) {
         HashMap<Integer,Integer> map = new HashMap<>();
@@ -50,5 +51,30 @@ public class CountNumberOfNiceSubarrays {
         }
 
         return count;
+    }
+
+    /*
+    TC : o(n)
+    SC: o(1)
+     */
+    public int numberOfSubarraysV2(int[] nums, int k) {
+        int start =0, odd =0, gap =0, subArray =0;
+        for(int end =0; end<nums.length; end++){
+            if(nums[end]%2==1){
+                odd++;
+            }
+
+            if(odd == k){
+                gap =0;
+                while(odd == k){
+                    odd -= nums[start]%2;
+                    gap++;
+                    start++;
+                }
+            }
+
+            subArray +=gap;
+        }
+        return subArray;
     }
 }
