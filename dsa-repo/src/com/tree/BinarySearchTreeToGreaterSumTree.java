@@ -37,6 +37,7 @@ public class BinarySearchTreeToGreaterSumTree {
             bstToGst(root.right);
 
         pre = root.val = pre+ root.val;
+
         if(root.left!=null)
             bstToGst(root.left);
 
