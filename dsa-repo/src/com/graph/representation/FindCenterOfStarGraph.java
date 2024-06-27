@@ -38,6 +38,7 @@ public class FindCenterOfStarGraph {
         };
 
         System.out.println(new FindCenterOfStarGraph().findCenter(edges));
+        System.out.println(new FindCenterOfStarGraph().findCenterV2(edges));
     }
     public int findCenter(int[][] edges) {
 
@@ -56,6 +57,18 @@ public class FindCenterOfStarGraph {
         }
 
         return 0;
+    }
+
+    /*
+    As the input is the star graph then one vertx should be present in all edges.
+    So, we need to check only two edges to find out the common vertex
+
+    TC : o(1)
+    SC: o(1)
+     */
+    public int findCenterV2(int[][] edges) {
+        int[] first = edges[0], sec = edges[1];
+        return (first[0]== sec[0] || first[0] == sec[1]) ? first[0] : first[1];
     }
 
 }
