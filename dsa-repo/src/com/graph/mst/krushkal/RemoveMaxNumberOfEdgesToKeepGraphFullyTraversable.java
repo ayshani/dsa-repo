@@ -74,6 +74,7 @@ public class RemoveMaxNumberOfEdgesToKeepGraphFullyTraversable {
                 if(unionBobGraph){
                     bobEdges++;
                 }
+
                 // edges already connected by Alice and Bob individually .
                 // we can Remove the edge
                 if(!unionAliceGraph && !unionBobGraph){
@@ -84,6 +85,7 @@ public class RemoveMaxNumberOfEdgesToKeepGraphFullyTraversable {
                 if(unionAliceGraph){
                     aliceEdges++;
                 } else{
+
                     // edges already connected by Alice and can be removed
                     canRemoveEdge++;
                 }
@@ -92,11 +94,13 @@ public class RemoveMaxNumberOfEdgesToKeepGraphFullyTraversable {
                 if(unionBobGraph){
                     bobEdges++;
                 } else{
+
                     // edges already connected by Bob and can be removed
                     canRemoveEdge++;
                 }
             }
         }
+
         //It takes minimum  (N -1) to connect a graph with N node . MST concept
         return (aliceEdges == n-1 && bobEdges == n-1) ? canRemoveEdge : -1;
     }
