@@ -45,7 +45,6 @@ public class IntersectionOfTwoArraysII {
                 leftIndex = index+1;
             }
         }
-
         return list.stream().mapToInt( i -> i).toArray();
     }
 
@@ -55,7 +54,6 @@ public class IntersectionOfTwoArraysII {
 
         while(left<=right){
             int mid = left +(right - left)/2;
-
             if(nums[mid]==target){
                 // if we get a hit, we need to take left most index. Hence , not
                 // returning from this point.
