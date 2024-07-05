@@ -52,22 +52,28 @@ public class FindTheMinimumAndMaximumNumberOfNodesBetweenCriticalPoints {
         int curIndex = 1, prevCriticalIndex = 0, firstCriticalIndex = 0;
 
         while(current.next != null){
+            // if this is local maxima/minima
             if((current.val < previous.val && current.val < current.next.val) ||
                     (current.val > previous.val && current.val > current.next.val)){
+                // if this si first time we are getting a critical point
+                // update the firstCriticalPoint and prevCriticalIndex to current index
                 if(prevCriticalIndex==0){
                     prevCriticalIndex = curIndex;
                     firstCriticalIndex = curIndex;
                 } else{
+                    // otherwise calculate minDistance from previous critcal update
                     minDistance = Math.min(minDistance, curIndex - prevCriticalIndex);
                     prevCriticalIndex = curIndex;
                 }
             }
+            // advance in the list
             curIndex++;
             previous = current;
             current = current.next;
         }
 
         if(minDistance != Integer.MAX_VALUE){
+            // get the diff between lastCritcal point and first one. This will become max distance
             int maxDistance = prevCriticalIndex - firstCriticalIndex;
             result = new int[]{minDistance, maxDistance};
         }
