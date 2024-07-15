@@ -49,7 +49,6 @@ public class CreateBinaryTreeFromDescriptions {
                 root = new TreeNode(des[0]);
                 map.put(des[0],root);
             }
-
             TreeNode parent = map.get(des[0]);
             TreeNode child = map.get(des[1]);
 
@@ -58,7 +57,6 @@ public class CreateBinaryTreeFromDescriptions {
             else
                 parent.right = child;
         }
-
         return root;
     }
 }
