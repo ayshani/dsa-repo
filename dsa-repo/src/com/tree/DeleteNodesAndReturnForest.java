@@ -23,6 +23,16 @@ Output: [[1,2,null,4],[6],[7]]
  */
 public class DeleteNodesAndReturnForest {
 
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(8);
+        root.left.left = new TreeNode(1);
+        root.right.left = new TreeNode(6);
+        root.right.right = new TreeNode(10);
+        int[] toDelete = {1,10};
+        System.out.println(new DeleteNodesAndReturnForest().delNodes(root,toDelete));
+    }
     List<TreeNode> nodeList;
     Set<Integer> deleteSet;
     public List<TreeNode> delNodes(TreeNode root, int[] to_delete) {
@@ -31,6 +41,7 @@ public class DeleteNodesAndReturnForest {
         for(int num : to_delete){
             deleteSet.add(num);
         }
+
         util(root, true);
         return nodeList;
     }
@@ -43,6 +54,7 @@ public class DeleteNodesAndReturnForest {
         if(isRoot && !deleted){
             nodeList.add(root);
         }
+
         root.left = util(root.left, deleted);
         root.right = util(root.right, deleted);
         return deleted ? null : root;
