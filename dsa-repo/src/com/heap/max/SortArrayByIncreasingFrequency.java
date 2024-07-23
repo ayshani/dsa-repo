@@ -28,7 +28,10 @@ public class SortArrayByIncreasingFrequency {
         int[] nums = new int[]{1,1,2,2,2,3};
 
         int[] res = new SortArrayByIncreasingFrequency().frequencySort(nums);
+        int[] res1 = new SortArrayByIncreasingFrequency().frequencySortV2(nums);
         Arrays.stream(res).forEach(e -> System.out.print(e+ " "));
+        System.out.println("\nV2 --");
+        Arrays.stream(res1).forEach(e -> System.out.print(e+ " "));
     }
     public int[] frequencySort(int[] nums) {
         Map<Integer,Integer> map = new HashMap<>();
@@ -54,5 +57,29 @@ public class SortArrayByIncreasingFrequency {
 
         return res;
 
+    }
+
+    public int[] frequencySortV2(int[] nums) {
+        int n = nums.length;
+        Map<Integer, Integer> freq = new HashMap<>();
+        for(int num : nums){
+            freq.put(num, freq.getOrDefault(num,0)+1);
+        }
+
+        Integer[] numObject = new Integer[n];
+        for(int i=0;i<n;i++){
+            numObject[i] = nums[i];
+        }
+
+        Arrays.sort(numObject, (a,b)->{
+            if(freq.get(a).equals(freq.get(b))){
+                return Integer.compare(b,a);
+            }
+            return Integer.compare(freq.get(a), freq.get(b));
+        });
+        for(int i=0;i<n;i++){
+            nums[i] = numObject[i];
+        }
+        return nums;
     }
 }
