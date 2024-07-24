@@ -1,9 +1,6 @@
 package com.sort;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /*
 2191. Sort the Jumbled Numbers
@@ -59,7 +56,7 @@ public class SortTheJumbledNumbers {
             int mappedValue = Integer.parseInt(formed);
             pairs.add(new Integer[]{mappedValue, i});
         }
-        Collections.sort(pairs, (a, b) -> a[0]-b[0]);
+        pairs.sort(Comparator.comparingInt(a -> a[0]));
         int[] ans = new int[nums.length];
         for(int i=0;i<pairs.size();i++){
             ans[i] = nums[pairs.get(i)[1]];
