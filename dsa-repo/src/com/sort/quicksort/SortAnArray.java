@@ -43,6 +43,7 @@ public class SortAnArray {
 
         int pivot = nums[low];
         int l = low-1, r = high+1;
+
         while(true){
             do{
                 l++;
@@ -58,6 +59,5 @@ public class SortAnArray {
             nums[l] = nums[r];
             nums[r] = temp;
         }
-
     }
 }
