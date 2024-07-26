@@ -54,6 +54,7 @@ public class FindTheCityWithSmallestNumberOfNeighboursAtAThresholdDistance {
             graph.get(u).add(new int[]{v,w});
             graph.get(v).add(new int[]{u,w});
         }
+
         int[][] distance = new int[n][n];
         for(int i=0;i<n;i++){
             Arrays.fill(distance[i],Integer.MAX_VALUE);
@@ -97,6 +98,7 @@ public class FindTheCityWithSmallestNumberOfNeighboursAtAThresholdDistance {
             if(visited[cur[0]])
                 continue;
             visited[cur[0]] = true;
+
             for(int[] neighbour : graph.get(cur[0])){
                 int next = neighbour[0], nextWeight = neighbour[1];
                 if(!visited[next] && dist[cur[0]] + nextWeight<dist[next] ){
