@@ -39,13 +39,11 @@ public class RangeSumOfSortedSubarraySums {
                 aux[index++] = sum;
             }
         }
-
         Arrays.sort(aux);
         int sum =0;
         for(int i=left-1;i<right;i++){
             sum = (sum+aux[i])%1000000007;
         }
-
         return sum;
     }
 
