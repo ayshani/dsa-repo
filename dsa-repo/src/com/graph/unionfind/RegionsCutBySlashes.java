@@ -27,6 +27,7 @@ public class RegionsCutBySlashes {
                 new String[]{"/\\","\\/"}
         ));
     }
+
     public int regionsBySlashes(String[] grid) {
         n = grid.length;
         parent = new int[n * n * 4];  //build an array to store all parents of all triangles
