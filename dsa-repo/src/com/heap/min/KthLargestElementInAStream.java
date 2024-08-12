@@ -53,6 +53,7 @@ class KthLargest {
     PriorityQueue<Integer> pq;
     int K;
     public KthLargest(int k, int[] nums) {
+
         pq = new PriorityQueue<>();
         this.K = k;
         for(int num : nums){
@@ -62,7 +63,6 @@ class KthLargest {
             }
         }
     }
-
     public int add(int val) {
         pq.add(val);
         if(pq.size()>K){
