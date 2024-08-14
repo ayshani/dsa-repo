@@ -41,7 +41,6 @@ public class FindKthSmallestPairDistance {
                 high = mid;
             }
         }
-
         return high;
     }
 
@@ -55,7 +54,6 @@ public class FindKthSmallestPairDistance {
             }
             count += (j-i-1);
         }
-
         return count;
     }
 }
