@@ -42,9 +42,9 @@ public class UglyNumberII {
         int fac2=2, fac3=3,fac5=5, index2 =0,index3=0, index5=0;
 
         dp[0]=1;
-
         for(int i=1;i<n;i++){
             int min = Math.min(fac2, Math.min(fac3,fac5));
+
             dp[i] = min;
             if(min ==fac2){
                 fac2 = 2*dp[++index2];
