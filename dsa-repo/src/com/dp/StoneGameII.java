@@ -38,7 +38,6 @@ public class StoneGameII {
     public int stoneGameII(int[] piles) {
         if(piles == null || piles.length==0)
             return 0;
-
         int n = piles.length;
 
         int[] sufffixSum = new int[n];
@@ -48,7 +47,6 @@ public class StoneGameII {
         for(int i=n-2;i>=0;i--){
             sufffixSum[i] = sufffixSum[i+1] + piles[i];
         }
-
         Integer[][] dp = new Integer[n][n];
         return util(piles, sufffixSum, dp, 0,1);
     }
@@ -72,6 +70,7 @@ public class StoneGameII {
         for(int x=1; x<=2*M;x++){
             minValue = Math.min(minValue, util(piles,sufffixSum, dp, pile+x, Math.max(M,x)));
         }
+
         // Alex max stones = all the left stones - the min stones Lee can get
         return dp[pile][M] = sufffixSum[pile] - minValue;
     }
