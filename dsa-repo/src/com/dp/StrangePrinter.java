@@ -84,6 +84,7 @@ public class StrangePrinter {
     public int strangePrinter(String s) {
         int n = s.length();
         Integer[][] dp = new Integer[n][n];
+
         return solve(s,n,0,n-1,dp)+1;
     }
 
@@ -96,12 +97,12 @@ public class StrangePrinter {
             if(s.charAt(i) != s.charAt(right) && j==-1){
                 j=i;
             }
-
             if(j!=-1){
                 dp[left][right] = Math.min(dp[left][right], 1 + solve(s,n,j,i,dp) +
                         solve(s,n,i+1,right,dp));
             }
         }
+
         if(j==-1){
             dp[left][right] = 0;
         }
