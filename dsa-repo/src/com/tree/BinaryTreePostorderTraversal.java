@@ -39,10 +39,11 @@ public class BinaryTreePostorderTraversal {
 
         if(root== null)
             return;
+
         postOrder(root.left,result);
         postOrder(root.right,result);
-        result.add(root.val);
 
+        result.add(root.val);
     }
 
     public List<Integer> postorderTraversalIterative(TreeNode root) {
@@ -54,6 +55,7 @@ public class BinaryTreePostorderTraversal {
             if(root!=null){
                 st.push(root);
                 root = root.left;
+
             } else{
                 root = st.peek();
                 if(root.right == null || root.right == previous){
@@ -61,8 +63,10 @@ public class BinaryTreePostorderTraversal {
                     st.pop();
                     previous = root;
                     root = null;
+
                 } else{
                     root = root.right;
+
                 }
             }
         }
