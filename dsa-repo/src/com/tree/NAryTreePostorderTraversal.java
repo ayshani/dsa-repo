@@ -44,8 +44,6 @@ public class NAryTreePostorderTraversal {
     private void util(Node root, List<Integer> result){
         if(root==null)
             return ;
-
-
         if(root.children!=null) {
             for (Node child : root.children) {
                 util(child, result);
