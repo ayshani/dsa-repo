@@ -38,6 +38,7 @@ public class PathWithMaximumProbability {
         for(int i=0;i<n;i++){
             graph.add(new ArrayList<>());
         }
+
         for(int i=0;i<edges.length;i++){
             graph.get(edges[i][0]).add(new ProbPair(edges[i][1],succProb[i]));
             graph.get(edges[i][1]).add(new ProbPair(edges[i][0],succProb[i]));
@@ -63,9 +64,11 @@ public class PathWithMaximumProbability {
             //System.out.println(cur.prob);
             if(cur.node==end)
                 return probability[end];
+
             if(visited[cur.node])
                 continue;
             visited[cur.node] =true;
+
             for(ProbPair neighbour : graph.get(cur.node)){
                 int next = neighbour.node;
                 double nextProbability = neighbour.prob;
