@@ -62,7 +62,6 @@ public class MostStonesRemovedWithSameRowOrColumn {
                 }
             }
         }
-
         return stones.length - numberOfIslands;
     }
 
@@ -76,8 +75,6 @@ public class MostStonesRemovedWithSameRowOrColumn {
 
     public int removeStonesV2(int[][] stones) {
         Set<int[]> visited = new HashSet<>();
-
-
         int numberOfIslands =0;
 
         for(int[] stone : stones){
