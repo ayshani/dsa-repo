@@ -22,6 +22,9 @@ Input: n = 3, edges = [[0,1],[1,2],[0,2]], succProb = [0.5,0.5,0.2], start = 0, 
 Output: 0.25000
 Explanation: There are two paths from start to end, one having a probability of success = 0.2
         and the other has 0.5 * 0.5 = 0.25.
+
+TC : o(m+nlogn)
+SC: o(m+n)
  */
 public class PathWithMaximumProbability {
 
@@ -67,6 +70,7 @@ public class PathWithMaximumProbability {
 
             if(visited[cur.node])
                 continue;
+
             visited[cur.node] =true;
 
             for(ProbPair neighbour : graph.get(cur.node)){
