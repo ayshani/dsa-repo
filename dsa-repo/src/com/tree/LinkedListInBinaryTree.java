@@ -25,6 +25,7 @@ Explanation: Nodes in blue form a subpath in the binary Tree.
 Time O(N * min(L,H))
 Space O(H)
 where N = tree size, H = tree height, L = list length.
+
  */
 public class LinkedListInBinaryTree {
     public static void main(String[] args) {
@@ -48,16 +49,20 @@ public class LinkedListInBinaryTree {
     public boolean isSubPath(ListNode head, TreeNode root) {
         if(head==null)
             return true;
+
         if(root==null)
             return false;
+
         return dfs(head,root) || isSubPath(head, root.left) || isSubPath(head, root.right);
     }
 
     private boolean dfs(ListNode head, TreeNode root){
         if(head==null)
             return true;
+
         if(root==null)
             return false;
+
         return root.val==head.val && (dfs(head.next, root.left) || dfs(head.next, root.right));
     }
 }
