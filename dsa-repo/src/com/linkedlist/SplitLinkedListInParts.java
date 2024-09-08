@@ -41,6 +41,7 @@ public class SplitLinkedListInParts {
     public ListNode[] splitListToParts(ListNode root, int k) {
         ListNode cur = root;
         int n =0;
+
         while(cur!=null){
             cur= cur.next;
             n++;
@@ -57,6 +58,7 @@ public class SplitLinkedListInParts {
                 if(cur!=null)
                     cur = cur.next;
             }
+
             if(cur!=null){
                 ListNode prev = cur;
                 cur = cur.next;
