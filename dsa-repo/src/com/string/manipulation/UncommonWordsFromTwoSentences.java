@@ -33,6 +33,7 @@ public class UncommonWordsFromTwoSentences {
         }
 
         ArrayList<String> list = new ArrayList<>();
+
         for(String s: map.keySet()){
             if(map.get(s)==1){
                 list.add(s);
@@ -40,6 +41,5 @@ public class UncommonWordsFromTwoSentences {
         }
 
         return list.toArray(new String[0]);
-
     }
 }
