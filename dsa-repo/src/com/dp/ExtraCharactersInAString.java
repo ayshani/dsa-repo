@@ -53,7 +53,6 @@ Space complexity: O(N+M⋅K). The HashSet used to store the strings in the dicti
 of O(M⋅K). Additionally, the dp method will consume stack space and traverse to a depth of NNN in the worst
 case scenario, resulting in a cost of O(N).
 
-
  */
 public class ExtraCharactersInAString {
 
@@ -76,9 +75,13 @@ public class ExtraCharactersInAString {
         if(dp[start]!= null)
             return dp[start];
 
+        // don't consider the current character
         int ans = solve(s, start+1, n, dp,set) + 1;
+
+        // consider from current character for which there is a hit in set of dictonary
         for(int end = start;end<n;end++){
             var currentSubString = s.substring(start, end+1);
+
             if(set.contains(currentSubString)){
                 ans = Math.min(ans, solve(s,end+1,n,dp,set));
             }
