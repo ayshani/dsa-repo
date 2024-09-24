@@ -29,6 +29,7 @@ The longest common prefix is 100 with a length of 3.
 
 TC : o(s)
 SC: o(n*s)
+
  */
 public class FindTheLengthOfTheLongestCommonPrefix {
 
@@ -44,13 +45,10 @@ public class FindTheLengthOfTheLongestCommonPrefix {
         for(int num : arr1){
             trie.insert(String.valueOf(num));
         }
-
         for(int num : arr2){
             int len = trie.search(String.valueOf(num));
             maxLength = Math.max(maxLength, len);
         }
-
-
         return maxLength;
     }
 
