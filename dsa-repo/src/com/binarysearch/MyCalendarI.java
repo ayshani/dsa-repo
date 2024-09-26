@@ -82,8 +82,11 @@ class MyCalendar {
     }
 
     public boolean book(int start, int end) {
+        // previous end
         Integer prev = calendar.floorKey(start);
+        // next start
         Integer next = calendar.ceilingKey(start);
+
         if((prev ==  null || calendar.get(prev) <=start)
                 && (next == null || end<= next))
         {
