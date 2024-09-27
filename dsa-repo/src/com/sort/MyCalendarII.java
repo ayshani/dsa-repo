@@ -41,6 +41,9 @@ myCalendarTwo.book(25, 55); // return True, The event can be booked,
                             as the time in [25, 40) will be double booked with the third event,
                             the time [40, 50) will be single booked, and the time [50, 55) will
                             be double booked with the second event.
+
+TC : o(nlogn)
+SC : o(n)
  */
 public class MyCalendarII {
     public static void main(String[] args) {
@@ -67,6 +70,8 @@ class MyCalendarTwo {
         int active = 0;
         for(int d : delta.values()){
             active+=d;
+            // this is triple booking
+            // so, remove the above inserted meeting
             if(active>=3){
                 delta.put(start,delta.getOrDefault(start,0)-1);
                 delta.put(end,delta.getOrDefault(end,0)+1);
@@ -76,7 +81,6 @@ class MyCalendarTwo {
                 return false;
             }
         }
-
         return true;
     }
 }
