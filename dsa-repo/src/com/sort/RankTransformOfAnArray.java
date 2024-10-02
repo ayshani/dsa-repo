@@ -39,15 +39,12 @@ public class RankTransformOfAnArray {
         int[] A = Arrays.copyOf(arr,arr.length);
         Arrays.sort(A);
         Map<Integer,Integer> map = new HashMap<>();
-
         for(int x : A){
             map.putIfAbsent(x,map.size()+1);
         }
-
         for(int i=0;i<arr.length;i++){
             arr[i] = map.get(arr[i]);
         }
-
         return arr;
     }
 
