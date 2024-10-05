@@ -44,9 +44,7 @@ public class PermutationInString {
                     count--;
                 }
             }
-
             end++;
-
             while(count==0){
                 if(end-start== s1.length()){
                     return true;
