@@ -49,6 +49,7 @@ public class MinimumNumberOfSwapsToMakeTheStringBalanced {
                 st.pop();
             }
         }
+
         // here we are doing +1 to take into account of odd length of stack
         // for eg: if stack size ==2 : 2/2 ==1 -> here there ll be no problem.
         // but for eg stack size==3 : 3/2 ==1 -> it is a problem, as min no. of swap for 3

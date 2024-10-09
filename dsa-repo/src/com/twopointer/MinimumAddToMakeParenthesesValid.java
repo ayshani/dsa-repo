@@ -40,7 +40,6 @@ public class MinimumAddToMakeParenthesesValid {
                 left++;
             }
         }
-
         return right+ left;
     }
 }
