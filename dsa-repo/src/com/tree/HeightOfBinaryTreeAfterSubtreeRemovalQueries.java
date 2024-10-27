@@ -42,7 +42,7 @@ public class HeightOfBinaryTreeAfterSubtreeRemovalQueries {
         root.right = new TreeNode(3);
         root.left.left = new TreeNode(4);
         root.right.left = new TreeNode(2);
-        TreeNode root2 = new TreeNode(1);
+        TreeNode root2 = new TreeNode(1 );
         root2.right = new TreeNode(2);
         root2.left = new TreeNode(3);
         root2.right.right = new TreeNode(4);
