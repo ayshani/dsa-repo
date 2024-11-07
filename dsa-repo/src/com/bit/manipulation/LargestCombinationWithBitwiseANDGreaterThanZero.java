@@ -69,6 +69,7 @@ public class LargestCombinationWithBitwiseANDGreaterThanZero {
         int[] candidates = new int[]{16,17,71,62,12,24,14};
 
         System.out.println(new LargestCombinationWithBitwiseANDGreaterThanZero().largestCombination(candidates));
+        System.out.println(new LargestCombinationWithBitwiseANDGreaterThanZero().largestCombinationV2(candidates));
     }
     public int largestCombination(int[] candidates) {
         int[] arr = new int[24]; //1_000_000_0's binary representation has length of 24
@@ -87,5 +88,23 @@ public class LargestCombinationWithBitwiseANDGreaterThanZero {
         }
 
         return Arrays.stream(arr).max().getAsInt();
+    }
+
+    /*
+    TC : o(n)
+    SC: o(1)
+     */
+    public int largestCombinationV2(int[] candidates) {
+        int maxCount = 0; // Variable to track the maximum count of set bits.
+        for (int i = 0; i < 24; i++) {
+            int count = 0; // Count of numbers with the i-th bit set.
+            for (int num : candidates) {
+                if ((num & (1 << i)) != 0) { // Check if the i-th bit is set.
+                    count++;
+                }
+            }
+            maxCount = Math.max(maxCount, count); // Update the maximum count.
+        }
+        return maxCount;
     }
 }
