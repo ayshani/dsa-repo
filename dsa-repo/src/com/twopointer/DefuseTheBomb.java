@@ -36,7 +36,6 @@ public class DefuseTheBomb {
         int[] code = new int[]{5,7,1,4};
         int k =3;
         int[] res = new DefuseTheBomb().decrypt(code,k);
-
         Arrays.stream(res).forEach(e-> System.out.print(e+ " "));
     }
     public int[] decrypt(int[] code, int k) {
