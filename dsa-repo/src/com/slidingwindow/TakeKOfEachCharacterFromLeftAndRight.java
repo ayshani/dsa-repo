@@ -62,7 +62,6 @@ public class TakeKOfEachCharacterFromLeftAndRight {
                 window[s.charAt(left) - 'a']--;
                 left++;
             }
-
             maxWindow = Math.max(maxWindow, right - left + 1);
         }
 
