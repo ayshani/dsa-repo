@@ -58,31 +58,29 @@ public class MinimumObstacleRemovalToReachCorner {
         for(int[] di : dist){
             Arrays.fill(di,M);
         }
-
         dist[0][0] = 0;
 
         Deque<int[]> q = new ArrayDeque<>();
         //{obstacles, x,y}
         q.offer(new int[3]);
 
-        while(!q.isEmpty()){
+        while(!q.isEmpty()) {
             int[] current = q.poll();
 
             int obstacle = current[0], x = current[1], y = current[2];
-            for(int k=0;k<4;k++){
-                int i = x+d[k], j = y+d[k+1];
-                if(0<=i && i<m && 0<=j && j<n && dist[i][j]==M){
-                    if(grid[i][j]==1){
-                        dist[i][j] = obstacle+1;
-                        q.offer(new int[]{obstacle+1,i,j});
-                    } else{
+            for (int k = 0; k < 4; k++) {
+                int i = x + d[k], j = y + d[k + 1];
+                if (0 <= i && i < m && 0 <= j && j < n && dist[i][j] == M) {
+                    if (grid[i][j] == 1) {
+                        dist[i][j] = obstacle + 1;
+                        q.offer(new int[]{obstacle + 1, i, j});
+                    } else {
                         dist[i][j] = obstacle;
-                        q.offerFirst(new int[]{obstacle,i,j});
+                        q.offerFirst(new int[]{obstacle, i, j});
                     }
                 }
             }
         }
-
         return dist[m-1][n-1];
     }
 }

@@ -18,7 +18,8 @@ Output: 1
 Explanation: After flipping no values, 1 row has all values equal.
 1072. Flip Columns For Maximum Number of Equal Rows
 
-
+TC : o(m*n)
+SC: o(m*n)
  */
 public class FlipColumnsForMaximumNumberOfEqualRows {
 
