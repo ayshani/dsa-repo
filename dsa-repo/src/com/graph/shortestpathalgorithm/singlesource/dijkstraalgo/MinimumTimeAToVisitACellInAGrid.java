@@ -5,13 +5,15 @@ import java.util.PriorityQueue;
 /*
 2577. Minimum Time to Visit a Cell In a Grid
 
-You are given a m x n matrix grid consisting of non-negative integers where grid[row][col] represents the minimum time required to be able to visit the cell (row, col), which means you can visit the cell (row, col) only when the time you visit it is greater than or equal to grid[row][col].
+You are given a m x n matrix grid consisting of non-negative integers where grid[row][col] represents the minimum time
+required to be able to visit the cell (row, col), which means you can visit the cell (row, col) only when the time
+you visit it is greater than or equal to grid[row][col].
 
-You are standing in the top-left cell of the matrix in the 0th second, and you must move to any adjacent cell in the four directions: up, down, left, and right. Each move you make takes 1 second.
+You are standing in the top-left cell of the matrix in the 0th second, and you must move to any adjacent cell in
+the four directions: up, down, left, and right. Each move you make takes 1 second.
 
-Return the minimum time required in which you can visit the bottom-right cell of the matrix. If you cannot visit the bottom-right cell, then return -1.
-
-
+Return the minimum time required in which you can visit the bottom-right cell of the matrix. If you cannot visit
+the bottom-right cell, then return -1.
 
 Example 1:
 Input: grid = [[0,1,3,2],[5,1,2,5],[4,3,8,6]]
@@ -26,7 +28,6 @@ Explanation: One of the paths that we can take is the following:
 - at t = 6, we move to the cell (1,3). It is possible because grid[1][3] <= 6.
 - at t = 7, we move to the cell (2,3). It is possible because grid[2][3] <= 7.
 The final time is 7. It can be shown that it is the minimum time possible.
-
 
 TC : o(nlogn)
 SC : o(m*n)
