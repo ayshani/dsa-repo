@@ -59,9 +59,7 @@ public class ValidArrangementOfPairs {
         }
 
         index = pairs.length-1;
-
         dfs(start, pairs);
-
         return pairs;
     }
 
