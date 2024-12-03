@@ -42,7 +42,6 @@ public class AddingSpacesToAString {
                 i--;
             }
         }
-
         sb.append(s.substring(i));
         return sb.toString();
     }
