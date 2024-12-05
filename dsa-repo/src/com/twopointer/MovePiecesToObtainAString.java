@@ -75,11 +75,9 @@ public class MovePiecesToObtainAString {
                 if(startIndex> targetIndex)
                     return false;
             }
-
             startIndex++;
             targetIndex++;
         }
-
         return true;
     }
 }
