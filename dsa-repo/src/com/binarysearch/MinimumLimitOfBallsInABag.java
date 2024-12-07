@@ -57,7 +57,6 @@ public class MinimumLimitOfBallsInABag {
                 start = mid+1;
             }
         }
-
         return minPenalty;
     }
 
@@ -70,7 +69,6 @@ public class MinimumLimitOfBallsInABag {
             }
             requiredOperations += minCut;
         }
-
         return requiredOperations<= maxOp;
     }
 }
