@@ -56,6 +56,7 @@ public class TwoBestNonOverlappingEvents {
         Arrays.sort(events,(a, b)-> a[1]-b[1]);
         TreeMap<Integer,Integer> map = new TreeMap<>();
         int maxProfitTillNow=0,answer=0;
+
         for(int[] event : events){
             Integer prevEventEndTime = map.lowerKey(event[0]);
             answer = Math.max(answer,event[2]);
@@ -65,7 +66,6 @@ public class TwoBestNonOverlappingEvents {
             }
             map.put(event[1],maxProfitTillNow);
         }
-
         return answer;
     }
 }
