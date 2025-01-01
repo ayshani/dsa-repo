@@ -42,7 +42,6 @@ public class MaximumScoreAfterSplittingAString {
             }
             best = Math.max(best, zero - one);
         }
-
         if(s.charAt(s.length()-1) == '1')
             one++;
         System.out.println(best + " "+ zero +" "+ one);
