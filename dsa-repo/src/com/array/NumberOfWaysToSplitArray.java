@@ -46,9 +46,7 @@ public class NumberOfWaysToSplitArray {
         }
         for(int i=0;i<n;i++){
             currentPrfixSum+= nums[i];
-
             long rightPartSum = totalSum-currentPrfixSum;
-
             if(i<n-1 && currentPrfixSum>= rightPartSum)
                 answer++;
         }
