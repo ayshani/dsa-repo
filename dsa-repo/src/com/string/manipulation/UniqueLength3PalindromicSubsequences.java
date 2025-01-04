@@ -46,10 +46,8 @@ public class UniqueLength3PalindromicSubsequences {
             if(first[index]==-1){
                 first[index] = i;
             }
-
             last[index] = i;
         }
-
         int ans =0;
         for(int i=0;i<26;i++){
             if(first[i]==-1 )
