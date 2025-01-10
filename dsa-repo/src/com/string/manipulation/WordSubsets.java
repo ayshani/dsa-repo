@@ -62,13 +62,10 @@ public class WordSubsets {
                 if(aCount[i]<bmax[i])
                     break;
             }
-
             if(i==26)
                 result.add(s);
         }
-
         return result;
-
     }
 
     private int[] count(String s){
