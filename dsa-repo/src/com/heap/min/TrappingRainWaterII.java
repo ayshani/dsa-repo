@@ -43,14 +43,12 @@ public class TrappingRainWaterII {
             pq.offer(new Cell(i,0,heightMap[i][0]));
             pq.offer(new Cell(i,n-1,heightMap[i][n-1]));
         }
-
         for(int i=0;i<n;i++){
             visited[0][i] = true;
             visited[m-1][i] = true;
             pq.offer(new Cell(0,i,heightMap[0][i]));
             pq.offer(new Cell(m-1,i,heightMap[m-1][i]));
         }
-
         // from the borders, pick the shortest cell visited and check its neighbors:
         // if the neighbor is shorter, collect the water it can trap and update its
         // height as its height plus the water trapped
@@ -71,7 +69,6 @@ public class TrappingRainWaterII {
                 }
             }
         }
-
         return totalTrappedWater;
     }
 }
