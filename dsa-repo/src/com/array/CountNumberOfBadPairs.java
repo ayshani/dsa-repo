@@ -49,7 +49,6 @@ public class CountNumberOfBadPairs {
             count+= i - prev;
             map.put(i-nums[i], prev+1);
         }
-
         return count;
     }
 }
