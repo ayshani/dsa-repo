@@ -27,7 +27,6 @@ public class RemoveAllOccurrencesOfASubstring {
         while(s.contains(part)){
             s = s.replaceFirst(part,"");
         }
-
         return s;
     }
 
