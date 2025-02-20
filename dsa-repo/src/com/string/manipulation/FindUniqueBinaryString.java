@@ -91,6 +91,7 @@ public class FindUniqueBinaryString {
             else
                 break;
         }
+
         String res = Integer.toBinaryString(start);
         if(res.length()<n)
             res = "0".repeat(n-res.length()) + res;
