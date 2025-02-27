@@ -59,9 +59,7 @@ public class LengthOfLongestFibonacciSubsequence {
                 }
             }
         }
-
         return ans>=3 ? ans : 0;
-
     }
 
 }
