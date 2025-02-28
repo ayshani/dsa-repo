@@ -43,7 +43,6 @@ public class LengthOfLongestFibonacciSubsequence {
         }
 
         int ans =0;
-
         // loop over the array
         for(int k=0;k<n;k++){
             // loop over till j<k
@@ -61,5 +60,4 @@ public class LengthOfLongestFibonacciSubsequence {
         }
         return ans>=3 ? ans : 0;
     }
-
 }
