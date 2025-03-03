@@ -45,8 +45,10 @@ public class PartitionArrayAccordingToGivenPivot {
                 equal++;
             }
         }
+
         int res[]=  new int[nums.length];
         int j=0;
+
         for(int i=0, k = smaller, h = smaller+equal;i<nums.length;i++){
             if(nums[i]<pivot){
                 res[j++] = nums[i];
@@ -56,6 +58,7 @@ public class PartitionArrayAccordingToGivenPivot {
                 res[h++]= nums[i];
             }
         }
+
         return res;
     }
 }
