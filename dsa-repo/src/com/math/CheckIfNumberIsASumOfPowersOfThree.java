@@ -38,7 +38,6 @@ public class CheckIfNumberIsASumOfPowersOfThree {
             else
                 n/=3;
         }
-
         return true;
     }
 }
