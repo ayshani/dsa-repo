@@ -43,6 +43,7 @@ public class MaximumCountOfPositiveIntegerAndNegativeInteger {
                 high = mid -1;
             }
         }
+
         return low;
     }
 }
