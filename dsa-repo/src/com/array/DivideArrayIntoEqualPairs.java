@@ -32,12 +32,10 @@ public class DivideArrayIntoEqualPairs {
     }
     public boolean divideArray(int[] nums) {
         Set<Integer> set = new HashSet<>();
-
         for(int num : nums){
             if(!set.add(num))
                 set.remove(num);
         }
-
         return set.isEmpty();
     }
 }
