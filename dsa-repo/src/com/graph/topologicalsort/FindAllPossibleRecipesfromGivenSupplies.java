@@ -80,18 +80,17 @@ public class FindAllPossibleRecipesfromGivenSupplies {
                     notAvailableIngredient++;
                 }
             }
-
             if(notAvailableIngredient==0){
                 answer.add(recipes[i]);
             } else{
                 inDegree.put(recipes[i],notAvailableIngredient);
             }
         }
+
         System.out.println(ingredientToRecipes);
         System.out.println(answer);
         for(int i=0;i<answer.size();i++){
             String recipe = answer.get(i);
-
             if(ingredientToRecipes.containsKey(recipe)){
                 for(String recipeToConsider : ingredientToRecipes.remove(recipe)) {
                     inDegree.put(recipeToConsider,inDegree.get(recipeToConsider)-1);
@@ -102,7 +101,6 @@ public class FindAllPossibleRecipesfromGivenSupplies {
                 }
             }
         }
-
         return answer;
     }
 }
