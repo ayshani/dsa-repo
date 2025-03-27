@@ -67,6 +67,7 @@ public class MinimumIndexOfAValidSplit {
         int n = nums.size();
         if(n<2)
             return -1;
+
         Map<Integer, Integer> countList = new TreeMap<>();
         int major = getMajorElement(nums);
         //System.out.println(major);
@@ -84,7 +85,6 @@ public class MinimumIndexOfAValidSplit {
                 int index = e.getKey(), frequency = e.getValue();
                 if(frequency*2l>(index+1) && (count-frequency)*2l>(n-index-1))
                     return e.getKey();
-
             }
         }
         return -1;
