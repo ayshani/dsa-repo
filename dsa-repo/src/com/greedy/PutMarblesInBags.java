@@ -110,7 +110,6 @@ public class PutMarblesInBags {
         for (int i = 0; i < k - 1; ++i) {
             answer += pairWeights[n - 2 - i] - pairWeights[i];
         }
-
         return answer;
     }
 }
