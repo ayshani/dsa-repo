@@ -50,10 +50,8 @@ public class SolvingQuestionsWithBrainpower {
             return 0;
         if(null!=dp[index])
             return dp[index];
-
         long pick = questions[index][0] + util(index + questions[index][1] +1, questions, dp);
         long notPick = util(index+1, questions, dp);
-
         return dp[index] = Math.max(pick,notPick);
     }
 }
