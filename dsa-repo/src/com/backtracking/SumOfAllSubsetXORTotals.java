@@ -40,7 +40,6 @@ public class SumOfAllSubsetXORTotals {
         if(index== nums.length){
             return currentXor;
         }
-
         int withElement = util(nums, index+1, nums[index]^currentXor);
         int withoutElement = util(nums, index+1, currentXor);
         return withElement + withoutElement;
