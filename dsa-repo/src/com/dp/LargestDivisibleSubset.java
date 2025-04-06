@@ -62,12 +62,10 @@ public class LargestDivisibleSubset {
                 index =i;
             }
         }
-
         while(index!=-1){
             result.add(nums[index]);
             index = previous[index];
         }
-
         return result;
     }
 
