@@ -58,7 +58,6 @@ public class FindTheCountOfGoodIntegers {
                 dict.add(new String(chars));
             }
         }
-
         long[] factorial = new long[n + 1];
         factorial[0] = 1;
         for (int i = 1; i <= n; i++) {
@@ -77,7 +76,6 @@ public class FindTheCountOfGoodIntegers {
             }
             ans += tot;
         }
-
         return ans;
     }
 }
