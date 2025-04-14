@@ -34,7 +34,6 @@ public class CountGoodTriplets {
     public int countGoodTriplets(int[] nums, int a, int b, int c) {
         int n = nums.length;
         int res=0;
-
         for(int i=0;i<n-2;i++){
             for(int j=i+1;j<n-1;j++){
                 if(Math.abs(nums[i]-nums[j])<=a){
@@ -45,7 +44,6 @@ public class CountGoodTriplets {
                 }
             }
         }
-
         return res;
     }
 }
