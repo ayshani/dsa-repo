@@ -47,12 +47,10 @@ public class CountEqualAndDivisiblePairsInAnArray {
                         count++;
                     }
                 }
-
                 list.add(i);
                 map.put(nums[i], list);
             }
         }
-
         return count;
     }
 }
