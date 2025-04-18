@@ -43,11 +43,9 @@ public class CountAndSay {
                 count++;
                 i++;
             }
-
             sb.append(count);
             sb.append(s.charAt(i));
         }
-
         return sb.toString();
     }
 }
