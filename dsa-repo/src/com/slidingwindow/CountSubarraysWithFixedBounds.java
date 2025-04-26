@@ -67,7 +67,6 @@ public class CountSubarraysWithFixedBounds {
             */
             count  += Math.max(0L,Math.min(minIndex,maxIndex) - startNextSubArray+1);
         }
-
         return count;
     }
 }
