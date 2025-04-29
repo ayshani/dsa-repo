@@ -51,6 +51,7 @@ public class CountSubarraysWhereMaxElementAppearsAtLeastKTimes {
             // i.e. By adding start to the answer, we ensure that we account for
             //all valid subarrays ending at the current index end
             ans += start;
+
         }
         return ans;
     }
