@@ -87,12 +87,10 @@ public class PushDominoes {
                 force = Math.max(force-1,0);
             forces[i]-=force;
         }
-
         StringBuilder sb = new StringBuilder();
         for(int f : forces){
             sb.append(f>0 ? 'R' : f<0 ? 'L' : '.');
         }
-
         return sb.toString();
     }
 
