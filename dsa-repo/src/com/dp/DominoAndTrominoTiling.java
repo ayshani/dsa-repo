@@ -147,6 +147,7 @@ public class DominoAndTrominoTiling {
             f[k] = (f[k - 1] + f[k - 2] + 2 * p[k - 1]) % MOD;
             p[k] = (p[k - 1] + f[k - 2]) % MOD;
         }
+
         return (int) (f[n]);
     }
 
