@@ -26,11 +26,40 @@ public class MinimumEqualSumOfTwoArraysAfterReplacingZeros {
         System.out.println(new MinimumEqualSumOfTwoArraysAfterReplacingZeros().minSum(
                 new int[]{20,0,18,11,0,0,0,0,0,0,17,28,0,11,10,0,0,15,29},
                 new int[]{16,9,25,16,1,9,20,28,8,0,1,0,1,27}));
-
+        System.out.println(new MinimumEqualSumOfTwoArraysAfterReplacingZeros().minSumV2(
+                new int[]{20,0,18,11,0,0,0,0,0,0,17,28,0,11,10,0,0,15,29},
+                new int[]{16,9,25,16,1,9,20,28,8,0,1,0,1,27}));
         /*System.out.println(new MinimumEqualSumOfTwoArraysAfterReplacingZeros().minSum(
                 new int[]{8,13,15,18,0,18,0,0,5,20,12,27,3,14,22,0},
                 new int[]{29,1,6,0,10,24,27,17,14,13,2,19,2,11}
         ));*/
+    }
+
+    public long minSumV2(int[] nums1, int[] nums2) {
+        long sum1 = 0, sum2 = 0;
+        long zero1 = 0, zero2 = 0;
+
+        for (int i : nums1) {
+            sum1 += i;
+            if (i == 0) {
+                sum1++;
+                zero1++;
+            }
+        }
+
+        for (int i : nums2) {
+            sum2 += i;
+            if (i == 0) {
+                sum2++;
+                zero2++;
+            }
+        }
+
+        if ((zero1 == 0 && sum2 > sum1) || (zero2 == 0 && sum1 > sum2)) {
+            return -1;
+        }
+
+        return Math.max(sum1, sum2);
     }
     public long minSum(int[] nums1, int[] nums2) {
         long sum1 =0, sum2 =0, count1 =0, count2 =0;
