@@ -24,6 +24,7 @@ public class ThreeConsecutiveOdds {
     }
     public boolean threeConsecutiveOdds(int[] arr) {
         int n = arr.length, i=0;
+
         while(i<n){
             if(arr[i]%2!=0){
                 int count =1, j=i+1;
@@ -41,6 +42,7 @@ public class ThreeConsecutiveOdds {
             }
             i++;
         }
+
         return false;
     }
 }
