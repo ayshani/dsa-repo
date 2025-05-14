@@ -1,4 +1,7 @@
 package com.array;
+
+import java.util.Arrays;
+
 /*
 3335. Total Characters in String After Transformations I
 
@@ -50,7 +53,7 @@ public class TotalCharactersInStringAfterTransformationsI {
         for(char ch: s.toCharArray()){
             ++cnt[ch-'a'];
         }
-
+        System.out.println(Arrays.toString(cnt));
         for(int round =0; round<t;round++){
             int[] nxt = new int[26];
             nxt[0] = cnt[25];
@@ -59,7 +62,10 @@ public class TotalCharactersInStringAfterTransformationsI {
                 nxt[i] = cnt[i-1];
             }
             cnt = nxt;
+            System.out.println(Arrays.toString(cnt));
         }
+
+
         int ans =0;
         for(int i=0;i<26;i++){
             ans = (ans+cnt[i])%MOD;
