@@ -31,6 +31,7 @@ public class SortColors {
         int left = 0, mid =0, right = nums.length-1;
 
         while(mid<=right){
+
             if(nums[mid]==0){
                 int temp = nums[mid];
                 nums[mid] = nums[left];
