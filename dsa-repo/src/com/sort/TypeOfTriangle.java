@@ -20,6 +20,8 @@ Input: nums = [3,3,3]
 Output: "equilateral"
 Explanation: Since all the sides are of equal length, therefore, it will form an equilateral triangle.
 
+TC : o(1)
+SC; o(1)
 
  */
 public class TypeOfTriangle {
