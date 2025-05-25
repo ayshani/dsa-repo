@@ -77,7 +77,6 @@ public class LongestPalindromeByConcatenatingTwoLetterWords {
                 }
             }
         }
-
         return unpaired > 0 ? answer+2 : answer;
     }
 
