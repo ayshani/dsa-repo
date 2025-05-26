@@ -41,10 +41,12 @@ public class LargestColorValueInADirectedGraph {
         for(int i=0;i<n;i++){
             graph.put(i, new HashSet<>());
         }
+
         for(int[] edge : edges){
             graph.get(edge[0]).add(edge[1]);
             indegree[edge[1]]++;
         }
+
         Queue<Integer> q = new LinkedList<>();
         int[][] count  = new int[n][26];
         for(int i=0;i<n;i++){
@@ -60,7 +62,9 @@ public class LargestColorValueInADirectedGraph {
             while(size-->0){
                 int cur = q.poll();
                 processed++;
+
                 result = Math.max(result, ++count[cur][colors.charAt(cur)-'a']);
+
                 for( int neighbour : graph.get(cur)){
                     for(int i=0;i<26;i++){
                         count[neighbour][i] = Math.max(count[neighbour][i], count[cur][i]);
@@ -73,7 +77,6 @@ public class LargestColorValueInADirectedGraph {
 
             }
         }
-
         return processed==n ? result : -1;
     }
 }
