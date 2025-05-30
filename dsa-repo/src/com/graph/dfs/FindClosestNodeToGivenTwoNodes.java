@@ -68,6 +68,7 @@ public class FindClosestNodeToGivenTwoNodes {
         int minDist = Integer.MAX_VALUE;
         int[] dist1 = new int[n];
         int[] dist2 = new int[n];
+
         boolean[] visited1 = new boolean[n];
         boolean[] visited2 = new boolean[n];
         dfs(node1, edges, dist1, visited1);
@@ -79,6 +80,7 @@ public class FindClosestNodeToGivenTwoNodes {
                 ans = currNode;
             }
         }
+
         return ans;
     }
 
