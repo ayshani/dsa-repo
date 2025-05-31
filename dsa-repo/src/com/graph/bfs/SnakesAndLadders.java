@@ -85,6 +85,7 @@ public class SnakesAndLadders {
         q.offer(start);
         visited[start]=true;
         int step =0;
+
         while(!q.isEmpty()){
             int sz = q.size();
             while(sz-->0){
@@ -102,6 +103,7 @@ public class SnakesAndLadders {
             }
             step++;
         }
+
         return -1;
     }
 }
