@@ -67,7 +67,6 @@ public class LexicographicallySmallestEquivalentString {
         if(representative[x] == x){
             return x;
         }
-
         return representative[x] = find(representative[x]);
     }
 
