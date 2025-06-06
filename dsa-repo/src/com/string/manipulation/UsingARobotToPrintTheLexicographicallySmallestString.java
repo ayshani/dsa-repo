@@ -42,7 +42,6 @@ public class UsingARobotToPrintTheLexicographicallySmallestString {
         }
 
         StringBuilder t= new StringBuilder(), paper = new StringBuilder();
-
         for(int i=0;i<n;i++){
             while(t.length()>0 && t.charAt(t.length()-1) <= minChar[i]){
                 paper.append(t.charAt(t.length()-1) );
