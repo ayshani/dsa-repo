@@ -70,7 +70,6 @@ public class LexicographicalNumbers {
                 currentNumber += 1; // Increment the number
             }
         }
-
         return lexicographicalNumbers;
     }
 }
