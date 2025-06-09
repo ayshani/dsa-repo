@@ -44,6 +44,7 @@ public class KthSmallestInLexicographicalOrder {
     // To count how many numbers exist between prefix1 and prefix2
     private int countSteps(int n, long prefix1, long prefix2) {
         int steps = 0;
+
         while (prefix1 <= n) {
             steps += Math.min(n + 1, prefix2) - prefix1;
             prefix1 *= 10;
