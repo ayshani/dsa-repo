@@ -66,6 +66,7 @@ public class MinimizeTheMaximumDifferenceOfPairs {
         int n = nums.length;
         int left =0, right = nums[n-1] - nums[0];
         while(left<right){
+
             int mid = left + (right-left)/2, k=0;
             for(int i=1;i<n;i++){
                 if(nums[i]-nums[i-1]<=mid)
@@ -80,6 +81,7 @@ public class MinimizeTheMaximumDifferenceOfPairs {
                 left = mid+1;
             }
         }
+
         return left;
     }
 }
