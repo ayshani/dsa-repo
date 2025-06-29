@@ -46,6 +46,7 @@ public class NumberOfSubsequencesThatSatisfyTheGivenSumCondition {
                 l++;
             }
         }
+
         return res;
     }
 }
