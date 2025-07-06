@@ -78,6 +78,7 @@ class FindSumPairs {
         updateFrequencey(num2[index],-1);
         num2[index] += val;
         updateFrequencey(num2[index],1);
+
     }
 
     //o(n)
@@ -86,7 +87,6 @@ class FindSumPairs {
         for(int num : num1){
             ans+= frequencyMap.getOrDefault(tot - num,0);
         }
-
         return ans;
     }
 }
