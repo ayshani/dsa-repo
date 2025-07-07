@@ -57,7 +57,6 @@ public class MaximumNumberofEventsThatCanBeAttended {
         for(int d=1;d<=max;d++){
             while(!pq.isEmpty() && pq.peek()<d)
                 pq.poll();
-
             while(i<n && events[i][0]==d)
                 pq.add(events[i++][1]);
             if(!pq.isEmpty()){
@@ -65,7 +64,6 @@ public class MaximumNumberofEventsThatCanBeAttended {
                 res++;
             }
         }
-
         return res;
     }
 }
