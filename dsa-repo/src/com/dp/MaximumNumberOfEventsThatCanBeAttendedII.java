@@ -76,8 +76,10 @@ public class MaximumNumberOfEventsThatCanBeAttendedII {
             return dp[k][cur];
 
         int nextIndex = getNextIndex(events, events[cur][1]);
+
         dp[k][cur] = Math.max(dfs(cur+1,k,events,dp),
                 events[cur][2] + dfs(nextIndex, k-1,events,dp));
+
         return dp[k][cur];
     }
 
@@ -91,6 +93,7 @@ public class MaximumNumberOfEventsThatCanBeAttendedII {
                 end = mid;
             }
         }
+
         return start;
     }
 }
