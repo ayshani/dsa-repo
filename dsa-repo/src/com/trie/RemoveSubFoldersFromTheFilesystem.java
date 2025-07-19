@@ -68,6 +68,7 @@ public class RemoveSubFoldersFromTheFilesystem {
                 }
                 currentNode = currentNode.children.get(folderName);
             }
+
             // Mark the end of the folder path
             currentNode.isEndOfFolder = true;
         }
@@ -90,7 +91,6 @@ public class RemoveSubFoldersFromTheFilesystem {
                     isSubfolder = true;
                     break; // Found a sub-folder
                 }
-
                 currentNode = nextNode;
             }
             // If not a sub-folder, add to the result
