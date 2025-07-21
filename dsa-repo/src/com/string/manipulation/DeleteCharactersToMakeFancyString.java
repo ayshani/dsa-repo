@@ -46,7 +46,6 @@ public class DeleteCharactersToMakeFancyString {
                 sb.append(s.charAt(i));
             }
         }
-
         // Convert StringBuilder back to String and return.
         return sb.toString();
     }
