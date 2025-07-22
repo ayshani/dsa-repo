@@ -21,7 +21,7 @@ Output: 17
 Explanation: The optimal subarray here is [2,4,5,6].
 
 TC : o(n)
-SC: o(1)
+SC: o(n)
  */
 public class MaximumErasureValue {
 
@@ -41,6 +41,7 @@ public class MaximumErasureValue {
                     start++;
                 }
             }
+
             // Expand the window from the right
             set.add(nums[end]);
             sum+= nums[end];
