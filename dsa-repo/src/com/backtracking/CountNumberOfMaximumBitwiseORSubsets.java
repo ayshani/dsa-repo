@@ -51,7 +51,6 @@ public class CountNumberOfMaximumBitwiseORSubsets {
             maximumOr |=num;
         }
         return backtrack(nums, 0,0, maximumOr);
-
     }
 
     private int backtrack(int[] nums, int start, int currentOr, int maximumOr){
@@ -59,6 +58,7 @@ public class CountNumberOfMaximumBitwiseORSubsets {
         {
             return currentOr == maximumOr ? 1 : 0;
         }
+
         return backtrack(nums, start+1, currentOr, maximumOr)
                 + backtrack(nums, start+1, currentOr|nums[start], maximumOr);
     }
