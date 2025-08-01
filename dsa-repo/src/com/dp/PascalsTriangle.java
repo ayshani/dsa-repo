@@ -37,7 +37,6 @@ public class PascalsTriangle {
             }
             list.add(row);
         }
-
         return list;
     }
 }
