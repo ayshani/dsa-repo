@@ -48,6 +48,7 @@ public class RearrangingFruits {
             m = Math.min(m, b2);
         }
 
+        System.out.println(freq);
         List<Integer> merge = new ArrayList<>();
         for (var entry : freq.entrySet()) {
             int count = entry.getValue();
@@ -56,12 +57,14 @@ public class RearrangingFruits {
                 merge.add(entry.getKey());
             }
         }
-
+        System.out.println(merge);
+        System.out.println("m = "+ m);
         Collections.sort(merge);
         long res = 0;
         for (int i = 0; i < merge.size() / 2; i++) {
             res += Math.min(2 * m, merge.get(i));
         }
+        System.out.println("res = "+ res);
         return res;
     }
 }
