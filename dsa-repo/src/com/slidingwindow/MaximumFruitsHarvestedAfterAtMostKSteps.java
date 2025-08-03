@@ -56,7 +56,6 @@ public class MaximumFruitsHarvestedAfterAtMostKSteps  {
         while(left<fruits.length && startPos-k> fruits[left][0]){
             left++;
         }
-
         for(int right = left;right<fruits.length && fruits[right][0] <= startPos+k ;right++){
             currentSum+=fruits[right][1];
 
@@ -67,7 +66,6 @@ public class MaximumFruitsHarvestedAfterAtMostKSteps  {
 
             maxSum = Math.max(maxSum, currentSum);
         }
-
         return maxSum;
     }
 }
