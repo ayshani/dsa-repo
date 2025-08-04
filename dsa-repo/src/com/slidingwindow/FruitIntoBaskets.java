@@ -40,7 +40,6 @@ public class FruitIntoBaskets {
         Map<Integer, Integer> map = new HashMap<>();
 
         int end =0, start =0, count =0;
-
         while(end<n){
 
             while(start<end && map.size()>=2 && !map.containsKey(fruits[end])){
@@ -55,6 +54,7 @@ public class FruitIntoBaskets {
             }
             count = Math.max(count, end- start);
         }
+
         return count;
     }
 }
