@@ -58,6 +58,7 @@ public class SoupServings {
     }
 
     private double calculateDP(int i, int j, Map<Integer,Map<Integer, Double>> dp){
+
         // incase both are 0 or less, then the prob is 1/2 for A to be empty
         if(i<=0 && j<=0)
             return 0.5;
@@ -71,6 +72,7 @@ public class SoupServings {
 
         if(dp.containsKey(i) && dp.get(i).containsKey(j))
             return dp.get(i).get(j);
+
 
         // these are the cases for 4 cases mentioned in statements
         double result = (calculateDP(i-4,j,dp) + calculateDP(i-3,j-1,dp) +
