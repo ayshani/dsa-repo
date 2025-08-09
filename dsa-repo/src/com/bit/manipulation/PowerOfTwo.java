@@ -20,6 +20,7 @@ public class PowerOfTwo {
         System.out.println(new PowerOfTwo().isPowerOfTwo(128));
     }
     public boolean isPowerOfTwo(int n) {
+
         return (n >0 ) && ((n&(n-1))==0);
     }
 
