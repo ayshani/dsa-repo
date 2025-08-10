@@ -38,7 +38,6 @@ public class ReorderedPowerOf2 {
             if(counter(1<<i)==c)
                 return true;
         }
-
         return false;
     }
 
