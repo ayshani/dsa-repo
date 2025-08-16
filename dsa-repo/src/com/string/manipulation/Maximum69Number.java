@@ -31,7 +31,6 @@ public class Maximum69Number {
                 break;
             }
         }
-
         return Integer.parseInt(sb.toString());
     }
 }
