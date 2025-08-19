@@ -36,6 +36,7 @@ public class NumberOfZeroFilledSubarrays {
                 length=0;
             }
         }
+
         return count;
     }
 }
