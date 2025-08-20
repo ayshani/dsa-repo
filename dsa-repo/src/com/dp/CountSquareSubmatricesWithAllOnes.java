@@ -47,6 +47,7 @@ public class CountSquareSubmatricesWithAllOnes {
                 ans += dp[i+1][j+1];
             }
         }
+
         return ans;
     }
 }
