@@ -47,7 +47,6 @@ public class LongestSubarrayOf1sAfterDeletingOneElement {
                 }
                 i++;
             }
-
             res = Math.max(res, j-i);
         }
         return res;
