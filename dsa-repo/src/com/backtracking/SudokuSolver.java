@@ -80,10 +80,8 @@ public class SudokuSolver {
             if(flag)
                 break;
         }
-
         if(i==board.length && j==board[0].length)
             return true;
-
         for(char n='1';n<='9';n++){
             if(isSafe(board,i,j,n)){
                 board[i][j] = n;
