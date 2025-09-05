@@ -34,6 +34,7 @@ public class MinimumOperationsToMakeTheIntegerZero {
         int k = 1;
         while (true) {
             long x = num1 - (long) num2 * k;
+            System.out.println("x -- "+ x + " k -- "+ k);
             if (x < k) {
                 return -1;
             }
