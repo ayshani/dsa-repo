@@ -50,6 +50,7 @@ public class SortVowelsInAString {
                 index++;
             }
         }
+
         return String.valueOf(ch);
     }
 
