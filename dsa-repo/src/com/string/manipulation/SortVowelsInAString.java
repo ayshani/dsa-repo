@@ -23,6 +23,11 @@ Output: "lEOtcede"
 Explanation: 'E', 'O', and 'e' are the vowels in s; 'l', 't', 'c', and 'd' are all consonants. The vowels are sorted
 according to their ASCII values, and the consonants remain in the same places.
 
+Intuition:
+Have the full vowel list in one set.
+
+
+
 TC : o(nlogn)
 SC: o(n)
  */
