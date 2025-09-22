@@ -36,7 +36,6 @@ public class CountElementsWithMaximumFrequency {
         for(int num : nums){
             map.put(num, map.getOrDefault(num,0)+1);
         }
-
         int max =0;
         int count =0;
 
