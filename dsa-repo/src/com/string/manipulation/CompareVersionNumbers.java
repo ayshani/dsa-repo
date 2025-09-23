@@ -48,6 +48,7 @@ public class CompareVersionNumbers {
                 return compare;
             }
         }
+
         return 0;
     }
 }
