@@ -42,7 +42,6 @@ public class Triangle {
         String key = row+":"+col;
         if(dp.containsKey(key))
             return dp.get(key);
-
         int path = triangle.get(row).get(col);
         if(row< triangle.size()-1){
             path += Math.min(util(triangle, row+1, col, dp), util(triangle, row+1, col+1, dp));
