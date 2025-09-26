@@ -18,7 +18,8 @@ Explanation: Valid combinations are:
 2,3,4 (using the second 2)
 2,2,3
 
-TC :
+TC : o(n^2 * logn)
+SC: o(logn)
  */
 public class ValidTriangleNumber {
 
