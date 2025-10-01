@@ -30,7 +30,6 @@ public class WaterBottles {
             consumed += k*numExchange;
             numBottles -= k*numExchange;
             numBottles += k;
-
         }
         return consumed + numBottles;
     }
