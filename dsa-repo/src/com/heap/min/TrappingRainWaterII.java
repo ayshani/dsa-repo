@@ -69,6 +69,7 @@ public class TrappingRainWaterII {
                 }
             }
         }
+
         return totalTrappedWater;
     }
 }
