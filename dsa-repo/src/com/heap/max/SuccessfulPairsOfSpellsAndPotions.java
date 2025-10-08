@@ -60,10 +60,8 @@ public class SuccessfulPairsOfSpellsAndPotions {
                 if(product * spell >= success){
                     break;
                 }
-
                 potionsPq.remove();
             }
-
             spells[index] = potionsPq.size();
         }
 
