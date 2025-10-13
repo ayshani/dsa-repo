@@ -64,6 +64,7 @@ public class FindResultantArrayAfterRemovingAnagrams {
                 prev = current;
             }
         }
+
         return result;
 
     }
