@@ -34,6 +34,7 @@ public class CalculateMoneyInLeetcodeBank {
         int last = first + (numberOfFullWeeks-1)*7;
         int sumForFullWeeks = numberOfFullWeeks * (first +last)/2;
 
+
         int lastMonday = 1+numberOfFullWeeks;
         int lastDay = lastMonday + (n%7 -1);
         int lastWeekSum = (n%7) * (lastMonday + lastDay)/2;
