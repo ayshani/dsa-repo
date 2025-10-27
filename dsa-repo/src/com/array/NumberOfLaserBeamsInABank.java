@@ -54,6 +54,7 @@ public class NumberOfLaserBeamsInABank {
                 if(bank[i].charAt(j)=='1')
                     count++;
             }
+
             total += (prev * count);
             if(count>0)
                 prev = count;
