@@ -43,12 +43,10 @@ public class DeleteNodesFromLinkedListPresentInArray {
         while (head != null && valuesToRemove.contains(head.val)) {
             head = head.next;
         }
-
         // If the list is empty after removing head nodes, return null
         if (head == null) {
             return null;
         }
-
         // Iterate through the list, removing nodes with values in the set
         ListNode current = head;
         while (current.next != null) {
