@@ -34,6 +34,7 @@ public class MinimumOneBitOperationsToMakeIntegersZero {
         System.out.println("n before "+ n);
         if(n==0)
             return res;
+
         int b = 1;
         while((b<<1)<=n){
             b= b<<1;
