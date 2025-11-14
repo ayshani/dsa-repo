@@ -43,6 +43,10 @@ public class IncrementSubmatricesByOne {
             diff[row2 + 1][col1] -= 1;
             diff[row1][col2 + 1] -= 1;
             diff[row2 + 1][col2 + 1] += 1;
+
+            System.out.println("Diff : ");
+            Arrays.stream(diff).forEach(e-> System.out.println(Arrays.toString(e)));
+            System.out.println();
         }
 
         int[][] mat = new int[n][n];
