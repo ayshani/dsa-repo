@@ -17,7 +17,8 @@ Output: true
 Explanation: The only way to decode it is two-bit character and one-bit character.
 So the last character is one-bit character.
 
-
+TC : o(n)
+SC : o(1)
  */
 public class OneBitAnd2BitCharacters {
 
