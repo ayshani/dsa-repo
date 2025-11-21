@@ -59,7 +59,6 @@ public class UniqueLength3PalindromicSubsequences {
             }
             ans += between.size();
         }
-
         return ans;
     }
 }
