@@ -67,7 +67,6 @@ public class PathsInMatrixWhoseSumIsDivisibleByK {
         long right = recur(i,j+1, nextRemainder, m,n,k,grid, dp);
         long down = recur(i+1,j, nextRemainder, m,n,k,grid, dp);
         return dp[i][j][remainder] = (right+down)%mod;
-
     }
 
 }
