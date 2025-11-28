@@ -102,7 +102,6 @@ public class MaximumNumberOfKDivisibleComponents {
                 queue.add(neighborNode);
             }
         }
-
         return componentCount;
     }
 }
