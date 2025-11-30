@@ -51,7 +51,6 @@ public class MakeSumDivisibleByP {
 
             mp.put(sum,i);
         }
-
         return minLength< n? minLength: -1;
     }
 }
