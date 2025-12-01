@@ -114,6 +114,7 @@ public class MaximumRunningTimeOfNComputers {
                 right = mid-1;
             }
         }
+
         return left;
     }
 }
