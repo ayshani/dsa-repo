@@ -29,6 +29,17 @@ The 4 partitions are:
 
 TC : o(n)
 SC: o(1)
+
+Intuition
+Let the sum of the elements in the array nums be sum, and let the sums of the two non-empty subarrays be x and y,
+respectively. Clearly, x+y=sum.
+
+If sum is odd, then either x is odd and y is even, or x is even and y is odd, so x−y is odd.
+
+If sum is even, then either both x and y are odd or both are even, so x−y is even.
+
+From this, let n be the number of elements in nums. When sum is even, the number of partitioning schemes with an
+even difference is n−1. When sum is odd, the number of such schemes is 0.
  */
 public class CountPartitionsWithEvenSumDifference {
 
