@@ -42,6 +42,9 @@ The total buying cost is 1 + 1 = 2 <= budget. Thus, the maximum total profit ach
 
 TC : O(n×budget^2)
 SC: O(n*budget)
+
+Explanation : https://leetcode.com/problems/maximum-profit-from-trading-stocks-with-discounts/editorial/?envType=daily-question&envId=2025-12-16
+
  */
 public class MaximumProfitFromTradingStocksWithDiscounts {
 
