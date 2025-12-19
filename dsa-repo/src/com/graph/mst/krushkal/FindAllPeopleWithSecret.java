@@ -95,7 +95,6 @@ public class FindAllPeopleWithSecret {
             if(uf.find(i)==uf.find(0))
                 secretKnown.add(i);
         }
-
         return secretKnown;
     }
 }
