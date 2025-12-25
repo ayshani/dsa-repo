@@ -56,9 +56,7 @@ public class MaximizeHappinessOfSelectedChildren {
                 }
             }
         }
-
         return sum;
-
     }
 
 }
