@@ -61,13 +61,13 @@ public class MinimumPenaltyForAShop {
             else{
                 currentPenalty++;
             }
-
             // Update earliestHour if a smaller penatly is encountered.
             if(currentPenalty< minPenalty){
                 minPenalty = currentPenalty;
                 earliestHour = i+1;
             }
         }
+
         return earliestHour;
     }
 }
