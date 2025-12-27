@@ -55,7 +55,6 @@ public class MeetingRoomsIII {
             freeRooms.add((long)i);
         }
 
-
         //List(start, end, room number)
         PriorityQueue<Long[]> occupiedRooms = new PriorityQueue<>((x,y)-> Long.compare(x[1], y[1]));
         // 3. Meetings that have an earlier original start time should be given the room
