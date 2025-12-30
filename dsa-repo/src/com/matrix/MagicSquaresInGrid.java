@@ -57,6 +57,7 @@ public class MagicSquaresInGrid {
         }
 
         String borderConverted = border.toString();
+
         // Make sure the sequence starts at one of the corners
         return (grid[row][col]%2==0 && (sequence.contains(borderConverted) ||
                 sequenceReversed.contains(borderConverted)) && grid[row+1][col+1] ==5);
