@@ -78,6 +78,7 @@ public class LastDayWhereYouCanStillCross {
 
     boolean canWeWalk(int[][] cells, int row, int col, int dayAt){
         int[][] grid = new int[row][col];
+
         for(int i=0;i<dayAt;i++){
             grid[cells[i][0]-1][cells[i][1]-1] = 1;
         }
@@ -98,6 +99,7 @@ public class LastDayWhereYouCanStillCross {
                 // Reached to bottom -> Return Valid
                 return true;
             }
+
             for(int i=0;i<4;i++){
                 int x = r+dir[i], y = c+dir[i+1];
                 if(x>=0 && x<row && y>=0 && y<col && grid[x][y]==0){
