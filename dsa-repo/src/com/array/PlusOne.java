@@ -32,6 +32,7 @@ public class PlusOne {
     }
     public int[] plusOne(int[] digits) {
         int n = digits.length;
+
         for(int i= n-1;i>=0;i--){
             digits[i] = digits[i]+1;
             if(digits[i]==10){
@@ -48,6 +49,7 @@ public class PlusOne {
             } else
                 break;
         }
+
         return digits;
     }
 }
