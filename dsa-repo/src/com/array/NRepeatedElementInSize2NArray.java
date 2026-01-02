@@ -52,7 +52,6 @@ public class NRepeatedElementInSize2NArray {
                     return A[i];
             }
         }
-
         return 0;
     }
 }
