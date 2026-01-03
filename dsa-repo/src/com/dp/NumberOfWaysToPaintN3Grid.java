@@ -14,7 +14,8 @@ Input: n = 1
 Output: 12
 Explanation: There are 12 possible way to paint the grid as shown.
 
-
+TC : o(n)
+SC: o(1)
 
  */
 public class NumberOfWaysToPaintN3Grid {
