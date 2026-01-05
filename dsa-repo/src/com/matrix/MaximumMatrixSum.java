@@ -45,12 +45,10 @@ public class MaximumMatrixSum {
                 minAbsVal = Math.min(minAbsVal, Math.abs(val));
             }
         }
-
         // Adjust if the count of negative numbers is odd
         if (negativeCount % 2 != 0) {
             totalSum -= 2 * minAbsVal;
         }
-
         return totalSum;
     }
 }
