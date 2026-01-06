@@ -44,6 +44,7 @@ public class MaximumLevelSumOfABinaryTree {
 
         q.offer(root);
         int minLevel =0, level=1, sum =Integer.MIN_VALUE;
+
         while(!q.isEmpty()){
             int size = q.size();
             int curSum =0;
