@@ -49,7 +49,6 @@ public class MaximumProductOfSplittedBinaryTree {
             max = Math.max(prod,max);
         }
         return (int)(max%mod);
-
     }
 
     private long postOrder(TreeNode root){
