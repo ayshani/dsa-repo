@@ -62,7 +62,6 @@ public class LargestMagicSquare {
                 }
             }
         }
-
         return 1;
     }
 
