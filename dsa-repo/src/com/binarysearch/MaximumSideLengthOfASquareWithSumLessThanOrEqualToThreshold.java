@@ -28,6 +28,7 @@ public class MaximumSideLengthOfASquareWithSumLessThanOrEqualToThreshold {
     public int maxSideLength(int[][] mat, int threshold) {
         int m = mat.length, n = mat[0].length;
         int[][] p = new int[m+1][n+1];
+        // compute prefix sum
         for(int i=1;i<=m;i++){
             for(int j= 1; j<=n;j++){
                 p[i][j] = p[i-1][j]+ p[i][j-1] - p[i-1][j-1] + mat[i-1][j-1];
