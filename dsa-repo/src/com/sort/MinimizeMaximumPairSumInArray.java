@@ -33,6 +33,7 @@ public class MinimizeMaximumPairSumInArray {
     }
     public int minPairSum(int[] nums) {
         Arrays.sort(nums);
+
         int maxSum =0;
         for(int i=0;i<nums.length;i++){
             maxSum = Math.max(maxSum, nums[i] + nums[nums.length-i-1]);
