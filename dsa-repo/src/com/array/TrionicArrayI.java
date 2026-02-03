@@ -45,6 +45,11 @@ public class TrionicArrayI {
             if(nums[i-1]== nums[i]){
                 return false;
             }
+            /*
+            This defines there will be two segments where increasing -> decreasing -> increasing is defined
+            whenever we go from increasing -> decreasing or decreasing -> increasing,
+            one pair should always be negative hence the multiplication would be -ve
+             */
             if((nums[i-2]-nums[i-1])* (nums[i-1]-nums[i])<0){
                 count++;
             }
