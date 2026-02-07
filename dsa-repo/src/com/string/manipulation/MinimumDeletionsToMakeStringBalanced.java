@@ -37,7 +37,6 @@ public class MinimumDeletionsToMakeStringBalanced {
                 aCount++;
             }
         }
-
         int minDel = n, bCount =0;
         for(int i=0;i<n;i++){
             minDel = Math.min(minDel, countA[i] + bCount);
