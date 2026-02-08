@@ -32,6 +32,7 @@ public class BalancedBinaryTree {
         if(root==null){
             return 0;
         }
+
         int leftHeight = getHeight(root.left);
         int rightHeight = getHeight(root.right);
         if(Math.abs(leftHeight-rightHeight)>1){
