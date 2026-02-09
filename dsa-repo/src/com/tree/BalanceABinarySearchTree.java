@@ -49,7 +49,6 @@ public class BalanceABinarySearchTree {
         if(start>end){
             return null;
         }
-
         int mid = (start+end)/2;
         TreeNode left = createBST(inorder, start, mid-1);
         TreeNode right = createBST(inorder, mid+1, end);
