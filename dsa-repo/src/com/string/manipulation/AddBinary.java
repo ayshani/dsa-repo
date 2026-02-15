@@ -36,6 +36,7 @@ public class AddBinary {
             i--;
             j--;
         }
+
         if(carry!=0)
             sb.append(carry);
 
