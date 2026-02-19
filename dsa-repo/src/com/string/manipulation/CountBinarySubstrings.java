@@ -63,7 +63,6 @@ public class CountBinarySubstrings {
             } else
                 group[t]++;
         }
-
         int ans =0;
         for(int i=1;i<=t;i++){
             ans+= Math.min(group[i-1],group[i]);
