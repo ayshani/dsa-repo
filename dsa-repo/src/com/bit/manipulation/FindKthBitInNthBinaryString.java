@@ -47,6 +47,7 @@ public class FindKthBitInNthBinaryString {
         // This is true if k is even (i.e., its least significant bit is 0)
         boolean originalBitIsOne = (k & 1) == 0;
 
+
         if (isInInvertedPart) {
             // If we're in the inverted part, we need to flip the bit
             return originalBitIsOne ? '0' : '1';
