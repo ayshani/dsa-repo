@@ -63,6 +63,7 @@ public class ThekthLexicographicalStringOfAllHappyStringsOfLengthN {
                     result
             );
 
+
             // If the result is found, stop further processing
             if (result[0] != null) return;
 
