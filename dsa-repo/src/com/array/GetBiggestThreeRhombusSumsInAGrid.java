@@ -24,6 +24,9 @@ Explanation: The rhombus shapes for the three biggest distinct rhombus sums are 
 - Blue: 20 + 3 + 200 + 5 = 228
 - Red: 200 + 2 + 10 + 4 = 216
 - Green: 5 + 200 + 4 + 2 = 211
+
+Explanation :
+https://leetcode.com/problems/get-biggest-three-rhombus-sums-in-a-grid/editorial/?envType=daily-question&envId=2026-03-16
  */
 public class GetBiggestThreeRhombusSumsInAGrid {
 
