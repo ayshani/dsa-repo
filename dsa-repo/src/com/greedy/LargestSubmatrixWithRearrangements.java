@@ -53,7 +53,6 @@ public class LargestSubmatrixWithRearrangements {
                 ans = Math.max(ans, currRow[i] * (n-i));
             }
         }
-
         return ans;
     }
 }
