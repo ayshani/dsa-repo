@@ -32,7 +32,8 @@ Distinct values in the submatrix are [1, 8, 3, -2].
 The minimum absolute difference in the submatrix is |1 - 3| = 2. Thus, the answer is [[2]].
 
 
-
+Time complexity: O((m−k)×(n−k)×k ^2×logk)
+Space complexity: O(k^2).
  */
 public class MinimumAbsoluteDifferenceInSlidingSubmatrix {
 
