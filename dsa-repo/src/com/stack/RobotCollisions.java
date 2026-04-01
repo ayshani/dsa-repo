@@ -71,8 +71,8 @@ public class RobotCollisions {
                     healths[i] = 0;
                 }
             }
-
         }
+
         List<Integer> res = new ArrayList<>();
         for(int val : healths){
             if(val >0){
