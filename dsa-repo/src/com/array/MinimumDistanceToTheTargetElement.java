@@ -35,7 +35,6 @@ public class MinimumDistanceToTheTargetElement {
             if(nums[i]==target)
                 minDistance = Math.min(minDistance, Math.abs(start-i));
         }
-
         return minDistance;
     }
 
