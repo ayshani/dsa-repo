@@ -51,6 +51,7 @@ public class MinimumTotalDistanceTraveled {
         Collections.sort(robot);
         Arrays.sort(factory, Comparator.comparingInt(a -> a[0]));
 
+
         // Flatten factory positions according to their capacities
         List<Integer> factoryPositions = new ArrayList<>();
         for (int[] f : factory) {
@@ -63,6 +64,7 @@ public class MinimumTotalDistanceTraveled {
         int factoryCount = factoryPositions.size();
         long[][] memo = new long[robotCount][factoryCount];
         for (long[] row : memo) Arrays.fill(row, -1);
+
 
         // Recursively calculate minimum total distance with memoization
         return calculateMinDistance(0, 0, robot, factoryPositions, memo);
