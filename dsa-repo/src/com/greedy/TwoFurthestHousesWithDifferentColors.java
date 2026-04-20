@@ -31,6 +31,7 @@ public class TwoFurthestHousesWithDifferentColors {
 
         while(colors[0]==colors[end])
             end--;
+
         while(colors[start]==colors[n-1])
             start++;
 
