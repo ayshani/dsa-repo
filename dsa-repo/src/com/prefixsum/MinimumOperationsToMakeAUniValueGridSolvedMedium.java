@@ -78,7 +78,6 @@ public class MinimumOperationsToMakeAUniValueGridSolvedMedium {
             // Update the result with the minimum operations needed
             result = Math.min(result, leftOperations + rightOperations);
         }
-
         return result;
     }
 }
