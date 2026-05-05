@@ -23,6 +23,7 @@ public class RotateList {
         new PrintLinkedList().print(new RotateList().rotateRight(head,2));
     }
     public ListNode rotateRight(ListNode head, int k) {
+
         if(head==null || head.next== null || k==0)
             return head;
         ListNode fast = head, slow = head;
