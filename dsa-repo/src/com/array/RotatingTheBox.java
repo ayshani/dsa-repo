@@ -57,7 +57,6 @@ public class RotatingTheBox {
                 result[i][m - 1 - j] = temp;
             }
         }
-
         // Apply gravity to let stones fall to the lowest possible empty cell in each column
         for (int j = 0; j < m; j++) {
             int lowestRowWithEmptyCell = n - 1;
@@ -69,6 +68,7 @@ public class RotatingTheBox {
                     result[lowestRowWithEmptyCell][j] = '#';
                     lowestRowWithEmptyCell--;
                 }
+
                 // Found an obstacle - reset `lowestRowWithEmptyCell` to the row directly above it
                 if (result[i][j] == '*') {
                     lowestRowWithEmptyCell = i - 1;
