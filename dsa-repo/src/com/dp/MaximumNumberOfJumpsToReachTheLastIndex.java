@@ -62,9 +62,12 @@ public class MaximumNumberOfJumpsToReachTheLastIndex {
     }
     public int maximumJumps(int[] nums, int target) {
         int n = nums.length, count =0;
+
         if(n==0)
             return -1;
+
         int[] dp = new int[n];
+
         for(int i=0;i<n;i++){
             if(i==0 || dp[i]!=0){
                 for(int j=i+1;j<n;j++){
