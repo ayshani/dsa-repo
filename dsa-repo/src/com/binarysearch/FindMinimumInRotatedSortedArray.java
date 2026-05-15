@@ -40,7 +40,6 @@ public class FindMinimumInRotatedSortedArray {
             return nums[left];
         while(left<=right){
             int mid = (left+right)/2;
-
             if(nums[mid]>nums[mid+1])
                 return nums[mid+1];
             else if(nums[mid]<nums[mid-1])
