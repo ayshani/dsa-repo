@@ -42,6 +42,7 @@ public class FindThePrefixCommonArrayOfTwoArrays {
 
         // Iterate through the elements of both arrays
         for (int currentIndex = 0; currentIndex < n; ++currentIndex) {
+
             // Increment frequency of current elements in A and B
             // Check if the element in A has appeared before (common in prefix)
             frequency[A[currentIndex]] += 1;
