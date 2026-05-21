@@ -63,6 +63,7 @@ class TrieNum{
 
     public void insert(String word){
         TrieNumNode node = root;
+
         for(int i=0;i<word.length();i++){
             char c = word.charAt(i);
             if(node.nodes[c-'0']== null){
