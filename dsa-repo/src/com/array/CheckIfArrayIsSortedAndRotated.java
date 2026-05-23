@@ -38,7 +38,6 @@ public class CheckIfArrayIsSortedAndRotated {
                 ++inversionCount;
             }
         }
-
         // Also check between the last and the first element due to rotation
         if (nums[0] < nums[n - 1]) {
             ++inversionCount;
