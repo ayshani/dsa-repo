@@ -56,10 +56,13 @@ public class JumpGameV {
     private int dfs(int[] arr, int n, int d, int i, Integer[] dp ){
         if(dp[i]!=null)
             return dp[i];
+
         int res =1;
+
         for(int j= i+1; j<=Math.min(i+d, n-1) && arr[i]> arr[j]; j++){
             res = Math.max(res, 1+dfs(arr, n, d, j,dp));
         }
+
         for(int j= i-1; j>=Math.max(i-d, 0) && arr[i]> arr[j]; j--){
             res = Math.max(res, 1+dfs(arr, n, d, j,dp));
         }
