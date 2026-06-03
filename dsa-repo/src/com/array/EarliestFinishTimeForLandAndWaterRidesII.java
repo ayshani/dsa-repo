@@ -42,7 +42,7 @@ Land ride 0 opened at landStartTime[0] = 2. Start at time 9, finish at 9 + landD
 Plan A gives the earliest finish time of 9.
 
 TC : o(m+n)
-SC: o(n)
+SC: o(1)
  */
 public class EarliestFinishTimeForLandAndWaterRidesII {
 
