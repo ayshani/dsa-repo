@@ -43,7 +43,6 @@ public class CreateBinaryTreeFromDescriptions {
         for(int[] des : descriptions){
             map.put(des[1],new TreeNode(des[1]));
         }
-
         for(int[] des : descriptions){
             if(!map.containsKey(des[0])){
                 root = new TreeNode(des[0]);
