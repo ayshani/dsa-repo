@@ -47,6 +47,7 @@ public class LeftAndRightSumDifferences {
         }
 
         for(int i=0;i<n;i++){
+
             res[i] = Math.abs(leftSum[i] - rightSum[i]);
         }
         return res;
