@@ -61,7 +61,6 @@ public class MaximumTwinSumOfALinkedList {
             cur = cur.next;
             rev = rev. next;
         }
-
         return maxSum;
     }
 
