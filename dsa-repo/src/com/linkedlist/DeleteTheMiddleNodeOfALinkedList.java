@@ -43,7 +43,6 @@ public class DeleteTheMiddleNodeOfALinkedList {
             slow= slow.next;
             fast = fast.next.next;
         }
-
         if(slow!=null)
             prev.next = slow.next;
 
