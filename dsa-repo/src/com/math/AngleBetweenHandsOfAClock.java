@@ -45,7 +45,6 @@ public class AngleBetweenHandsOfAClock {
 
         // Absolute angle between them
         double angle = Math.abs(hourDegree-minuteDegree);
-
         // return which ever is smaller : acute (0<=x<=180)/ normal angle
         return Math.min(angle, 360.0 - angle);
     }
