@@ -49,6 +49,7 @@ public class FindTheMaximumNumberOfElementsInSubset {
 
         for(int num : nums){
             int count =0, val = num;
+
             while(map.containsKey(val) && map.get(val)>=2 && val !=1){
                 count += 2;
                 val *= val;
