@@ -39,7 +39,6 @@ public class MaximumElementAfterDecreasingAndRearranging {
         for(int num : arr){
             count[Math.min(num, n)]++;
         }
-
         int ans =1;
         for(int num =2; num<=n;num++){
             ans =  Math.min(ans + count[num], num);
