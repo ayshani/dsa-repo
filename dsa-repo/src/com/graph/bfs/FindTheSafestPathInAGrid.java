@@ -110,6 +110,7 @@ public class FindTheSafestPathInAGrid {
         int start = 0;
         int end = 0;
         int res = -1;
+
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 // Set end as the maximum safeness factor possible
