@@ -74,7 +74,6 @@ class UnionFindScore{
         if(parentA==parentB)
             return;
         parent[parentB] = parentA;
-
     }
 
     public int getMinScore(int a){
