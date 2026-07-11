@@ -43,6 +43,7 @@ public class CountTheNumberOfCompleteComponents {
             dsu.union(edge[0], edge[1]);
         }
 
+
         // Count edges in each component
         for (int[] edge : edges) {
             int root = dsu.find(edge[0]);
