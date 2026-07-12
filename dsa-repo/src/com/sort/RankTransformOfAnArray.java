@@ -38,6 +38,7 @@ public class RankTransformOfAnArray {
     public int[] arrayRankTransform(int[] arr) {
         int[] A = Arrays.copyOf(arr,arr.length);
         Arrays.sort(A);
+
         Map<Integer,Integer> map = new HashMap<>();
         for(int x : A){
             map.putIfAbsent(x,map.size()+1);
