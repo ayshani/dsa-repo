@@ -31,6 +31,7 @@ public class SequentialDigits {
         for(int i=1;i<10;i++){
             solve(low,high,i,0);
         }
+
         Collections.sort(ans);
         return ans;
     }
