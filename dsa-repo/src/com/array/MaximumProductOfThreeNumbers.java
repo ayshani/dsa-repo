@@ -44,7 +44,6 @@ public class MaximumProductOfThreeNumbers {
                 minHeap.poll();
             }
         }
-
         int mult =1, max =0;
         while(!maxHeap.isEmpty()){
             max = maxHeap.poll();
