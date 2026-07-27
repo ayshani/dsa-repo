@@ -22,6 +22,7 @@ public class MaximumProductOfTwoElementsInAnArray {
         System.out.println(new MaximumProductOfTwoElementsInAnArray().maxProduct(new int[]{3,4,2,8}));
     }
     public int maxProduct(int[] nums) {
+
         int biggest=0, secondBiggest =0;
         for(int num : nums){
             if(num>biggest){
