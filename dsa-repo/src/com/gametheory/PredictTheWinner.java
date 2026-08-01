@@ -74,9 +74,11 @@ public class PredictTheWinner {
     // TC : o(2^n) as we have always two choices to pick
     // SC : o(n)
     private int maxScoreDifference(int start, int end, int[] nums){
+
         if(start==end){
             return nums[start];
         }
+
         return Math.max(nums[start] - maxScoreDifference(start+1,end,nums),
                 nums[end] - maxScoreDifference(start,end-1,nums));
     }
