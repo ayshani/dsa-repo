@@ -36,6 +36,7 @@ public class StoneGameII {
         System.out.println(new StoneGameII().stoneGameII(piles));
     }
     public int stoneGameII(int[] piles) {
+
         if(piles == null || piles.length==0)
             return 0;
         int n = piles.length;
@@ -53,6 +54,7 @@ public class StoneGameII {
 
     // helper method return the Alex max score from pile[i] for the given M
     private int util(int[] piles,int[] sufffixSum,  Integer[][] dp, int pile, int M){
+
         // base case
         if(pile== piles.length)
             return 0;
