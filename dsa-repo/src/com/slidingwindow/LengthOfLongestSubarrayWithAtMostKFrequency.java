@@ -36,9 +36,11 @@ public class LengthOfLongestSubarrayWithAtMostKFrequency {
                 .maxSubarrayLength(new int[]{1,2,3,1,2,3,1,2},2));
     }
     public int maxSubarrayLength(int[] nums, int k) {
+
         int n = nums.length;
         Map<Integer,Integer> map = new HashMap<>();
         int maxLength = 0;
+
         for(int start=0, end =0; end <n;end++){
             int num = nums[end];
             map.put(num, map.getOrDefault(num,0)+1);
