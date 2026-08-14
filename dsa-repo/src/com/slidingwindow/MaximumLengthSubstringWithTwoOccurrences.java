@@ -33,6 +33,7 @@ public class MaximumLengthSubstringWithTwoOccurrences {
         Map<Character,Integer> map = new HashMap<>();
         int n = s.length();
         int start =0, maxLength =0;;
+
         for(int i=0;i<n;i++){
             char c = s.charAt(i);
             if(!map.containsKey(c)){
