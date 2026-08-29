@@ -57,7 +57,6 @@ public class MakeLexicographicallySmallestArrayBySwappingElements {
                 // new group
                 currGroup++;
             }
-
             // assign current element to group
             numToGroup.put(numsSorted[i], currGroup);
 
