@@ -66,6 +66,7 @@ public class FindTheMinimumAndMaximumNumberOfNodesBetweenCriticalPoints {
                     prevCriticalIndex = curIndex;
                 }
             }
+
             // advance in the list
             curIndex++;
             previous = current;
