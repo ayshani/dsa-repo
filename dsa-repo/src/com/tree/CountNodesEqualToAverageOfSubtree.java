@@ -44,10 +44,12 @@ public class CountNodesEqualToAverageOfSubtree {
     public SubtreePair dfs(TreeNode root){
         if(root==null)
             return new SubtreePair(0,0);
+
         if(root.left==null && root.right==null){
             globalCount++;
             return new SubtreePair(root.val,1);
         }
+
         SubtreePair left = dfs(root.left);
         SubtreePair right = dfs(root.right);
 
@@ -57,6 +59,7 @@ public class CountNodesEqualToAverageOfSubtree {
         if((totalSum/totalCount) == root.val){
             globalCount++;
         }
+
         return new SubtreePair(totalSum, totalCount);
     }
 }
