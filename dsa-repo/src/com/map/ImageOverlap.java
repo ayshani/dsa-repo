@@ -65,6 +65,7 @@ public class ImageOverlap {
         HashMap<Pair, Integer> groupCount = new HashMap<>();
 
         for (Pair a : A_ones)
+
             for (Pair b : B_ones) {
                 Pair vec =
                         new Pair(b.getKey() - a.getKey(), b.getValue() - a.getValue());
