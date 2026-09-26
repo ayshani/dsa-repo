@@ -52,7 +52,6 @@ public class EvaluateTheBracketPairsOfAString {
         for(List<String> pair : knowledge){
             map.put(pair.get(0),pair.get(1));
         }
-
         int i=0;
         //to avoid String concatenation
         StringBuilder sb = new StringBuilder();
