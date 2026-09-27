@@ -42,7 +42,6 @@ public class ReverseSubstringsBetweenEachPairOfParentheses {
                 pair[j] = i;
             }
         }
-
         StringBuilder result = new StringBuilder();
         for (
                 int currIndex = 0, direction = 1;
