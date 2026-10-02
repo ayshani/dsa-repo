@@ -35,6 +35,7 @@ public class ValidParentheses {
         for(int i=0;i<s.length();i++){
             if(st.isEmpty()){
                 st.push(s.charAt(i));
+
             } else{
                 if(st.peek()=='(' && s.charAt(i)==')'){
                     st.pop();

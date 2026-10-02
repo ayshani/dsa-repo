@@ -36,7 +36,6 @@ public class GenerateParentheses {
             result.add(String.valueOf(cur));
             return;
         }
-
         if(open<n){
             cur.append("(");
             util(open+1, close, cur, n, result);
