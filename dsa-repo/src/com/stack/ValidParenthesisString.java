@@ -47,6 +47,7 @@ public class ValidParenthesisString {
                     return false;
                 }
             } else{
+
                 asterisk.push(i);
             }
         }
