@@ -57,6 +57,7 @@ public class RemoveInvalidParentheses {
         }
 
         List<String> maxSol = new ArrayList<>();
+
         for(String str : sol){
             if(str.length()== max)
                 maxSol.add(str);
