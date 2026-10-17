@@ -45,6 +45,7 @@ public class SubarraysDistinctElementSumOfSquaresII {
                 cur = 0;
         BIT bit = new BIT(n + 10);
         Map<Integer, Integer> seen = new HashMap<>();
+
         long mod = 1000000007;
         for (int i = 0; i < n; i++) {
             int a = A[i];
