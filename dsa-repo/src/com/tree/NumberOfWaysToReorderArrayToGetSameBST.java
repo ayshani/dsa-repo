@@ -79,6 +79,7 @@ public class NumberOfWaysToReorderArrayToGetSameBST {
     public int numOfWays(int[] nums) {
         int len = nums.length;
         List<Integer> arr = new ArrayList<>();
+
         for(int num : nums){
             arr.add(num);
         }
