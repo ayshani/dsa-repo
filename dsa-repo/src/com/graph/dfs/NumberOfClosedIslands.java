@@ -75,5 +75,6 @@ public class NumberOfClosedIslands {
         mark(grid,i-1,j,m,n);
         mark(grid,i,j+1,m,n);
         mark(grid,i,j-1,m,n);
+
     }
 }
