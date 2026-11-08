@@ -44,6 +44,7 @@ public class CountServersThatCommunicate {
                 communicableServersCount += serverCountInRow;
                 lastServerInCol[row] = -1;
             }
+
         }
 
         // Second pass to check if servers can communicate
