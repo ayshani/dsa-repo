@@ -40,7 +40,8 @@ Request 3 comes in. Server 0 is busy, so it's assigned to the next available ser
 Request 4 comes in. It cannot be handled since all servers are busy, so it is dropped.
 Servers 0 and 2 handled one request each, while server 1 handled two requests. Hence server 1 is the busiest server.
 
-
+TC: o(k+nlogk)
+SC: o(k+n)
  */
 public class FindServersThatHandledMostNumberOfRequests {
     record Job(int at, int server) {}  // at: the time its server frees up
