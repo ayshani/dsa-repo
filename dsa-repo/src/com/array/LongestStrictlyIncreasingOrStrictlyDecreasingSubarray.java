@@ -44,6 +44,7 @@ public class LongestStrictlyIncreasingOrStrictlyDecreasingSubarray {
 
         increasingDp[0] =1;
         decreasingDp[0] =1;
+
         for(int i=1;i<n;i++){
             increasingDp[i] =1;
             decreasingDp[i]=1;
