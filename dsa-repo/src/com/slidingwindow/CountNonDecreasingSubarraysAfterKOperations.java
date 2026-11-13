@@ -29,6 +29,9 @@ Explanation:
 Out of all 21 possible subarrays of nums, only the subarrays [6, 3, 1], [6, 3, 1, 2], [6, 3, 1, 2, 4] and
 [6, 3, 1, 2, 4, 4] cannot be made non-decreasing after applying up to k = 7 operations. Thus, the number of
 non-decreasing subarrays is 21 - 4 = 17.
+
+TC : o(nlogn)
+SC: o(n)
  */
 public class CountNonDecreasingSubarraysAfterKOperations {
 
