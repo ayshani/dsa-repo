@@ -31,6 +31,7 @@ public class NumberOfSubArraysWithOddSum {
         int oddCount = 0, evenCount = 1;
 
         for (int num : arr) {
+
             prefixSum += num;
             // If current prefix sum is even, add the number of odd subarrays
             if (prefixSum % 2 == 0) {
