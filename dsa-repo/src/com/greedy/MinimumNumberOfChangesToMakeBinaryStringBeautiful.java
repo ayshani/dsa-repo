@@ -31,6 +31,7 @@ public class MinimumNumberOfChangesToMakeBinaryStringBeautiful {
         System.out.println(new MinimumNumberOfChangesToMakeBinaryStringBeautiful().minChanges("1001"));
     }
     public int minChanges(String s) {
+
         // Initialize with first character of string
         char currentChar = s.charAt(0);
 
