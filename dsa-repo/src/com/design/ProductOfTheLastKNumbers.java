@@ -69,6 +69,7 @@ class ProductOfNumbers {
     }
 
     public void add(int num) {
+
         if (num == 0) {
             // If num is 0, reset the cumulative products since multiplication
             // with 0 invalidates previous products
